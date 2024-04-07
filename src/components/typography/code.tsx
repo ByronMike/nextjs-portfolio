@@ -1,8 +1,9 @@
 'use client';
 
-import React, { FunctionComponent, Fragment, useEffect } from 'react';
 import clsx from 'clsx';
 import { highlightAll } from 'prismjs';
+import { Fragment, FunctionComponent, useCallback, useEffect } from 'react';
+
 import 'prism-themes/themes/prism-holi-theme.css';
 import 'prismjs/components/prism-jsx';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
@@ -15,22 +16,33 @@ export type CodeGroupProps = {
 };
 
 export const Code: FunctionComponent<CodeGroupProps> = ({
-  code,
   language,
+  code,
   className,
 }) => {
-  useEffect(() => {
+  const loadDependencies = useCallback(async () => {
     highlightAll();
   }, []);
 
+  useEffect(() => {
+    loadDependencies();
+  }, [language, loadDependencies]);
+
   return (
     <pre className={clsx(`language-${language}`, className)} tabIndex={-1}>
-      {(Array.isArray(code) ? code : [code]).map((codeBlock, index) => (
-        <Fragment key={index}>
-          <code className={`language-${language}`}>{codeBlock}</code>
-          {'\n'}
-        </Fragment>
-      ))}
+      {(Array.isArray(code) ? code : [code]).map((code, index) => {
+        return (
+          <Fragment key={index}>
+            <code
+              className={`language-${language}`}
+              data-selected-index={index}
+            >
+              {code}
+            </code>
+            {`\n`}
+          </Fragment>
+        );
+      })}
     </pre>
   );
 };

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Inter-roman-latin.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/Inter-italic-latin.var.woff2') format('woff2');
+}
+
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+.focus-border:focus {
+  -moz-box-shadow: black 0px 0px 0px 2px;
+  -webkit-box-shadow: black 0px 0px 0px 2px;
+  box-shadow: black 0px 0px 0px 2px;
+}
+
+html {
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+input[type='number'] {
+  @include appearance(textfield);
+}
+
+* {
+  &:focus:not(:focus-visible):not(:is([type='checkbox'], [type='radio'])) {
+    outline: none;
+  }
+
+  @apply outline-accent;
+}
+
+* {
+  &:focus-visible:not(:is(input, select)) {
+    outline: none;
+    @apply ring-2 ring-sky-400 ring-offset-2 dark:ring-white dark:ring-offset-0;
+  }
+  :is(input, select):not(:is([type='checkbox'], [type='radio'])):focus-visible {
+    outline: none;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+button {
+  &:hover:not(:focus-visible),
+  &:focus:not(:focus-visible),
+  &:active:not(:focus-visible) {
+    outline: none;
+  }
+}

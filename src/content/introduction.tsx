@@ -41,7 +41,7 @@ export const Welcome = {
       efficient web solutions. From crafting interactive user interfaces to
       optimizing website performance, I excel in harnessing the power of these
       technologies..{' '}
-      <em className="b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600 relative cursor-pointer before:absolute">
+      <em className="relative cursor-pointer before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600">
         WOW!
       </em>
       .<span className="mt-4 block" />
@@ -50,8 +50,8 @@ export const Welcome = {
       striving to push the boundaries of what's achievable{' '}
       <Link
         target="_blank"
-        href="https://nextjs.org/"
-        className="hfa:text-sky-500 underline"
+        href="https://astro.build/"
+        className="underline hfa:text-sky-500"
       >
         Next.js
       </Link>{' '}
@@ -59,7 +59,7 @@ export const Welcome = {
       <Link
         href="https://react.dev/"
         target="_blank"
-        className="hfa:text-sky-500 underline"
+        className="underline hfa:text-sky-500"
       >
         React
       </Link>
