@@ -1,0 +1,129 @@
+@layer components {
+  .prose :where(pre):not(:where([class~='not-prose'] *)) {
+    --container-width: calc(100vw - (100vw - 100%));
+    margin-left: max(
+      -62px,
+      calc(((100vw - var(--container-width))) / -2) + 4px
+    );
+    margin-right: max(
+      -62px,
+      calc(((100vw - var(--container-width))) / -2) + 4px
+    );
+    @apply !rounded-none md:!rounded-md;
+  }
+
+  code[class*='language'] {
+    @apply font-normal text-white/95;
+    transition: 0.15s color;
+  }
+
+  .token.tag,
+  .token.class-name {
+    color: #b7e2f8;
+  }
+  .token.tag > .token.punctuation {
+    color: #65c6ff;
+  }
+
+  .token.selector,
+  .token.selector .class,
+  .token.selector.class,
+  .token.function {
+    @apply text-lime-400;
+  }
+
+  .token.constant {
+    @apply font-medium text-orange-400;
+  }
+  .token.script {
+    @apply font-normal text-white;
+    color: #fd971f;
+  }
+  .token.attr-name {
+    color: #a6e22e;
+  }
+  .token.builtin,
+  .token.keyword,
+  .token.rule,
+  .token.pseudo-class,
+  .token.important {
+    @apply font-bold;
+    color: #f92672;
+  }
+
+  .token.attr-value,
+  .token.class,
+  .token.string {
+    @apply text-green-400;
+  }
+
+  .token.punctuation,
+  .token.attr-equals {
+    @apply text-slate-200/75;
+  }
+
+  .token.attr-value * {
+    @apply text-sky-300;
+  }
+
+  .token.attr-value .attr-equals,
+  .token.attr-value .attr-equals + .punctuation,
+  .token.attr-value > .punctuation:last-child {
+    @apply text-slate-500;
+  }
+
+  .token.property {
+    @apply text-sky-300;
+  }
+
+  .token.unit {
+    @apply text-teal-200;
+  }
+
+  .language-shell .token:not(.comment),
+  .token.atapply .token:not(.rule):not(.important):not(.punctuation) {
+    color: inherit;
+  }
+
+  .language-css .token.function {
+    @apply text-teal-200;
+  }
+
+  .token.comment,
+  .token.module,
+  .token.operator,
+  .token.combinator {
+    @apply text-slate-400/80;
+  }
+
+  .code-inactive,
+  .code-inactive * {
+    @apply transition:
+      0.15s color text-slate-400/50;
+  }
+
+  .token.unchanged {
+    @apply block;
+  }
+
+  .token.deleted,
+  .token.inserted {
+    @apply relative -mx-9 block border-l-4 pl-8 pr-5 before:absolute before:left-4 before:top-0;
+  }
+
+  .token.inserted {
+    @apply border-teal-400 bg-teal-400/[0.15] before:text-teal-400 before:content-['+'];
+  }
+
+  .token.deleted {
+    @apply border-rose-400 bg-rose-500/[0.15] before:text-rose-400 before:content-['-'];
+  }
+
+  pre[class^='language-diff-'] {
+    @apply flex px-9;
+  }
+
+  pre[class^='language-diff-'] > code {
+    @apply min-w-full flex-none;
+  }
+}
