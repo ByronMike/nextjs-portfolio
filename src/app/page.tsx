@@ -1,8 +1,8 @@
-import { Introduction } from '@/components/templates/introduction';
+import { Introduction } from '@/components/sections/introduction';
 
 export default function Home() {
   return (
-    <main className="flex">
+    <main className="flex justify-center">
       <Introduction />
     </main>
   );

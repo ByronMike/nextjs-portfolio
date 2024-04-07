@@ -1,8 +1,8 @@
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
-import { Badge } from '@/components/molecules/badge';
-import { CodeEditor } from '@/components/organisms/code-editor';
-import { Profile } from '@/components/molecules/profile';
+import { Badge } from '@/components/badge';
+import { CodeEditor } from '@/components/code-editor';
+import { Profile } from '@/components/profile';
 import { Welcome } from '@/content/introduction';
 
 export const Introduction: FunctionComponent = () => {
