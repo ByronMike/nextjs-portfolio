@@ -34,7 +34,7 @@ export const About: FunctionComponent = () => {
   }, [focusImageIndex, images.length]);
 
   return (
-    <div id="about" className="-mt-12 overflow-hidden pt-12">
+    <section id="about" className="-mt-12 overflow-hidden pt-12">
       <div className="mx-auto flex max-w-6xl flex-col justify-center gap-16 px-4 pb-16 md:px-8 lg:grid lg:grid-cols-[540px_auto] lg:pt-16">
         <button
           ref={buttonRef}
@@ -100,6 +100,6 @@ export const About: FunctionComponent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

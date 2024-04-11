@@ -13,12 +13,11 @@ import ReactNative from '@/public/svg/tools/react-native.svg';
 
 export const TechStack: FunctionComponent = () => {
   return (
-    <section>
+    <section className="mx-auto  max-w-6xl px-4 pb-16 md:px-8">
       <h2 className="headline mt-24 text-center text-xl md:text-2xl lg:text-3xl">
         Some of my favourite tools
       </h2>
-
-      <div className="mx-auto mt-8 flex max-w-6xl flex-wrap items-center justify-center gap-x-16 gap-y-8 px-4">
+      <div className="mx-auto mt-8 flex  flex-wrap items-center justify-center gap-x-16 gap-y-8">
         <LogoNext className="w-32" aria-label="Next.js" />
         <LogoTailwind className="w-32 md:w-40" aria-label="Tailwind" />
         <LogoStorybook className="w-32 md:w-40" aria-label="Storybook" />
