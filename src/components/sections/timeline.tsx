@@ -81,9 +81,9 @@ export const Timeline: FunctionComponent = () => {
       >
         {Object.entries(TIMELINEOBJECT).map(([year, events], yearIndex) => (
           <div key={year} className="relative">
-            <header className="absolute left-0 -translate-x-1/2 select-none text-xs font-semibold text-gray-400">
+            <div className="absolute left-0 -translate-x-1/2 select-none text-xs font-semibold text-gray-400">
               {year}
-            </header>
+            </div>
             <div
               className="mt-6 grid"
               style={{
