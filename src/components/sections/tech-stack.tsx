@@ -14,8 +14,8 @@ import ReactNative from '@/public/svg/tools/react-native.svg';
 export const TechStack: FunctionComponent = () => {
   return (
     <section className="mx-auto  max-w-6xl px-4 pb-16 md:px-8">
-      <h2 className="headline mt-24 text-center text-xl md:text-2xl lg:text-3xl">
-        Some of my favourite tools
+      <h2 className="headline mt-24 text-center text-xl font-bold md:text-2xl lg:text-3xl">
+        Mes outils préférés pour le Développement Web
       </h2>
       <div className="mx-auto mt-8 flex  flex-wrap items-center justify-center gap-x-16 gap-y-8">
         <LogoNext className="w-32" aria-label="Next.js" />
@@ -25,8 +25,8 @@ export const TechStack: FunctionComponent = () => {
         <LogoCypress className="w-32 md:w-32" aria-label="Cypress" />
         <TypeScript className="w-14" aria-label="TypeScript" />
         <NodeJs className="w-32 md:w-24" aria-label="NodeJs" />
-        <MongoDb className="w-32 md:w-40" aria-label="MongoDb" />
         <ReactNative className="w-20 md:w-14" aria-label="ReactNative" />
+        <MongoDb className="w-32 md:w-40" aria-label="MongoDb" />
       </div>
     </section>
   );
