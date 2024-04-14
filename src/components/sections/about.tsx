@@ -1,8 +1,8 @@
 'use client';
 
+import { FunctionComponent, useCallback, useRef, useState } from 'react';
 import Image from 'next/image';
 import { ABOUT } from '@/content/about';
-import { FunctionComponent, useCallback, useRef, useState } from 'react';
 
 export const About: FunctionComponent = () => {
   const [focusImageIndex, setFocusImageIndex] = useState(0);

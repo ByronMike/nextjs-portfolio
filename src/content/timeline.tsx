@@ -7,8 +7,8 @@ import {
 
 import { AiOutlineFund } from 'react-icons/ai';
 import { BiGame } from 'react-icons/bi';
-import { FaBaby } from 'react-icons/fa';
 import { CiKeyboard } from 'react-icons/ci';
+import { FaBaby } from 'react-icons/fa';
 import { IoBookOutline } from 'react-icons/io5';
 import { PiLeafThin } from 'react-icons/pi';
 import { TbMathIntegrals } from 'react-icons/tb';

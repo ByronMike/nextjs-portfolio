@@ -27,10 +27,10 @@ import { SiWordpress } from 'react-icons/si';
 import { SiYarn } from 'react-icons/si';
 
 import Axios from '@/public/icons/tech-logos/axios.svg';
+import Express from '@/public/icons/tech-logos/express.svg';
+import NextJs from '@/public/icons/tech-logos/nextjs.svg';
 import Prisma from '@/public/icons/tech-logos/prisma.svg';
 import ReactQuery from '@/public/icons/tech-logos/react_query.svg';
-import NextJs from '@/public/icons/tech-logos/nextjs.svg';
-import Express from '@/public/icons/tech-logos/express.svg';
 
 type IconProps = {
   className?: string;

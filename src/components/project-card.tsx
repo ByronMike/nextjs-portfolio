@@ -3,10 +3,10 @@
 import { FunctionComponent } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import { LinkIcon } from '@heroicons/react/24/solid';
-import { FaGithub } from 'react-icons/fa';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import { LinkIcon } from '@heroicons/react/24/solid';
+import { FaGithub } from 'react-icons/fa';
 import { Technology } from '@/content/tech-stack';
 
 interface projectType {
