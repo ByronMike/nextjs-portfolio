@@ -9,7 +9,6 @@ export const Projects: FunctionComponent = () => {
   const [filteredProjects, setFilteredProjects] = useState(PROJECTS);
 
   const handleFilterChange = (newFilter = filter) => {
-    console.log('newfilter', newFilter);
     setFilter(newFilter);
     if (newFilter === 'All Projects') {
       setFilteredProjects(PROJECTS);
