@@ -1,27 +1,14 @@
 'use client';
 
 import { FunctionComponent } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { LinkIcon } from '@heroicons/react/24/solid';
 import { FaGithub } from 'react-icons/fa';
-import { Technology } from '@/content/tech-stack';
 
-interface projectType {
-  name: string;
-  type: string[];
-  tech: Technology[];
-  description: string;
-  featuredImage: StaticImageData;
-  year: string;
-  url?: string;
-  repository?: string;
-}
-interface ProjectCardProps {
-  project: projectType;
-}
+import { ProjectCardProps } from '@/types/components/project-card';
 
 const variants = {
   hover: { opacity: 0, y: '100%' },

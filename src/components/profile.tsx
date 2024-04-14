@@ -2,16 +2,7 @@ import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-interface ProfileProps {
-  profile_image_url: string;
-  name: string;
-  username: string;
-  description: string;
-  public_metrics: {
-    following_count: number;
-    followers_count: number;
-  };
-}
+import { ProfileProps } from '@/types/components/profile';
 
 export const Profile: FunctionComponent<ProfileProps> = ({
   profile_image_url,

@@ -4,9 +4,7 @@ import { SiNodedotjs } from 'react-icons/si';
 import { SiReact } from 'react-icons/si';
 import { SiTailwindcss } from 'react-icons/si';
 
-interface IconProps {
-  className: string;
-}
+import { IconProps } from '@/types/content/tech-stack';
 
 export const Welcome = {
   pre: 'Welcome to my site.',

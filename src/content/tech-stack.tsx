@@ -32,152 +32,143 @@ import NextJs from '@/public/icons/tech-logos/nextjs.svg';
 import Prisma from '@/public/icons/tech-logos/prisma.svg';
 import ReactQuery from '@/public/icons/tech-logos/react_query.svg';
 
-type IconProps = {
-  className?: string;
-};
-
-export interface Technology {
-  name: string;
-  Icon: React.FunctionComponent<IconProps>;
-}
+import { Technology } from '@/types/content/tech-stack';
 
 export const TECH: Record<string, Technology> = {
   typescript: {
     name: 'TypeScript',
-    Icon: ({ className }: IconProps) => <SiTypescript className={className} />,
+    Icon: ({ className }) => <SiTypescript className={className} />,
   },
   vercel: {
     name: 'Vercel',
-    Icon: ({ className }: IconProps) => <IoLogoVercel className={className} />,
+    Icon: ({ className }) => <IoLogoVercel className={className} />,
   },
   nextjs: {
     name: 'Next.js',
-    Icon: ({ className }: IconProps) => <NextJs className={className} />,
+    Icon: ({ className }) => <NextJs className={className} />,
   },
   markdown: {
     name: 'Markdown',
-    Icon: ({ className }: IconProps) => <SiMarkdown className={className} />,
+    Icon: ({ className }) => <SiMarkdown className={className} />,
   },
   graphql: {
     name: 'GraphQL',
-    Icon: ({ className }: IconProps) => <SiGraphql className={className} />,
+    Icon: ({ className }) => <SiGraphql className={className} />,
   },
   reactjs: {
     name: 'React.js',
-    Icon: ({ className }: IconProps) => <SiReact className={className} />,
+    Icon: ({ className }) => <SiReact className={className} />,
   },
   tailwind: {
     name: 'TailwindCSS',
-    Icon: ({ className }: IconProps) => <SiTailwindcss className={className} />,
+    Icon: ({ className }) => <SiTailwindcss className={className} />,
   },
   prisma: {
     name: 'Prisma',
-    Icon: ({ className }: IconProps) => <Prisma className={className} />,
+    Icon: ({ className }) => <Prisma className={className} />,
   },
   axios: {
     name: 'Axios',
-    Icon: ({ className }: IconProps) => <Axios className={className} />,
+    Icon: ({ className }) => <Axios className={className} />,
   },
   css_3: {
     name: 'CSS',
-    Icon: ({ className }: IconProps) => <SiCss3 className={className} />,
+    Icon: ({ className }) => <SiCss3 className={className} />,
   },
   eslint: {
     name: 'Eslint',
-    Icon: ({ className }: IconProps) => <SiEslint className={className} />,
+    Icon: ({ className }) => <SiEslint className={className} />,
   },
   figma: {
     name: 'Figma',
-    Icon: ({ className }: IconProps) => <SiFigma className={className} />,
+    Icon: ({ className }) => <SiFigma className={className} />,
   },
   firebase: {
     name: 'Firebase',
-    Icon: ({ className }: IconProps) => <SiFirebase className={className} />,
+    Icon: ({ className }) => <SiFirebase className={className} />,
   },
   framer: {
     name: 'Framer',
-    Icon: ({ className }: IconProps) => <SiFramer className={className} />,
+    Icon: ({ className }) => <SiFramer className={className} />,
   },
   git: {
     name: 'Git',
-    Icon: ({ className }: IconProps) => <SiGit className={className} />,
+    Icon: ({ className }) => <SiGit className={className} />,
   },
   github: {
     name: 'Github',
-    Icon: ({ className }: IconProps) => <SiGithub className={className} />,
+    Icon: ({ className }) => <SiGithub className={className} />,
   },
   html_5: {
     name: 'HTML',
-    Icon: ({ className }: IconProps) => <SiHtml5 className={className} />,
+    Icon: ({ className }) => <SiHtml5 className={className} />,
   },
   javascript: {
     name: 'JavaScript',
-    Icon: ({ className }: IconProps) => <SiJavascript className={className} />,
+    Icon: ({ className }) => <SiJavascript className={className} />,
   },
   jest: {
     name: 'Jest',
-    Icon: ({ className }: IconProps) => <SiJest className={className} />,
+    Icon: ({ className }) => <SiJest className={className} />,
   },
   mysql: {
     name: 'MySQL',
-    Icon: ({ className }: IconProps) => <SiMysql className={className} />,
+    Icon: ({ className }) => <SiMysql className={className} />,
   },
   nodejs: {
     name: 'Node.js',
-    Icon: ({ className }: IconProps) => <SiNodedotjs className={className} />,
+    Icon: ({ className }) => <SiNodedotjs className={className} />,
   },
   express: {
     name: 'Express',
-    Icon: ({ className }: IconProps) => <Express className={className} />,
+    Icon: ({ className }) => <Express className={className} />,
   },
   prettier: {
     name: 'Prettier',
-    Icon: ({ className }: IconProps) => <SiPrettier className={className} />,
+    Icon: ({ className }) => <SiPrettier className={className} />,
   },
   react: {
     name: 'React.js',
-    Icon: ({ className }: IconProps) => <SiReact className={className} />,
+    Icon: ({ className }) => <SiReact className={className} />,
   },
   react_query: {
     name: 'React Query',
-    Icon: ({ className }: IconProps) => <ReactQuery className={className} />,
+    Icon: ({ className }) => <ReactQuery className={className} />,
   },
   redis: {
     name: 'Redis',
-    Icon: ({ className }: IconProps) => <SiRedis className={className} />,
+    Icon: ({ className }) => <SiRedis className={className} />,
   },
   tailwindcss: {
     name: 'Tailwindcss',
-    Icon: ({ className }: IconProps) => <SiTailwindcss className={className} />,
+    Icon: ({ className }) => <SiTailwindcss className={className} />,
   },
   webpack: {
     name: 'Webpack',
-    Icon: ({ className }: IconProps) => <SiWebpack className={className} />,
+    Icon: ({ className }) => <SiWebpack className={className} />,
   },
   yarn: {
     name: 'Yarn',
-    Icon: ({ className }: IconProps) => <SiYarn className={className} />,
+    Icon: ({ className }) => <SiYarn className={className} />,
   },
   npm: {
     name: 'NPM',
-    Icon: ({ className }: IconProps) => <SiNpm className={className} />,
+    Icon: ({ className }) => <SiNpm className={className} />,
   },
   sql: {
     name: 'SQL',
-    Icon: ({ className }: IconProps) => (
-      <AiOutlineConsoleSql className={className} />
-    ),
+    Icon: ({ className }) => <AiOutlineConsoleSql className={className} />,
   },
   php: {
     name: 'PHP',
-    Icon: ({ className }: IconProps) => <SiPhp className={className} />,
+    Icon: ({ className }) => <SiPhp className={className} />,
   },
   postman: {
     name: 'Postman',
-    Icon: ({ className }: IconProps) => <SiPostman className={className} />,
+    Icon: ({ className }) => <SiPostman className={className} />,
   },
   wordpress: {
     name: 'WordPress',
-    Icon: ({ className }: IconProps) => <SiWordpress className={className} />,
+    Icon: ({ className }) => <SiWordpress className={className} />,
   },
 } as const;

@@ -13,14 +13,7 @@ import { IoBookOutline } from 'react-icons/io5';
 import { PiLeafThin } from 'react-icons/pi';
 import { TbMathIntegrals } from 'react-icons/tb';
 
-interface TIMELINEOBJECTTYPE {
-  [year: string]: {
-    date: string;
-    heading: string;
-    description: string;
-    Icon: React.FunctionComponent<{ className?: string }>;
-  }[];
-}
+import { TIMELINEOBJECTTYPE } from '@/types/content/timeline';
 
 export const TIMELINEOBJECT: TIMELINEOBJECTTYPE = {
   1991: [
