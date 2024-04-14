@@ -9,7 +9,6 @@ export const Projects: FunctionComponent = () => {
   const [filteredProjects, setFilteredProjects] = useState(PROJECTS);
 
   const handleFilterChange = (newFilter = filter) => {
-    console.log('newfilter', newFilter);
     setFilter(newFilter);
     if (newFilter === 'All Projects') {
       setFilteredProjects(PROJECTS);
@@ -26,7 +25,7 @@ export const Projects: FunctionComponent = () => {
       id="portfolio"
       className="portfolio-preview mx-auto grid w-full max-w-6xl px-4 md:px-8"
     >
-      <header className="mx-auto grid w-full max-w-6xl px-4 md:px-8">
+      <div className="mx-auto grid w-full max-w-6xl px-4 md:px-8">
         <div className="heading-pre">Mes projets</div>
         <h1 className="heading-2xl -ml-1">Une sélection de mes projets</h1>
         <div className="relative -mx-4 mb-2 flex gap-2 overflow-x-auto px-4 pb-2">
@@ -54,7 +53,7 @@ export const Projects: FunctionComponent = () => {
             })}
           </fieldset>
         </div>
-      </header>
+      </div>
       <div className="flex flex-wrap gap-4">
         {filteredProjects.map((project) => (
           <ProjectCard key={project.name} project={project} />

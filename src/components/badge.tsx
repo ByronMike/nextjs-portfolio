@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import { FunctionComponent } from 'react';
+import clsx from 'clsx';
 import { capitalize } from '@/utils/capitalize';
 
 export type BadgeProps = {
