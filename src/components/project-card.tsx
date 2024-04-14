@@ -35,7 +35,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
       key={project.name}
       whileHover="hover"
       className={clsx(
-        'backdrop relative h-[380px] w-[340px] min-w-[340px] snap-start rounded-xl border-2 border-gray-700/30 bg-white bg-opacity-10  bg-clip-padding p-4 shadow-lg shadow-xl transition-[min-width,width,margin-left,opacity] duration-300 spacing-0 d:border-white/20'
+        'backdrop relative h-[380px] w-[340px] min-w-[340px] snap-start rounded-xl border-2 border-gray-700/30 bg-white bg-opacity-10  bg-clip-padding p-4 shadow-xl  transition-[min-width,width,margin-left,opacity] duration-300 spacing-0 d:border-white/20'
       )}
     >
       <figure className="relative flex aspect-2 h-full w-full">
@@ -73,7 +73,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
         <main className="mt-2 px-4 text-[15px] tracking-tight text-black d:text-black ">
           <p className="line-clamp-4">{project.description}</p>
         </main>
-        <footer className="bottom-3 left-0 mt-auto flex w-full items-end justify-end gap-2 px-4 px-4">
+        <footer className="bottom-3 left-0 mt-auto flex w-full items-end justify-end gap-2 px-4">
           <div className="mr-auto text-sm font-semibold text-black d:text-gray-300/80">
             {project.year}
           </div>

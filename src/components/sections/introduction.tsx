@@ -52,7 +52,7 @@ export const Introduction: FunctionComponent = () => {
         </div>
       </div>
       <div className="relative md:h-[420px]">
-        <div className="relative flex h-full min-w-[460px] flex-col gap-4 sm:min-w-[660px] lg:absolute lg:left-6 lg:left-8 lg:top-16 lg:top-24 lg:min-w-[460px]">
+        <div className="relative flex h-full min-w-[460px] flex-col gap-4 sm:min-w-[660px] lg:absolute lg:left-6 lg:top-16 lg:min-w-[460px]">
           <div className="relative z-20 flex justify-end gap-1.5">
             <Badge style="info">TS Developer</Badge>
             <Badge style="success">Watersport Blogger</Badge>
@@ -75,7 +75,7 @@ export const Introduction: FunctionComponent = () => {
           />
         </div>
       </div>
-      <div className="background pointer-events-none absolute inset-0 -z-30 z-0 select-none">
+      <div className="background pointer-events-none absolute inset-0 -z-0 select-none">
         <div className="relative left-1/2 top-1/2  h-2/3 w-1/2 -translate-y-[30%] rounded-full bg-gradient-radial from-emerald-600/30 to-sky-600/5 blur-2xl"></div>
       </div>
     </section>

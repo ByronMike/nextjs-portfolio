@@ -38,7 +38,7 @@ type IconProps = {
 
 export interface Technology {
   name: string;
-  Icon: React.FunctionComponent<IconProps>; // Define Icon as a functional component
+  Icon: React.FunctionComponent<IconProps>;
 }
 
 export const TECH: Record<string, Technology> = {
