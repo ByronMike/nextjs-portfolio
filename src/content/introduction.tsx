@@ -7,10 +7,10 @@ import { SiTailwindcss } from 'react-icons/si';
 import { IconProps } from '@/types/content/tech-stack';
 
 export const Welcome = {
-  pre: 'Welcome to my site.',
+  pre: 'Bienvenue sur mon portfolio',
   heading: (
     <>
-      I'm <strong>Michaël Auger</strong>, a Front-end developer.
+      Je suis <strong>Michaël Auger</strong> Front-end developer.
     </>
   ),
   tech: [

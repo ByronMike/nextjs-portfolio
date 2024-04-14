@@ -35,7 +35,10 @@ export const About: FunctionComponent = () => {
 
   return (
     <section id="about" className="-mt-12 overflow-hidden pt-12">
-      <div className="mx-auto flex max-w-6xl flex-col justify-center gap-16 px-4 pb-16 md:px-8 lg:grid lg:grid-cols-[540px_auto] lg:pt-16">
+      <div className="heading-pre mx-auto w-full max-w-6xl px-4 md:px-8 lg:pt-16">
+        Présentation
+      </div>
+      <div className="mx-auto flex max-w-6xl flex-col justify-center gap-16 px-4 pb-16 md:px-8 lg:grid lg:grid-cols-[540px_auto]">
         <button
           ref={buttonRef}
           className="group relative mx-auto mb-12 mt-10 aspect-3/2 max-h-[405px] w-full max-w-[540px] flex-1 hfa:outline-none lg:mb-auto  lg:mr-0 lg:aspect-4/3"
