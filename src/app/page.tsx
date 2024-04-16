@@ -3,6 +3,7 @@ import { Introduction } from '@/components/sections/introduction';
 import { TechStack } from '@/components/sections/tech-stack';
 import { Timeline } from '@/components/sections/timeline';
 import { Projects } from '@/components/sections/projects';
+import { Partners } from '@/components/sections/partners';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Timeline />
       <Projects />
+      <Partners />
     </main>
   );
 }
