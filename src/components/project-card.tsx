@@ -34,9 +34,9 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
           className="rounded-t-lg object-cover object-center"
         />
       </figure>
-      <div className="absolute bottom-1 left-0 w-full">
+      <div className="absolute bottom-0 left-0 w-full">
         <motion.header
-          className="h-[160px] bg-opacity-60 bg-clip-padding px-4 pb-2 pt-2 text-[15px] tracking-tight text-black backdrop-blur-lg backdrop-filter d:text-black"
+          className="h-[160px] rounded-b-xl bg-opacity-60 bg-clip-padding px-4 pb-2 pt-2 text-[15px] tracking-tight text-black backdrop-blur-lg backdrop-filter d:text-black"
           variants={variants}
           transition={{ duration: 0.3 }}
         >
