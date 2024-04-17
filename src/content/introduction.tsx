@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { SiNextdotjs } from 'react-icons/si';
 import { SiNodedotjs } from 'react-icons/si';
 import { SiReact } from 'react-icons/si';
@@ -35,42 +34,42 @@ export const Welcome = {
   ] as const,
   body: (
     <>
-      My expertise lies in leveraging React and Next.js to create dynamic and
-      efficient web solutions. From crafting interactive user interfaces to
-      optimizing website performance, I excel in harnessing the power of these
-      technologies..{' '}
-      <em className="relative cursor-pointer before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600">
-        WOW!
-      </em>
-      .<span className="mt-4 block" />
-      Continuously expanding my knowledge, I'm deeply engaged in exploring the
-      latest features and best practices within React and Next.js, constantly
-      striving to push the boundaries of what's achievable{' '}
-      <Link
+      Mon expertise se focalise sur l'utilisation de{' '}
+      <a
         target="_blank"
-        href="https://astro.build/"
-        className="underline hfa:text-sky-500"
+        rel="noreferrer"
+        href="https://nextjs.org/"
+        className="relative cursor-pointer underline before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600"
       >
         Next.js
-      </Link>{' '}
-      and{' '}
-      <Link
+      </a>{' '}
+      et{' '}
+      <a
         href="https://react.dev/"
         target="_blank"
-        className="underline hfa:text-sky-500"
+        rel="noreferrer"
+        className="relative cursor-pointer underline before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600"
       >
-        React
-      </Link>
-      .
+        React.js
+      </a>{' '}
+      pour créer des solutions web dynamiques et efficaces. De la conception
+      d'interfaces utilisateur interactives à l'optimisation des performances
+      des sites web.
+      <span className="mt-4 block" />
+      Ma motivation principale réside dans l'amélioration de la qualité de mon
+      code au profit de ses impacts sur le business. Enfin, je poursuis une
+      démarche d'amélioration continue de mes connaissances afin d'utiliser des
+      technologies modernes, pour mettre en oeuvre les meilleures pratiques
+      ainsi que par pur plaisir d'apprendre.
     </>
   ),
   cta1: {
     href: 'mailto:auger.michaell@gmail.com',
-    name: "Let's Work",
+    name: 'Contactez-moi',
   },
   cta2: {
     href: '/resume',
-    name: 'Resume',
+    name: 'CV',
   },
   code: `const App = props => {
     return (
