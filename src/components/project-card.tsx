@@ -34,12 +34,12 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
           className="rounded-t-lg object-cover object-center"
         />
       </figure>
-      <motion.div
-        variants={variants}
-        transition={{ duration: 0.3 }}
-        className="absolute bottom-0 left-0 w-full rounded-bl-xl rounded-br-xl bg-opacity-60 bg-clip-padding py-2 backdrop-blur-lg backdrop-filter"
-      >
-        <header className="px-4">
+      <div className="absolute bottom-1 left-0 w-full">
+        <motion.header
+          className="h-[160px] bg-opacity-60 bg-clip-padding px-4 pb-2 pt-2 text-[15px] tracking-tight text-black backdrop-blur-lg backdrop-filter d:text-black"
+          variants={variants}
+          transition={{ duration: 0.3 }}
+        >
           <h2 className="text-2xl font-bold tracking-tighter text-black d:text-white">
             {project.name}
           </h2>
@@ -56,38 +56,38 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
               );
             })}
           </div>
-        </header>
-        <main className="mt-2 px-4 text-[15px] tracking-tight text-black d:text-black ">
-          <p className="line-clamp-4">{project.description}</p>
-        </main>
-        <footer className="bottom-3 left-0 mt-auto flex w-full items-end justify-end gap-2 px-4">
-          <div className="mr-auto text-sm font-semibold text-black d:text-gray-300/80">
-            {project.year}
+          <p className="line-clamp-4 py-2">{project.description}</p>
+        </motion.header>
+        <footer className="absolute bottom-0 left-0 w-full rounded-b-xl bg-opacity-60 bg-clip-padding px-4 py-2 backdrop-blur-lg backdrop-filter">
+          <div className="flex w-full items-end justify-end gap-2">
+            <div className="mr-auto text-sm font-semibold text-black d:text-gray-300/80">
+              {project.year}
+            </div>
+            {project.repository ? (
+              <Link
+                target="_blank"
+                href={project.repository}
+                className="p-1 text-gray-700/80 transition-all hfa:text-gray-900 d:text-gray-300/80 d:hfa:text-gray-50"
+                data-tip="View repository"
+              >
+                <span className="sr-only">Link to Github repository</span>
+                <FaGithub className="h-5 w-5 " />
+              </Link>
+            ) : null}
+            {project.url ? (
+              <Link
+                target="_blank"
+                href={project.url}
+                className="p-1 text-gray-700/80 transition-all hfa:text-gray-900 d:text-gray-300/80 d:hfa:text-gray-50"
+                data-tip="View site"
+              >
+                <span className="sr-only">Link to Project</span>
+                <LinkIcon className="h-5 w-5 " />
+              </Link>
+            ) : null}
           </div>
-          {project.repository ? (
-            <Link
-              target="_blank"
-              href={project.repository}
-              className="p-1 text-gray-700/80 transition-all hfa:text-gray-900 d:text-gray-300/80 d:hfa:text-gray-50"
-              data-tip="View repository"
-            >
-              <span className="sr-only">Link to Github repository</span>
-              <FaGithub className="h-5 w-5 " />
-            </Link>
-          ) : null}
-          {project.url ? (
-            <Link
-              target="_blank"
-              href={project.url}
-              className="p-1 text-gray-700/80 transition-all hfa:text-gray-900 d:text-gray-300/80 d:hfa:text-gray-50"
-              data-tip="View site"
-            >
-              <span className="sr-only">Link to Project</span>
-              <LinkIcon className="h-5 w-5 " />
-            </Link>
-          ) : null}
         </footer>
-      </motion.div>
+      </div>
     </motion.section>
   );
 };
