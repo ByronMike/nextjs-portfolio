@@ -1,4 +1,4 @@
-import { TECH } from '@/content/tech-stack';
+import { TECH } from '@/content/sections/tech-stack';
 import SurfCommunity from '@/public/images/projects/surf-community.png';
 
 export const PROJECTS = [
