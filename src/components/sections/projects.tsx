@@ -1,7 +1,7 @@
 'use client';
 
 import { FunctionComponent, useState } from 'react';
-import { PROJECTS } from '@/content/projects';
+import { PROJECTS } from '@/content/sections/projects';
 import { ProjectCard } from '@/components/project-card';
 
 export const Projects: FunctionComponent = () => {
@@ -22,7 +22,7 @@ export const Projects: FunctionComponent = () => {
 
   return (
     <section
-      id="portfolio"
+      id="projects"
       className="portfolio-preview mx-auto grid w-full max-w-6xl px-4 md:px-8"
     >
       <div className="mx-auto grid w-full max-w-6xl px-4 md:px-8">

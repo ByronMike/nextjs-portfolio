@@ -2,7 +2,7 @@
 
 import { FunctionComponent, useCallback, useRef, useState } from 'react';
 import Image from 'next/image';
-import { ABOUT } from '@/content/about';
+import { ABOUT } from '@/content/sections/about';
 
 export const About: FunctionComponent = () => {
   const [focusImageIndex, setFocusImageIndex] = useState(0);

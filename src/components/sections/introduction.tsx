@@ -3,11 +3,14 @@ import Link from 'next/link';
 import { Badge } from '@/components/badge';
 import { CodeEditor } from '@/components/code-editor';
 import { Profile } from '@/components/profile';
-import { Welcome } from '@/content/introduction';
+import { Welcome } from '@/content/sections/introduction';
 
 export const Introduction: FunctionComponent = () => {
   return (
-    <section className="relative mx-auto flex max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4 py-16 md:px-8 md:py-32 lg:grid">
+    <section
+      id="introduction"
+      className="relative mx-auto flex max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4 py-16 md:px-8 md:py-32 lg:grid"
+    >
       <div className="col-span-2">
         <div>
           <div className="heading-pre">{Welcome.pre}</div>
