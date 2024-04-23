@@ -8,12 +8,6 @@ export const HEADER = {
   },
   nav: [
     {
-      href: '/#introduction',
-      title: 'Home',
-      alt: 'Home',
-      desktop: true,
-    },
-    {
       href: '/#about',
       title: 'Présentation',
       alt: 'Ma présentation professionnelle et personnelle',
@@ -23,6 +17,12 @@ export const HEADER = {
       href: '/#projects',
       title: 'Projets',
       alt: 'Mes meilleurs projets',
+      desktop: true,
+    },
+    {
+      href: '/#partners',
+      title: 'Partenaires',
+      alt: 'Mes partenaires de confiance',
       desktop: true,
     },
     {
