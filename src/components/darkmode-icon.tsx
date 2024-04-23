@@ -1,3 +1,5 @@
+'use client';
+
 import { m as motion, useMotionValue, useTransform } from 'framer-motion';
 // import { useTheme } from 'next-themes';
 import { FunctionComponent } from 'react';
