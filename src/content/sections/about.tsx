@@ -2,6 +2,7 @@ import Bouddha from '@/public/images/about/bouddha.jpg';
 import Calanques from '@/public/images/about/calanques.jpg';
 import Dev from '@/public/images/about/dev.jpg';
 import JurassicPark from '@/public/images/about/jurassic-park.jpg';
+import Me from '@/public/images/about/me.png';
 import SurfPortugal from '@/public/images/about/surf-portugal.jpg';
 import TahitiJardin from '@/public/images/about/tahiti-jardin.jpg';
 import TahitiPk0 from '@/public/images/about/tahiti-pk0.jpg';
@@ -58,6 +59,10 @@ export const ABOUT = {
     </>
   ),
   images: [
+    {
+      src: Me,
+      alt: 'Votre aimable serviteur',
+    },
     {
       src: SurfPortugal,
       alt: 'Surf au Portugal dans la région de Peniche',
