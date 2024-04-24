@@ -24,7 +24,7 @@
       "@/content/*": ["./src/content/*"],
       "@/public/*": ["./public/*"],
       "@/lib/*": ["./src/lib/*"],
-      "@/utils/*": ["./src/utils/*"],
+      "@/helpers/*": ["src/helpers/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/types/*": ["./src/types/*"],

@@ -18,11 +18,15 @@ export const ABOUT = {
       caption: 'ans',
     },
     {
-      statistic: '7',
+      statistic: `${
+        new Date(Date.now() - new Date('2017').getTime()).getFullYear() - 1970
+      }`,
       caption: 'années Webmaster',
     },
     {
-      statistic: '3+',
+      statistic: `${
+        new Date(Date.now() - new Date('2021').getTime()).getFullYear() - 1970
+      }+`,
       caption: 'années Développeur',
     },
     {

@@ -34,7 +34,7 @@ export const Welcome = {
   ] as const,
   body: (
     <>
-      Mon expertise se focalise sur l'utilisation de{' '}
+      Mon expertise se focalise sur{' '}
       <a
         target="_blank"
         rel="noreferrer"

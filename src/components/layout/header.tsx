@@ -15,7 +15,7 @@ export const Header: FunctionComponent = () => {
             href="/"
             className="z-10 w-min"
             data-tip={
-              "Bonjour, je m'appelle Michaël. Bienvenue sur mon portfolioHi."
+              "Bonjour, je m'appelle Michaël. Bienvenue sur mon portfolio."
             }
             data-delay-show={2000}
           >

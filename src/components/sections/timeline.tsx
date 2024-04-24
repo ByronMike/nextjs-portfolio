@@ -4,7 +4,7 @@ import { FunctionComponent, useRef, useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { useInView } from 'framer-motion';
 import { useDebouncedEffect } from '@/hooks/useDebouncedEffect';
-import { scrollToX } from '@/utils/scrollTo';
+import { scrollToX } from '@/helpers/utils/scrollTo';
 import { TIMELINEOBJECT } from '@/content/sections/timeline';
 
 export const Timeline: FunctionComponent = () => {
