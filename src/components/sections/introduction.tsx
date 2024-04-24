@@ -1,11 +1,22 @@
+'use client';
+
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { Badge } from '@/components/badge';
 import { CodeEditor } from '@/components/code-editor';
 import { Profile } from '@/components/profile';
 import { Welcome } from '@/content/sections/introduction';
+import { useGitHubUserData } from '@/hooks/useGitHubUserData';
+import {
+  NEXT_PUBLIC_GITHUB_TOKEN,
+  NEXT_PUBLIC_GITHUB_USER,
+} from '@/helpers/constants';
 
 export const Introduction: FunctionComponent = () => {
+  const { user } = useGitHubUserData(
+    NEXT_PUBLIC_GITHUB_USER,
+    NEXT_PUBLIC_GITHUB_TOKEN
+  );
   return (
     <section
       id="introduction"
@@ -69,13 +80,18 @@ export const Introduction: FunctionComponent = () => {
           </div>
         </div>
         <div className="absolute hidden sm:-right-5 sm:top-24 sm:block lg:-left-64 lg:top-full">
-          <Profile
-            profile_image_url="/logo.svg"
-            name="Michael"
-            username="Auger"
-            description="Je m'appelle Michael"
-            public_metrics={{ following_count: 3, followers_count: 10 }}
-          />
+          {user && (
+            <Profile
+              profile_image_url="/logo.svg"
+              name={user.name}
+              username={user.login}
+              description={user.bio}
+              public_metrics={{
+                following_count: user.following,
+                followers_count: user.followers,
+              }}
+            />
+          )}
         </div>
       </div>
       <div className="background pointer-events-none absolute inset-0 -z-0 select-none">

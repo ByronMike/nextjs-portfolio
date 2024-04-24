@@ -31,7 +31,7 @@ export const Profile: FunctionComponent<ProfileProps> = ({
         </div>
         <Link
           target="_blank"
-          href={`https://twitter.com/${username}`}
+          href={`https://github.com/${username}`}
           className="butter-border my-auto ml-auto flex items-center justify-center rounded-full bg-sky-500/90 px-4 py-1.5 text-xs text-white transition-colors hfa:bg-sky-600/80 d:bg-sky-600/90 d:hfa:bg-sky-500/80"
         >
           Follow
