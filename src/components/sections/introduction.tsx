@@ -70,7 +70,7 @@ export const Introduction: FunctionComponent = () => {
         </div>
         <div className="absolute hidden sm:-right-5 sm:top-24 sm:block lg:-left-64 lg:top-full">
           <Profile
-            profile_image_url=""
+            profile_image_url="/logo.svg"
             name="Michael"
             username="Auger"
             description="Je m'appelle Michael"
