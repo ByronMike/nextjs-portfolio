@@ -64,6 +64,10 @@ const config: Config = {
         blink: {
           '50%': { opacity: '0' },
         },
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         slide: 'slide 30s linear infinite',
@@ -71,6 +75,7 @@ const config: Config = {
         float: 'float 6s ease-in-out infinite',
         heartbeat: 'heartbeat 2s ease-in-out infinite',
         blink: 'blink 0.75s step-start infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
       },
       // fontFamily: {
       //   sans: ['Inter', ...defaultTheme.fontFamily.sans],

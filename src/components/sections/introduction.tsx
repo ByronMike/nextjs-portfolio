@@ -26,17 +26,33 @@ export const Introduction: FunctionComponent = () => {
         <div>
           <div className="heading-pre">{Welcome.pre}</div>
           <h1 className="heading-hero ">{Welcome.heading}</h1>
-          <ul className="sm:scrollbar-none -mx-4 mb-2 flex items-center gap-6 overflow-x-auto px-4 pb-2 text-[15px] font-medium">
-            {Welcome.tech.map(({ name, Icon }) => (
-              <li
-                className="flex items-center gap-2 text-gray-500 d:text-gray-400"
-                key={name}
-              >
-                <Icon className="h-7 w-7 text-gray-400 d:text-gray-300/80" />
-                {name}
-              </li>
-            ))}
-          </ul>
+          <div className="group inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+            <ul className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8">
+              {Welcome.tech.map(({ name, Icon }) => (
+                <li
+                  className="flex items-center gap-2 text-gray-500 d:text-gray-400"
+                  key={name}
+                >
+                  <Icon className="h-7 w-7 text-gray-400 d:text-gray-300/80" />
+                  {name}
+                </li>
+              ))}
+            </ul>
+            <ul
+              className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8"
+              aria-hidden="true"
+            >
+              {Welcome.tech.map(({ name, Icon }) => (
+                <li
+                  className="flex items-center gap-2 text-gray-500 d:text-gray-400"
+                  key={name}
+                >
+                  <Icon className="h-7 w-7 text-gray-400 d:text-gray-300/80" />
+                  {name}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div>
           <p className="mb-3 max-w-prose font-normal text-gray-500 d:text-gray-400 md:text-lg md:tracking-tight">
