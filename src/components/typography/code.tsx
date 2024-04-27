@@ -27,7 +27,7 @@ export const Code: FunctionComponent<CodeGroupProps> = ({
   }, []);
 
   return (
-    <pre className={clsx(`language-${language}`, className)}>
+    <pre className={clsx(`language-${language}`, className)} tabIndex={-1}>
       {(Array.isArray(code) ? code : [code]).map(
         (e: string | string[], index: number) => (
           <code key={index} className={`language-${language}`}>
