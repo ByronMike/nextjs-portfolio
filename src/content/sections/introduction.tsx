@@ -71,13 +71,25 @@ export const Welcome = {
     href: '/resume',
     name: 'CV',
   },
-  code: `const App = props => {
-    return (
-      <div>
-        <h1> React App </h1>
-        <div>Awesome code</div>
-      </div>
-    );
-  };
-  `,
+  code1: `import {`,
+  code2: ` FunctionComponent `,
+  code3: `} from 'react'; \n\ntype `,
+  code4: `WelcomeProps`,
+  code5: ` = {
+  objectives:
+    | 'experiment new tech'
+    | 'show my skills'
+    | 'find freelancing opportunities'
+    | 'find a fulltime job';
+  }; \n\n`,
+  code6: `export const Welcome: `,
+  code7: `FunctionComponent`,
+  code8: `<WelcomeProps> = ({ objectives }) => {
+  return (
+    <>
+      <h1>Bienvenue sur mon portfolio</h1>
+      <p>Ce site me permet de <em>{objectives}</em></p>
+    </>
+  );
+};`,
 };

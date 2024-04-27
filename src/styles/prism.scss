@@ -17,12 +17,76 @@
     transition: 0.15s color;
   }
 
-  .token.tag,
   .token.class-name {
     color: #b7e2f8;
   }
   .token.tag > .token.punctuation {
     color: #65c6ff;
+  }
+
+  #introduction
+    > div.relative.md\:h-\[420px\]
+    > div.relative.flex.h-full.min-w-\[460px\].flex-col.gap-4.sm\:min-w-\[660px\].lg\:absolute.lg\:left-6.lg\:top-16.lg\:min-w-\[460px\]
+    > div.relative.flex.h-full.flex-col
+    > figure
+    > div.relative.overflow-hidden.before\:absolute.b\:pointer-events-none.b\:bottom-0.b\:z-10.b\:h-12.b\:w-full.b\:select-none.b\:bg-gradient-to-b.b\:from-transparent.b\:to-gray-900
+    > div
+    > pre
+    > code
+    > span
+    > .token.tag {
+    color: #b7e2f8;
+  }
+
+  #introduction
+    > div.relative.md\:h-\[420px\]
+    > div.relative.flex.h-full.min-w-\[460px\].flex-col.gap-4.sm\:min-w-\[660px\].lg\:absolute.lg\:left-6.lg\:top-16.lg\:min-w-\[460px\]
+    > div.relative.flex.h-full.flex-col
+    > figure
+    > div.relative.overflow-hidden.before\:absolute.b\:pointer-events-none.b\:bottom-0.b\:z-10.b\:h-12.b\:w-full.b\:select-none.b\:bg-gradient-to-b.b\:from-transparent.b\:to-gray-900
+    > div
+    > pre
+    > code:nth-child(4) {
+    color: #f8b7e3;
+  }
+
+  #introduction
+    > div.relative.md\:h-\[420px\]
+    > div.relative.flex.h-full.min-w-\[460px\].flex-col.gap-4.sm\:min-w-\[660px\].lg\:absolute.lg\:left-6.lg\:top-16.lg\:min-w-\[460px\]
+    > div.relative.flex.h-full.flex-col
+    > figure
+    > div.relative.overflow-hidden.before\:absolute.b\:pointer-events-none.b\:bottom-0.b\:z-10.b\:h-12.b\:w-full.b\:select-none.b\:bg-gradient-to-b.b\:from-transparent.b\:to-gray-900
+    > div
+    > pre
+    > code:nth-child(8)
+    > span:nth-child(1)
+    > span.token.tag
+    > span.token.class-name {
+    color: #f8b7e3;
+  }
+
+  #introduction
+    > div.relative.md\:h-\[420px\]
+    > div.relative.flex.h-full.min-w-\[460px\].flex-col.gap-4.sm\:min-w-\[660px\].lg\:absolute.lg\:left-6.lg\:top-16.lg\:min-w-\[460px\]
+    > div.relative.flex.h-full.flex-col
+    > figure
+    > div.relative.overflow-hidden.before\:absolute.b\:pointer-events-none.b\:bottom-0.b\:z-10.b\:h-12.b\:w-full.b\:select-none.b\:bg-gradient-to-b.b\:from-transparent.b\:to-gray-900
+    > div
+    > pre
+    > code:nth-child(2) {
+    @apply font-medium text-orange-400;
+  }
+
+  #introduction
+    > div.relative.md\:h-\[420px\]
+    > div.relative.flex.h-full.min-w-\[460px\].flex-col.gap-4.sm\:min-w-\[660px\].lg\:absolute.lg\:left-6.lg\:top-16.lg\:min-w-\[460px\]
+    > div.relative.flex.h-full.flex-col
+    > figure
+    > div.relative.overflow-hidden.before\:absolute.b\:pointer-events-none.b\:bottom-0.b\:z-10.b\:h-12.b\:w-full.b\:select-none.b\:bg-gradient-to-b.b\:from-transparent.b\:to-gray-900
+    > div
+    > pre
+    > code:nth-child(5) {
+    @apply font-medium text-orange-400;
   }
 
   .token.selector,
@@ -42,7 +106,8 @@
   .token.attr-name {
     color: #a6e22e;
   }
-  .token.builtin,
+
+  .span .token.builtin,
   .token.keyword,
   .token.rule,
   .token.pseudo-class,
@@ -99,7 +164,7 @@
   .code-inactive,
   .code-inactive * {
     @apply transition:
-      0.15s color text-slate-400/50;
+    0.15s color text-slate-400/50;
   }
 
   .token.unchanged {
