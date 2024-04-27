@@ -66,3 +66,9 @@
     print-color-adjust: exact;
   }
 }
+
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+}

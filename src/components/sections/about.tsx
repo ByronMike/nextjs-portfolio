@@ -84,10 +84,7 @@ export const About: FunctionComponent = () => {
           <div className="grid max-w-xl grid-cols-2 gap-4 text-center sm:grid-cols-4 sm:text-left">
             {ABOUT.stats.map(({ statistic, caption }, index) => {
               return (
-                <figure
-                  key={caption + index}
-                  className="cursor-help select-none spacing-1"
-                >
+                <figure key={caption + index} className="select-none spacing-1">
                   <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-4xl font-extrabold tracking-tighter text-transparent">
                     {statistic}
                   </span>

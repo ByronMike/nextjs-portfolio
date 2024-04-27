@@ -17,6 +17,12 @@ export const Introduction: FunctionComponent = () => {
     NEXT_PUBLIC_GITHUB_USER,
     NEXT_PUBLIC_GITHUB_TOKEN
   );
+  const codeSnippets: string[] = [];
+  for (let i = 1; i <= 8; i++) {
+    // @ts-expect-error: Should be fixed one day
+    codeSnippets.push(Welcome[`code${i}`]);
+  }
+
   return (
     <section
       id="introduction"
@@ -26,17 +32,33 @@ export const Introduction: FunctionComponent = () => {
         <div>
           <div className="heading-pre">{Welcome.pre}</div>
           <h1 className="heading-hero ">{Welcome.heading}</h1>
-          <ul className="sm:scrollbar-none -mx-4 mb-2 flex items-center gap-6 overflow-x-auto px-4 pb-2 text-[15px] font-medium">
-            {Welcome.tech.map(({ name, Icon }) => (
-              <li
-                className="flex items-center gap-2 text-gray-500 d:text-gray-400"
-                key={name}
-              >
-                <Icon className="h-7 w-7 text-gray-400 d:text-gray-300/80" />
-                {name}
-              </li>
-            ))}
-          </ul>
+          <div className="group inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+            <ul className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8">
+              {Welcome.tech.map(({ name, Icon }) => (
+                <li
+                  className="flex items-center gap-2 text-gray-500 d:text-gray-400"
+                  key={name}
+                >
+                  <Icon className="h-7 w-7 text-gray-400 d:text-gray-300/80" />
+                  {name}
+                </li>
+              ))}
+            </ul>
+            <ul
+              className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8"
+              aria-hidden="true"
+            >
+              {Welcome.tech.map(({ name, Icon }) => (
+                <li
+                  className="flex items-center gap-2 text-gray-500 d:text-gray-400"
+                  key={name}
+                >
+                  <Icon className="h-7 w-7 text-gray-400 d:text-gray-300/80" />
+                  {name}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div>
           <p className="mb-3 max-w-prose font-normal text-gray-500 d:text-gray-400 md:text-lg md:tracking-tight">
@@ -75,11 +97,11 @@ export const Introduction: FunctionComponent = () => {
             <Badge style="plain">Ginger tea aficionado</Badge>
           </div>
           <div className="relative flex h-full flex-col">
-            <CodeEditor code={Welcome.code} language="jsx" />
+            <CodeEditor code={codeSnippets} language="tsx" />
             <div className="absolute -bottom-5 -right-5 -z-10 h-[calc(100%+1.25rem)] w-[calc(100%+1.25rem)] rounded-lg border border-gray-400/20 bg-gray-100/70 [mask-image:linear-gradient(-30deg,#fff_16.35%,rgb(255_255_255_/_0%)_61.66%)] d:border-gray-700/20 d:bg-gray-900/40"></div>
           </div>
         </div>
-        <div className="absolute hidden sm:-right-5 sm:top-24 sm:block lg:-left-64 lg:top-full">
+        <div className="absolute hidden sm:-right-5 sm:top-24 sm:block lg:-left-[270px] lg:top-[105%]">
           {user && (
             <Profile
               profile_image_url="/logo.svg"
