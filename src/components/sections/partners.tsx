@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import Section from '@/components/layout/section';
 import LogoAristid from '@/public/svg/partners/aristid.svg';
 import LogoLP from '@/public/svg/partners/la-provence.svg';
 import LogoProcivis from '@/public/svg/partners/procivis.svg';
@@ -7,7 +8,7 @@ import LogoTCM from '@/public/svg/partners/the-coding-machine.svg';
 
 export const Partners: FunctionComponent = () => {
   return (
-    <section
+    <Section
       id="partners"
       className="portfolio-preview md:px-8> mx-auto my-32 grid w-full max-w-6xl px-4"
     >
@@ -53,6 +54,6 @@ export const Partners: FunctionComponent = () => {
           </a>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

@@ -3,6 +3,7 @@
 import { FunctionComponent, useRef, useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { useInView } from 'framer-motion';
+import Section from '@/components/layout/section';
 import { useDebouncedEffect } from '@/hooks/useDebouncedEffect';
 import { scrollToX } from '@/helpers/utils/scrollTo';
 import { TIMELINEOBJECT } from '@/content/sections/timeline';
@@ -74,7 +75,7 @@ export const Timeline: FunctionComponent = () => {
   );
 
   return (
-    <section id="timeline" className="mx-auto  max-w-6xl px-4 pb-16 md:px-8">
+    <Section id="timeline" className="mx-auto  max-w-6xl px-4 pb-16 md:px-8">
       <div
         className="-mx-4 flex h-96 overflow-x-auto px-6 py-4 xl:mx-0"
         ref={scrollContainerRef}
@@ -156,6 +157,6 @@ export const Timeline: FunctionComponent = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

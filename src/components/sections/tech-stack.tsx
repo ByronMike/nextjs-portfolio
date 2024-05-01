@@ -1,6 +1,7 @@
 'use client';
 
 import { FunctionComponent } from 'react';
+import Section from '@/components/layout/section';
 import LogoReact from '@/public/svg/tools/reactjs.svg';
 import LogoNext from '@/public/svg/tools/nextjs.svg';
 import LogoFigma from '@/public/svg/tools/figma.svg';
@@ -14,7 +15,7 @@ import LogoReactNative from '@/public/svg/tools/react-native.svg';
 
 export const TechStack: FunctionComponent = () => {
   return (
-    <section id="tech-stack" className="mx-auto  max-w-6xl px-4 pb-16 md:px-8">
+    <Section id="tech-stack" className="mx-auto  max-w-6xl px-4 pb-16 md:px-8">
       <h2 className="headline mt-24 text-center text-xl font-bold md:text-2xl lg:text-3xl">
         Mes outils préférés pour le Développement Web
       </h2>
@@ -30,6 +31,6 @@ export const TechStack: FunctionComponent = () => {
         <LogoFigma className="w-8" aria-label="Figma" />
         <LogoMongoDb className="w-32 md:w-40" aria-label="MongoDb" />
       </div>
-    </section>
+    </Section>
   );
 };

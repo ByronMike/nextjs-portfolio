@@ -2,15 +2,16 @@
 
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
+import Section from '@/components/layout/section';
 import { Badge } from '@/components/badge';
 import { CodeEditor } from '@/components/code-editor';
 import { Profile } from '@/components/profile';
-import { Welcome } from '@/content/sections/introduction';
 import { useGitHubUserData } from '@/hooks/useGitHubUserData';
 import {
   NEXT_PUBLIC_GITHUB_TOKEN,
   NEXT_PUBLIC_GITHUB_USER,
 } from '@/helpers/constants';
+import { Welcome } from '@/content/sections/introduction';
 
 export const Introduction: FunctionComponent = () => {
   const { user } = useGitHubUserData(
@@ -24,8 +25,9 @@ export const Introduction: FunctionComponent = () => {
   }
 
   return (
-    <section
+    <Section
       id="introduction"
+      isMotion
       className="relative mx-auto flex max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4 py-16 md:px-8 md:py-32 lg:grid"
     >
       <div className="col-span-2">
@@ -119,6 +121,6 @@ export const Introduction: FunctionComponent = () => {
       <div className="background pointer-events-none absolute inset-0 -z-0 select-none">
         <div className="relative left-1/2 top-1/2  h-2/3 w-1/2 -translate-y-[30%] rounded-full bg-gradient-radial from-emerald-600/30 to-sky-600/5 blur-2xl"></div>
       </div>
-    </section>
+    </Section>
   );
 };

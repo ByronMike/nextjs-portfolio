@@ -1,6 +1,7 @@
 'use client';
 
 import { FunctionComponent, useState } from 'react';
+import Section from '@/components/layout/section';
 import { PROJECTS } from '@/content/sections/projects';
 import { ProjectCard } from '@/components/project-card';
 
@@ -21,8 +22,9 @@ export const Projects: FunctionComponent = () => {
   };
 
   return (
-    <section
+    <Section
       id="projects"
+      isMotion
       className="portfolio-preview mx-auto grid w-full max-w-6xl px-4 md:px-8"
     >
       <div className="mx-auto grid w-full max-w-6xl px-4 md:px-8">
@@ -59,6 +61,6 @@ export const Projects: FunctionComponent = () => {
           <ProjectCard key={project.name} project={project} />
         ))}
       </div>
-    </section>
+    </Section>
   );
 };

@@ -1,12 +1,12 @@
 'use client';
 
 import { FunctionComponent } from 'react';
-
+import Section from '@/components/layout/section';
 import { CONTACTS } from '@/content/sections/contact';
 
 export const Contact: FunctionComponent = () => {
   return (
-    <section id="contact">
+    <Section id="contact">
       <div className="mx-auto mb-40 grid w-full max-w-6xl px-4 md:px-8">
         <div className="heading-pre flex justify-center">Contact</div>
         <h1 className="heading-2xl -ml-1 flex justify-center">Keep in Touch</h1>
@@ -25,6 +25,6 @@ export const Contact: FunctionComponent = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

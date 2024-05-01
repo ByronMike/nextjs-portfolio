@@ -2,6 +2,7 @@
 
 import { FunctionComponent, useCallback, useRef, useState } from 'react';
 import Image from 'next/image';
+import Section from '@/components/layout/section';
 import { ABOUT } from '@/content/sections/about';
 
 export const About: FunctionComponent = () => {
@@ -34,7 +35,7 @@ export const About: FunctionComponent = () => {
   }, [focusImageIndex, images.length]);
 
   return (
-    <section id="about" className="-mt-12 overflow-hidden pt-12">
+    <Section id="about" isMotion className="-mt-12 overflow-hidden pt-12">
       <div className="heading-pre mx-auto w-full max-w-6xl px-4 md:px-8 lg:pt-16">
         Présentation
       </div>
@@ -100,6 +101,6 @@ export const About: FunctionComponent = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
