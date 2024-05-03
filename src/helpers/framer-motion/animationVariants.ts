@@ -1,6 +1,6 @@
 export const sectionVariants = {
   initial: {
-    x: -200,
+    x: -50,
     opacity: 0,
   },
   animate: {
@@ -11,4 +11,15 @@ export const sectionVariants = {
       duration: 0.5,
     },
   },
+};
+
+// INTRODUCTION
+export const upVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
+};
+
+export const displayVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
 };
