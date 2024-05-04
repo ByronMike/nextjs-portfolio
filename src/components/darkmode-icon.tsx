@@ -1,14 +1,13 @@
 'use client';
 
 import { m as motion, useMotionValue, useTransform } from 'framer-motion';
-// import { useTheme } from 'next-themes';
+import { useTheme } from 'next-themes';
 import { FunctionComponent } from 'react';
 
 const DarkmodeIcon: FunctionComponent = () => {
-  // const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const duration = 0.7;
-  // const isDark = theme === 'dark';
-  const isDark = true;
+  const isDark = theme === 'dark';
 
   const moonVariants = {
     checked: {
