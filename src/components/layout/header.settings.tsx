@@ -17,7 +17,6 @@ export const ProfileNav: FunctionComponent = () => {
         }
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
-        <span className="sr-only">Switch Color Theme</span>
         <DarkmodeIcon />
       </button>
       <Link

@@ -21,7 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    // Recommended by the next-theme official docs (only applied one level deep, so it won't block hydration warnings on other elements)
+    <html lang="fr" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon/logo.svg" type="svg" sizes="any" />
       </head>
