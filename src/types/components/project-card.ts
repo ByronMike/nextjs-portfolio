@@ -13,4 +13,5 @@ export interface projectType {
 }
 export interface ProjectCardProps {
   project: projectType;
+  cardNumber: number;
 }

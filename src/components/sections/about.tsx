@@ -2,9 +2,11 @@
 
 import { FunctionComponent, useCallback, useRef, useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import Section from '@/components/layout/section';
 import StatisticItem from '@/components/StatisticItem';
 import { ABOUT } from '@/content/sections/about';
+import { rightVariants } from '@/helpers/framer-motion/animationVariants';
 
 export const About: FunctionComponent = () => {
   const [focusImageIndex, setFocusImageIndex] = useState(0);
@@ -92,9 +94,16 @@ export const About: FunctionComponent = () => {
               />
             ))}
           </div>
-          <div className="tracking tight max-w-3xl leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            variants={rightVariants}
+            className="tracking tight max-w-3xl leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4"
+          >
             {ABOUT.description}
-          </div>
+          </motion.div>
         </div>
       </div>
     </Section>

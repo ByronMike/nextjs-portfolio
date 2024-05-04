@@ -13,7 +13,7 @@ import {
   NEXT_PUBLIC_GITHUB_USER,
 } from '@/helpers/constants';
 import {
-  upVariants,
+  leftVariants,
   displayVariants,
 } from '@/helpers/framer-motion/animationVariants';
 import { Welcome } from '@/content/sections/introduction';
@@ -41,7 +41,7 @@ export const Introduction: FunctionComponent = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          variants={upVariants}
+          variants={leftVariants}
         >
           <div className="heading-pre">{Welcome.pre}</div>
           <h1 className="heading-hero ">{Welcome.heading}</h1>
@@ -78,7 +78,7 @@ export const Introduction: FunctionComponent = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          variants={upVariants}
+          variants={leftVariants}
         >
           <p className="mb-3 max-w-prose font-normal text-gray-500 d:text-gray-400 md:text-lg md:tracking-tight">
             {Welcome.body}
@@ -92,7 +92,7 @@ export const Introduction: FunctionComponent = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          variants={upVariants}
+          variants={leftVariants}
         >
           {Welcome.cta1 ? (
             <Link
