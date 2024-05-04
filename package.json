@@ -1,7 +1,21 @@
 {
-  "name": "nextjs-template",
+  "name": "nextjs-portfolio",
+  "description": "A redesign of my portfolio website.",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Michael Auger",
+    "email": "auger.michaell@gmail.com",
+    "url": "https://michael-auger.fr"
+  },
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ByronMike/nextjs-portfolio"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
