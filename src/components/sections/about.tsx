@@ -2,7 +2,11 @@
 
 import { FunctionComponent, useCallback, useRef, useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Section from '@/components/layout/section';
+import StatisticItem from '@/components/StatisticItem';
 import { ABOUT } from '@/content/sections/about';
+import { rightVariants } from '@/helpers/framer-motion/animationVariants';
 
 export const About: FunctionComponent = () => {
   const [focusImageIndex, setFocusImageIndex] = useState(0);
@@ -34,7 +38,7 @@ export const About: FunctionComponent = () => {
   }, [focusImageIndex, images.length]);
 
   return (
-    <section id="about" className="-mt-12 overflow-hidden pt-12">
+    <Section id="about" isMotion className="-mt-12 overflow-hidden pt-12">
       <div className="heading-pre mx-auto w-full max-w-6xl px-4 md:px-8 lg:pt-16">
         Présentation
       </div>
@@ -82,24 +86,26 @@ export const About: FunctionComponent = () => {
         </button>
         <div className="spacing-8">
           <div className="grid max-w-xl grid-cols-2 gap-4 text-center sm:grid-cols-4 sm:text-left">
-            {ABOUT.stats.map(({ statistic, caption }, index) => {
-              return (
-                <figure key={caption + index} className="select-none spacing-1">
-                  <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-4xl font-extrabold tracking-tighter text-transparent">
-                    {statistic}
-                  </span>
-                  <figcaption className="text-[15px] font-semibold tracking-tight text-gray-400 d:text-gray-300/80">
-                    {caption}
-                  </figcaption>
-                </figure>
-              );
-            })}
+            {ABOUT.stats.map(({ statistic, caption }, index) => (
+              <StatisticItem
+                key={caption + index}
+                statistic={statistic}
+                caption={caption}
+              />
+            ))}
           </div>
-          <div className="tracking tight max-w-3xl leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            variants={rightVariants}
+            className="tracking tight max-w-3xl leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4"
+          >
             {ABOUT.description}
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

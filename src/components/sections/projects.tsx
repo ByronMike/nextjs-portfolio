@@ -1,6 +1,7 @@
 'use client';
 
 import { FunctionComponent, useState } from 'react';
+import Section from '@/components/layout/section';
 import { PROJECTS } from '@/content/sections/projects';
 import { ProjectCard } from '@/components/project-card';
 
@@ -21,8 +22,9 @@ export const Projects: FunctionComponent = () => {
   };
 
   return (
-    <section
+    <Section
       id="projects"
+      isMotion
       className="portfolio-preview mx-auto grid w-full max-w-6xl px-4 md:px-8"
     >
       <div className="mx-auto grid w-full max-w-6xl px-4 md:px-8">
@@ -55,10 +57,10 @@ export const Projects: FunctionComponent = () => {
         </div>
       </div>
       <div className="flex flex-wrap gap-4">
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.name} project={project} />
+        {filteredProjects.map((project, key) => (
+          <ProjectCard key={project.name} project={project} cardNumber={key} />
         ))}
       </div>
-    </section>
+    </Section>
   );
 };

@@ -2,15 +2,21 @@
 
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Section from '@/components/layout/section';
 import { Badge } from '@/components/badge';
 import { CodeEditor } from '@/components/code-editor';
 import { Profile } from '@/components/profile';
-import { Welcome } from '@/content/sections/introduction';
 import { useGitHubUserData } from '@/hooks/useGitHubUserData';
 import {
   NEXT_PUBLIC_GITHUB_TOKEN,
   NEXT_PUBLIC_GITHUB_USER,
 } from '@/helpers/constants';
+import {
+  leftVariants,
+  displayVariants,
+} from '@/helpers/framer-motion/animationVariants';
+import { Welcome } from '@/content/sections/introduction';
 
 export const Introduction: FunctionComponent = () => {
   const { user } = useGitHubUserData(
@@ -24,12 +30,19 @@ export const Introduction: FunctionComponent = () => {
   }
 
   return (
-    <section
+    <Section
       id="introduction"
+      isMotion
       className="relative mx-auto flex max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4 py-16 md:px-8 md:py-32 lg:grid"
     >
       <div className="col-span-2">
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          variants={leftVariants}
+        >
           <div className="heading-pre">{Welcome.pre}</div>
           <h1 className="heading-hero ">{Welcome.heading}</h1>
           <div className="group inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
@@ -59,15 +72,28 @@ export const Introduction: FunctionComponent = () => {
               ))}
             </ul>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          variants={leftVariants}
+        >
           <p className="mb-3 max-w-prose font-normal text-gray-500 d:text-gray-400 md:text-lg md:tracking-tight">
             {Welcome.body}
           </p>
 
           <p className="mb-3 max-w-xl font-normal text-gray-500 md:text-lg md:tracking-tight"></p>
-        </div>
-        <div className="mt-6 flex flex-wrap gap-4 md:gap-8">
+        </motion.div>
+        <motion.div
+          className="mt-6 flex flex-wrap gap-4 md:gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          variants={leftVariants}
+        >
           {Welcome.cta1 ? (
             <Link
               href={Welcome.cta1.href}
@@ -85,10 +111,17 @@ export const Introduction: FunctionComponent = () => {
               {Welcome.cta2.name}
             </Link>
           ) : null}
-        </div>
+        </motion.div>
       </div>
       <div className="relative md:h-[420px]">
-        <div className="relative flex h-full min-w-[460px] flex-col gap-4 sm:min-w-[660px] lg:absolute lg:left-6 lg:top-16 lg:min-w-[460px]">
+        <motion.div
+          className="relative flex h-full min-w-[460px] flex-col gap-4 sm:min-w-[660px] lg:absolute lg:left-6 lg:top-16 lg:min-w-[460px]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          variants={displayVariants}
+        >
           <div className="relative z-20 flex justify-end gap-1.5">
             <Badge style="info">TS Developer</Badge>
             <Badge style="success">Watersport Blogger</Badge>
@@ -100,8 +133,15 @@ export const Introduction: FunctionComponent = () => {
             <CodeEditor code={codeSnippets} language="tsx" />
             <div className="absolute -bottom-5 -right-5 -z-10 h-[calc(100%+1.25rem)] w-[calc(100%+1.25rem)] rounded-lg border border-gray-400/20 bg-gray-100/70 [mask-image:linear-gradient(-30deg,#fff_16.35%,rgb(255_255_255_/_0%)_61.66%)] d:border-gray-700/20 d:bg-gray-900/40"></div>
           </div>
-        </div>
-        <div className="absolute hidden sm:-right-5 sm:top-24 sm:block lg:-left-[270px] lg:top-[105%]">
+        </motion.div>
+        <motion.div
+          className="absolute hidden sm:-right-5 sm:top-24 sm:block lg:-left-[270px] lg:top-[105%]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+          variants={displayVariants}
+        >
           {user && (
             <Profile
               profile_image_url="/logo.svg"
@@ -114,11 +154,11 @@ export const Introduction: FunctionComponent = () => {
               }}
             />
           )}
-        </div>
+        </motion.div>
       </div>
       <div className="background pointer-events-none absolute inset-0 -z-0 select-none">
         <div className="relative left-1/2 top-1/2  h-2/3 w-1/2 -translate-y-[30%] rounded-full bg-gradient-radial from-emerald-600/30 to-sky-600/5 blur-2xl"></div>
       </div>
-    </section>
+    </Section>
   );
 };

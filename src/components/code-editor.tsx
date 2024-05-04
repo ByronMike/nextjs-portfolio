@@ -15,17 +15,14 @@ export const CodeEditor = ({
       >
         <i className="flex gap-1.5">
           <button
-            tabIndex={-1}
             aria-hidden
             className="h-3 w-3 rounded-full bg-gray-700 transition-colors h:bg-[#EC6A5F]"
           />
           <button
-            tabIndex={-1}
             aria-hidden
             className="h-3 w-3 rounded-full bg-gray-700 transition-colors h:bg-[#F4BF50]"
           />
           <button
-            tabIndex={-1}
             aria-hidden
             className="h-3 w-3 rounded-full bg-gray-700 transition-colors h:bg-[#61C454]"
           />
