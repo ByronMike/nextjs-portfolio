@@ -31,7 +31,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
         key={project.name}
         whileHover="hover"
         className={clsx(
-          'backdrop relative h-[380px] w-[340px] min-w-[340px] snap-start rounded-xl border-2 border-gray-700/30 bg-white bg-opacity-10  bg-clip-padding p-4 shadow-xl  transition-[min-width,width,margin-left,opacity] duration-300 spacing-0 d:border-white/20'
+          'hover:shadow-neon backdrop to-black-500 relative h-[380px] w-[340px] min-w-[340px] snap-start rounded-xl border border-2 border-gray-700/30 bg-white bg-opacity-10 from-[#06b6d4] bg-clip-padding p-4  shadow-xl transition-[min-width,width,margin-left,opacity]  duration-300 spacing-0 d:border-[#06b6d4]   d:bg-opacity-0 d:bg-gradient-to-r'
         )}
       >
         <figure className="relative flex aspect-2 h-full w-full">
@@ -49,7 +49,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
             variants={variants}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-2xl font-bold tracking-tighter text-black d:text-white">
+            <h2 className="text-2xl font-bold tracking-tighter text-black">
               {project.name}
             </h2>
             <div className="-ml-0.5 mt-0.5 flex items-center gap-2 tracking-tight text-black d:text-gray-200">
@@ -67,7 +67,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
             </div>
             <p className="line-clamp-4 py-2">{project.description}</p>
           </motion.header>
-          <footer className="absolute bottom-0 left-0 w-full rounded-b-xl bg-opacity-60 bg-clip-padding px-4 py-2 backdrop-blur-lg backdrop-filter">
+          <footer className="absolute bottom-0 left-0 w-full rounded-b-xl bg-opacity-60 bg-clip-padding px-4 py-2 backdrop-blur-lg backdrop-filter d:backdrop-blur-none">
             <div className="flex w-full items-end justify-end gap-2">
               <div className="mr-auto text-sm font-semibold text-black d:text-gray-300/80">
                 {project.year}
