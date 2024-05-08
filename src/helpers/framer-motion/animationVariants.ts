@@ -13,6 +13,10 @@ export const sectionVariants = {
   },
 };
 
+export const cardAnimationVariants = {
+  hover: { opacity: 0, y: '100%' },
+};
+
 export const displayVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
@@ -54,4 +58,8 @@ export const sunVariants = {
   unchecked: {
     scale: 1,
   },
+};
+
+export const blurAnimationVariations = {
+  hover: { backdropFilter: 'blur(10px)' },
 };

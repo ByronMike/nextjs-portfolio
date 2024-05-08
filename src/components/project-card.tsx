@@ -9,11 +9,11 @@ import { LinkIcon } from '@heroicons/react/24/solid';
 import { FaGithub } from 'react-icons/fa';
 
 import { ProjectCardProps } from '@/types/components/project-card';
-import { upScaleVariants } from '@/helpers/framer-motion/animationVariants';
-
-const variants = {
-  hover: { opacity: 0, y: '100%' },
-};
+import {
+  upScaleVariants,
+  cardAnimationVariants,
+  blurAnimationVariations,
+} from '@/helpers/framer-motion/animationVariants';
 
 export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
   project,
@@ -31,7 +31,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
         key={project.name}
         whileHover="hover"
         className={clsx(
-          'hover:shadow-neon backdrop to-black-500 relative h-[380px] w-[340px] min-w-[340px] snap-start rounded-xl border border-2 border-gray-700/30 bg-white bg-opacity-10 from-[#06b6d4] bg-clip-padding p-4  shadow-xl transition-[min-width,width,margin-left,opacity]  duration-300 spacing-0 d:border-[#06b6d4]   d:bg-opacity-0 d:bg-gradient-to-r'
+          'd:hover:dark-shadow-neon hover:shadow-neon backdrop to-black-500 relative h-[380px] w-[340px] min-w-[340px] snap-start rounded-xl border-2 border-gray-700/30 bg-white bg-opacity-10 from-[#06b6d4] bg-clip-padding p-4  shadow-xl transition-[min-width,width,margin-left,opacity]  duration-300 spacing-0 d:border-[#06b6d4]   d:bg-opacity-0 d:bg-gradient-to-r'
         )}
       >
         <figure className="relative flex aspect-2 h-full w-full">
@@ -46,7 +46,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
         <div className="absolute bottom-0 left-0 w-full">
           <motion.header
             className="h-[160px] rounded-b-xl bg-opacity-60 bg-clip-padding px-4 pb-2 pt-2 text-[15px] tracking-tight text-black backdrop-blur-lg backdrop-filter d:text-black"
-            variants={variants}
+            variants={cardAnimationVariants}
             transition={{ duration: 0.3 }}
           >
             <h2 className="text-2xl font-bold tracking-tighter text-black">
@@ -67,16 +67,21 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
             </div>
             <p className="line-clamp-4 py-2">{project.description}</p>
           </motion.header>
-          <footer className="absolute bottom-0 left-0 w-full rounded-b-xl bg-opacity-60 bg-clip-padding px-4 py-2 backdrop-blur-lg backdrop-filter d:backdrop-blur-none">
+          <motion.footer
+            className="absolute bottom-0 left-0 w-full rounded-b-xl bg-opacity-60 bg-clip-padding px-4 py-2 backdrop-blur-lg backdrop-filter d:backdrop-blur-none"
+            variants={blurAnimationVariations}
+            transition={{ duration: 0.3 }}
+          >
+            {/* d:backdrop-blur-none */}
             <div className="flex w-full items-end justify-end gap-2">
-              <div className="mr-auto text-sm font-semibold text-black d:text-gray-300/80">
+              <div className="mr-auto text-sm font-semibold text-black">
                 {project.year}
               </div>
               {project.repository ? (
                 <Link
                   target="_blank"
                   href={project.repository}
-                  className="p-1 text-gray-700/80 transition-all hfa:text-gray-900 d:text-gray-300/80 d:hfa:text-gray-50"
+                  className="p-1 text-gray-700/80 transition-all"
                   data-tip="View repository"
                 >
                   <span className="sr-only">Link to Github repository</span>
@@ -87,7 +92,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                 <Link
                   target="_blank"
                   href={project.url}
-                  className="p-1 text-gray-700/80 transition-all hfa:text-gray-900 d:text-gray-300/80 d:hfa:text-gray-50"
+                  className="p-1 text-gray-700/80 transition-all"
                   data-tip="View site"
                 >
                   <span className="sr-only">Link to Project</span>
@@ -95,7 +100,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                 </Link>
               ) : null}
             </div>
-          </footer>
+          </motion.footer>
         </div>
       </motion.div>
     </motion.section>
