@@ -8,7 +8,6 @@ import DarkmodeIcon from '@/components/darkmode-icon';
 
 export const ProfileNav: FunctionComponent = () => {
   const { theme, setTheme } = useTheme();
-
   return (
     <nav className="z-10 ml-auto flex gap-1 pl-4">
       <button
@@ -18,7 +17,6 @@ export const ProfileNav: FunctionComponent = () => {
         }
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
-        <span className="sr-only">Switch Color Theme</span>
         <DarkmodeIcon />
       </button>
       <Link

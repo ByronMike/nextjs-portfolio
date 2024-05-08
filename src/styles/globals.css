@@ -71,4 +71,19 @@
   .paused {
     animation-play-state: paused;
   }
+  .shadow-neon {
+    box-shadow:
+      0 0 10px 5px rgba(160, 172, 174, 0.75),
+      0 0 20px 10px rgba(255, 255, 255, 0.5),
+      0 0 30px 15px rgba(255, 255, 255, 0.3),
+      0 0 40px 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .dark-shadow-neon {
+    box-shadow:
+      0 0 10px 5px rgba(81, 219, 243, 0.75),
+      0 0 20px 10px rgba(255, 255, 255, 0.5),
+      0 0 30px 15px rgba(255, 255, 255, 0.3),
+      0 0 40px 20px rgba(255, 255, 255, 0.2);
+  }
 }

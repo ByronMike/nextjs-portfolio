@@ -1,32 +1,15 @@
-'use client';
-
-import { m as motion, useMotionValue, useTransform } from 'framer-motion';
-// import { useTheme } from 'next-themes';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { useTheme } from 'next-themes';
 import { FunctionComponent } from 'react';
+import {
+  moonVariants,
+  sunVariants,
+} from '@/helpers/framer-motion/animationVariants';
 
 const DarkmodeIcon: FunctionComponent = () => {
-  // const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const duration = 0.7;
-  // const isDark = theme === 'dark';
-  const isDark = true;
-
-  const moonVariants = {
-    checked: {
-      scale: 1,
-    },
-    unchecked: {
-      scale: 0,
-    },
-  };
-
-  const sunVariants = {
-    checked: {
-      scale: 0,
-    },
-    unchecked: {
-      scale: 1,
-    },
-  };
+  const isDark = theme === 'dark';
 
   const scaleMoon = useMotionValue(isDark ? 1 : 0);
   const scaleSun = useMotionValue(isDark ? 0 : 1);
@@ -48,8 +31,9 @@ const DarkmodeIcon: FunctionComponent = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          initial={isDark ? 'checked' : 'unchecked'}
+          animate={isDark ? 'checked' : 'unchecked'}
           variants={sunVariants}
-          custom={isDark}
           transition={{ duration }}
           style={{
             pathLength: pathLengthSun,
@@ -62,8 +46,9 @@ const DarkmodeIcon: FunctionComponent = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          initial={isDark ? 'checked' : 'unchecked'}
+          animate={isDark ? 'checked' : 'unchecked'}
           variants={sunVariants}
-          custom={isDark}
           transition={{ duration }}
           style={{
             pathLength: pathLengthSun,
@@ -76,8 +61,9 @@ const DarkmodeIcon: FunctionComponent = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          initial={isDark ? 'checked' : 'unchecked'}
+          animate={isDark ? 'checked' : 'unchecked'}
           variants={sunVariants}
-          custom={isDark}
           transition={{ duration }}
           style={{
             pathLength: pathLengthSun,
@@ -90,8 +76,9 @@ const DarkmodeIcon: FunctionComponent = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          initial={isDark ? 'checked' : 'unchecked'}
+          animate={isDark ? 'checked' : 'unchecked'}
           variants={sunVariants}
-          custom={isDark}
           transition={{ duration }}
           style={{
             pathLength: pathLengthSun,
@@ -104,8 +91,9 @@ const DarkmodeIcon: FunctionComponent = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          initial={isDark ? 'checked' : 'unchecked'}
+          animate={isDark ? 'checked' : 'unchecked'}
           variants={sunVariants}
-          custom={isDark}
           transition={{ duration }}
           style={{
             pathLength: pathLengthSun,
@@ -118,8 +106,9 @@ const DarkmodeIcon: FunctionComponent = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          initial={isDark ? 'checked' : 'unchecked'}
+          animate={isDark ? 'checked' : 'unchecked'}
           variants={sunVariants}
-          custom={isDark}
           transition={{ duration }}
           style={{
             pathLength: pathLengthSun,
@@ -132,8 +121,9 @@ const DarkmodeIcon: FunctionComponent = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          initial={isDark ? 'checked' : 'unchecked'}
+          animate={isDark ? 'checked' : 'unchecked'}
           variants={sunVariants}
-          custom={isDark}
           transition={{ duration }}
           style={{
             pathLength: pathLengthSun,
@@ -146,8 +136,9 @@ const DarkmodeIcon: FunctionComponent = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          initial={isDark ? 'checked' : 'unchecked'}
+          animate={isDark ? 'checked' : 'unchecked'}
           variants={sunVariants}
-          custom={isDark}
           transition={{ duration }}
           style={{
             pathLength: pathLengthSun,
@@ -160,8 +151,9 @@ const DarkmodeIcon: FunctionComponent = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          initial={isDark ? 'checked' : 'unchecked'}
+          animate={isDark ? 'checked' : 'unchecked'}
           variants={sunVariants}
-          custom={isDark}
           transition={{ duration }}
           style={{
             pathLength: pathLengthSun,
@@ -174,9 +166,10 @@ const DarkmodeIcon: FunctionComponent = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          transition={{ duration }}
+          initial={isDark ? 'checked' : 'unchecked'}
+          animate={isDark ? 'checked' : 'unchecked'}
           variants={moonVariants}
-          custom={isDark}
+          transition={{ duration }}
           style={{
             pathLength: pathLengthMoon,
             scale: scaleMoon,

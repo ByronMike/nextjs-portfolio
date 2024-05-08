@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { ThemeProvider } from '@/components/providers/theme-provider';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import '@/styles/globals.css';
@@ -20,14 +21,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    // Recommended by the next-theme official docs (only applied one level deep, so it won't block hydration warnings on other elements)
+    <html lang="fr" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon/logo.svg" type="svg" sizes="any" />
       </head>
       <body>
-        <Header />
-        <main className={inter.className}>{children}</main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className={inter.className}>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
