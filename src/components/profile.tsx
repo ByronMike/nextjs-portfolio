@@ -12,7 +12,7 @@ export const Profile: FunctionComponent<ProfileProps> = ({
   public_metrics,
 }) => {
   return (
-    <section className="max-w-xs animate-float rounded-lg border-2 border-gray-400/30 bg-white/90 p-4 backdrop-blur-md will-change-transform spacing-2 d:bg-gray-800 lg:bg-white/80">
+    <section className="absolute left-[352px] w-[100%] max-w-xs animate-float rounded-lg border-2 border-gray-400/30 bg-white/90 p-4 backdrop-blur-md will-change-transform spacing-2 d:bg-gray-800 lg:relative lg:left-0  lg:top-[65px] lg:bg-white/80 ">
       <div className="flex gap-4">
         <figure className="overflow-hidden rounded-full border-2 border-gray-400/50">
           <Image

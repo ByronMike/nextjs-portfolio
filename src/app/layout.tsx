@@ -34,7 +34,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className={inter.className}>{children}</main>
+          <main className={`flex flex-col justify-center ${inter.className}`}>
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>

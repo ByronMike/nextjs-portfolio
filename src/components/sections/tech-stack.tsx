@@ -15,8 +15,11 @@ import LogoReactNative from '@/public/svg/tools/react-native.svg';
 
 export const TechStack: FunctionComponent = () => {
   return (
-    <Section id="tech-stack" className="mx-auto  max-w-6xl px-4 pb-16 md:px-8">
-      <h2 className="headline mt-24 text-center text-xl font-bold md:text-2xl lg:text-3xl">
+    <Section
+      id="tech-stack"
+      className="mx-auto max-w-6xl px-4 pb-16 md:px-8 lg:pt-24"
+    >
+      <h2 className="headline text-center text-xl font-bold md:text-2xl lg:mt-24 lg:text-3xl">
         Mes outils préférés pour le Développement Web
       </h2>
       <div className="mx-auto mt-8 flex  flex-wrap items-center justify-center gap-x-16 gap-y-8">
