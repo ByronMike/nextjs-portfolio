@@ -42,13 +42,13 @@ export const Partners: FunctionComponent = () => {
           </a>
           <a href="https://procivis.fr/">
             <LogoProcivis
-              className="w-32"
+              className="mr-10 w-32"
               aria-label="Logo de l'entreprise Procivis"
             />
           </a>
           <a href="https://www.reezocar.com/">
             <LogoReezocar
-              className="w-32"
+              className="ml-4 w-32"
               aria-label="Logo de l'entreprise Reezocar"
             />
           </a>

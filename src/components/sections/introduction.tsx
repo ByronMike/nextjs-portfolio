@@ -33,7 +33,7 @@ export const Introduction: FunctionComponent = () => {
     <Section
       id="introduction"
       isMotion
-      className="relative mx-auto flex max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4 py-16  md:px-8  lg:grid"
+      className="relative mx-auto flex w-[85%] max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4  py-16  md:w-[100%] md:px-8 lg:grid"
     >
       <div className="col-span-2">
         <motion.div
@@ -45,8 +45,8 @@ export const Introduction: FunctionComponent = () => {
         >
           <div className="heading-pre">{Welcome.pre}</div>
           <h1 className="heading-hero ">{Welcome.heading}</h1>
-          <div className="group inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-            <ul className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8">
+          <div className="group inline-flex w-full max-w-[710px] flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+            <ul className="group-hover:paused flex  animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8">
               {Welcome.tech.map(({ name, Icon }) => (
                 <li
                   className="flex items-center gap-2 text-gray-500 d:text-gray-400"
@@ -115,7 +115,7 @@ export const Introduction: FunctionComponent = () => {
       </div>
       <div className="relative w-[583px] md:h-[420px]">
         <motion.div
-          className="relative flex h-full min-w-[460px] flex-col gap-4 sm:min-w-[660px] lg:absolute lg:left-6 lg:top-16 lg:min-w-[460px]"
+          className="relative flex h-full w-[90%] min-w-[460px] flex-col gap-4 sm:min-w-[660px] lg:absolute lg:left-6 lg:top-16 lg:w-full lg:min-w-[460px]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

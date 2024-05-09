@@ -75,7 +75,10 @@ export const Timeline: FunctionComponent = () => {
   );
 
   return (
-    <Section id="timeline" className="mx-auto  max-w-6xl px-4 pb-16 md:px-8">
+    <Section
+      id="timeline"
+      className=" mx-auto w-full  max-w-6xl px-4 pb-16 md:px-8"
+    >
       <div
         className="-mx-4 flex h-96 overflow-x-auto px-6 py-4 xl:mx-0"
         ref={scrollContainerRef}

@@ -9,7 +9,7 @@ export const Welcome = {
   pre: 'Bienvenue sur mon portfolio',
   heading: (
     <>
-      Je suis <strong>Michaël Auger</strong> Front-end developer.
+      Je suis <strong>&nbsp;Michaël Auger</strong> Front-end developer.
     </>
   ),
   tech: [
