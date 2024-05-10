@@ -56,7 +56,7 @@ export const Projects: FunctionComponent = () => {
           </fieldset>
         </div>
       </div>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap justify-center gap-4">
         {filteredProjects.map((project, key) => (
           <ProjectCard key={project.name} project={project} cardNumber={key} />
         ))}

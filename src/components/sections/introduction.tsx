@@ -115,7 +115,7 @@ export const Introduction: FunctionComponent = () => {
       </div>
       <div className="relative w-[583px] md:h-[420px]">
         <motion.div
-          className="relative flex h-full w-[90%] min-w-[460px] flex-col gap-4 sm:min-w-[660px] lg:absolute lg:left-6 lg:top-16 lg:w-full lg:min-w-[460px]"
+          className="relative flex h-full w-[90%] flex-col gap-4 sm:min-w-[660px] md:min-w-[460px] lg:absolute lg:left-6 lg:top-16 lg:w-full lg:min-w-[460px]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -126,8 +126,10 @@ export const Introduction: FunctionComponent = () => {
             <Badge style="info">TS Developer</Badge>
             <Badge style="success">Watersport Blogger</Badge>
             <Badge style="warning">Surfer</Badge>
-            <Badge style="accent">Ukuleleist</Badge>
-            <Badge style="plain">Ginger tea aficionado</Badge>
+            <div className="hidden md:contents">
+              <Badge style="accent">Ukuleleist</Badge>
+              <Badge style="plain">Ginger tea aficionado</Badge>
+            </div>
           </div>
           <div className="relative flex h-full flex-col">
             <CodeEditor code={codeSnippets} language="tsx" />
