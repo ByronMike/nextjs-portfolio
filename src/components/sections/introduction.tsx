@@ -33,7 +33,7 @@ export const Introduction: FunctionComponent = () => {
     <Section
       id="introduction"
       isMotion
-      className="relative mx-auto flex max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4 py-16 md:px-8 md:py-32 lg:grid"
+      className="relative mx-auto flex w-[85%] max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4  py-16  md:w-[100%] md:px-8 lg:grid"
     >
       <div className="col-span-2">
         <motion.div
@@ -45,8 +45,8 @@ export const Introduction: FunctionComponent = () => {
         >
           <div className="heading-pre">{Welcome.pre}</div>
           <h1 className="heading-hero ">{Welcome.heading}</h1>
-          <div className="group inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-            <ul className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8">
+          <div className="group inline-flex w-full max-w-[710px] flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+            <ul className="group-hover:paused flex  animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8">
               {Welcome.tech.map(({ name, Icon }) => (
                 <li
                   className="flex items-center gap-2 text-gray-500 d:text-gray-400"
@@ -113,29 +113,30 @@ export const Introduction: FunctionComponent = () => {
           ) : null}
         </motion.div>
       </div>
-      <div className="relative md:h-[420px]">
+      <div className="relative overflow-scroll sm:overflow-visible md:h-[420px] md:w-[583px]">
         <motion.div
-          className="relative flex h-full min-w-[460px] flex-col gap-4 sm:min-w-[660px] lg:absolute lg:left-6 lg:top-16 lg:min-w-[460px]"
+          className="relative flex h-full w-[90%] flex-col gap-4  sm:min-w-[660px]  md:min-w-[460px] lg:absolute lg:left-6 lg:top-16 lg:w-full lg:min-w-[460px]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.6, duration: 0.5 }}
           variants={displayVariants}
         >
-          <div className="relative z-20 flex justify-end gap-1.5">
+          <div className="relative z-20 flex justify-start gap-1.5">
             <Badge style="info">TS Developer</Badge>
             <Badge style="success">Watersport Blogger</Badge>
             <Badge style="warning">Surfer</Badge>
-            <Badge style="accent">Ukuleleist</Badge>
-            <Badge style="plain">Ginger tea aficionado</Badge>
+            <div className="hidden md:contents">
+              <Badge style="accent">Ukuleleist</Badge>
+              <Badge style="plain">Ginger tea aficionado</Badge>
+            </div>
           </div>
           <div className="relative flex h-full flex-col">
             <CodeEditor code={codeSnippets} language="tsx" />
-            <div className="absolute -bottom-5 -right-5 -z-10 h-[calc(100%+1.25rem)] w-[calc(100%+1.25rem)] rounded-lg border border-gray-400/20 bg-gray-100/70 [mask-image:linear-gradient(-30deg,#fff_16.35%,rgb(255_255_255_/_0%)_61.66%)] d:border-gray-700/20 d:bg-gray-900/40"></div>
           </div>
         </motion.div>
         <motion.div
-          className="absolute hidden sm:-right-5 sm:top-24 sm:block lg:-left-[270px] lg:top-[105%]"
+          className="absolute hidden w-[60%] sm:-right-5 sm:top-24 md:block lg:-left-[270px] lg:top-[105%] lg:w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

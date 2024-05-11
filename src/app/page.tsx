@@ -8,7 +8,7 @@ import { Contact } from '@/components/sections/contact';
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center">
+    <>
       <Introduction />
       <TechStack />
       <About />
@@ -16,6 +16,6 @@ export default function Home() {
       <Projects />
       <Partners />
       <Contact />
-    </main>
+    </>
   );
 }

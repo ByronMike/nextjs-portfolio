@@ -25,9 +25,9 @@ export const Projects: FunctionComponent = () => {
     <Section
       id="projects"
       isMotion
-      className="portfolio-preview mx-auto grid w-full max-w-6xl px-4 md:px-8"
+      className="portfolio-preview mx-auto grid w-full max-w-6xl px-4 pt-28 md:px-8"
     >
-      <div className="mx-auto grid w-full max-w-6xl px-4 md:px-8">
+      <div className="mx-auto grid w-full max-w-6xl">
         <div className="heading-pre">Mes projets</div>
         <h1 className="heading-2xl -ml-1">Une sélection de mes projets</h1>
         <div className="relative -mx-4 mb-2 flex gap-2 overflow-x-auto px-4 pb-2">
@@ -56,7 +56,7 @@ export const Projects: FunctionComponent = () => {
           </fieldset>
         </div>
       </div>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap justify-center gap-4">
         {filteredProjects.map((project, key) => (
           <ProjectCard key={project.name} project={project} cardNumber={key} />
         ))}
