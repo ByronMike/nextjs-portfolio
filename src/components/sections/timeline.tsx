@@ -6,7 +6,7 @@ import { useInView } from 'framer-motion';
 import Section from '@/components/layout/section';
 import { useDebouncedEffect } from '@/hooks/useDebouncedEffect';
 import { scrollToX } from '@/helpers/utils/scrollTo';
-import { TIMELINEOBJECT } from '@/content/sections/timeline';
+import { TIMELINE } from '@/content/sections/Timeline';
 
 export const Timeline: FunctionComponent = () => {
   const [selected, setSelected] = useState('');
@@ -18,7 +18,7 @@ export const Timeline: FunctionComponent = () => {
   useEffect(() => {
     if (!initiated && inView) {
       setTimeout(() => {
-        const year = Object.keys(TIMELINEOBJECT)[0];
+        const year = Object.keys(TIMELINE)[0];
         setInitiated(true);
         setSelected(`${year}-${0}`);
       }, 50);
@@ -29,11 +29,11 @@ export const Timeline: FunctionComponent = () => {
     () => {
       if (!autoScroll || !inView) return;
       const [year, index] = selected.split('-');
-      const keys = Object.keys(TIMELINEOBJECT);
-      const values = Object.values(TIMELINEOBJECT);
+      const keys = Object.keys(TIMELINE);
+      const values = Object.values(TIMELINE);
       const yearLength = keys.length;
       const yearIndex = keys.findIndex((key) => key === year);
-      const indexLength = TIMELINEOBJECT[year]?.length;
+      const indexLength = TIMELINE[year]?.length;
       const totalIndex =
         values
           .flat()
@@ -83,7 +83,7 @@ export const Timeline: FunctionComponent = () => {
         className="-mx-4 flex h-96 overflow-x-auto px-6 py-4 xl:mx-0"
         ref={scrollContainerRef}
       >
-        {Object.entries(TIMELINEOBJECT).map(([year, events], yearIndex) => (
+        {Object.entries(TIMELINE).map(([year, events], yearIndex) => (
           <div key={year} className="relative">
             <div className="absolute left-0 -translate-x-1/2 select-none text-xs font-semibold text-gray-400">
               {year}

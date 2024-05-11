@@ -2,7 +2,7 @@
 
 import { FunctionComponent, useState } from 'react';
 import Section from '@/components/layout/section';
-import { PROJECTS } from '@/content/sections/projects';
+import { PROJECTS } from '@/content/sections/Projects';
 import { ProjectCard } from '@/components/project-card';
 
 export const Projects: FunctionComponent = () => {

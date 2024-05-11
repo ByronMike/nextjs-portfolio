@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
-import { FOOTER } from '@/content/layout/footer';
+import { FOOTER } from '@/content/layout/Footer';
 
 export const Footer: FunctionComponent = () => {
   return (

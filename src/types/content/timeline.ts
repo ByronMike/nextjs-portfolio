@@ -1,4 +1,4 @@
-export interface TIMELINEOBJECTTYPE {
+export interface Timeline {
   [year: string]: {
     date: string;
     heading: string;

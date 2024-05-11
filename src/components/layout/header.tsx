@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { DesktopNav } from '@/components/layout/header.desktop-nav';
 import { MobileNav } from '@/components/layout/header-mobile-nav';
 import { ProfileNav } from '@/components/layout/header.settings';
-import { HEADER } from '@/content/layout/header';
+import { HEADER } from '@/content/layout/Header';
 
 export const Header: FunctionComponent = () => {
   const [showNav, setShowNav] = useState(false);

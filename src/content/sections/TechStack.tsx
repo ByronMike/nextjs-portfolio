@@ -32,7 +32,7 @@ import NextJs from '@/public/icons/tech-logos/nextjs.svg';
 import Prisma from '@/public/icons/tech-logos/prisma.svg';
 import ReactQuery from '@/public/icons/tech-logos/react_query.svg';
 
-import { Technology } from '@/types/content/tech-stack';
+import { Technology } from '@/types/content/techStack';
 
 export const TECH: Record<string, Technology> = {
   typescript: {

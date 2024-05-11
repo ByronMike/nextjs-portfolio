@@ -3,7 +3,7 @@
 import { FunctionComponent } from 'react';
 import { motion } from 'framer-motion';
 import Section from '@/components/layout/section';
-import { CONTACTS } from '@/content/sections/contact';
+import { CONTACTS } from '@/content/sections/Contact';
 import { upVariants } from '@/helpers/framer-motion/animationVariants';
 
 export const Contact: FunctionComponent = () => {

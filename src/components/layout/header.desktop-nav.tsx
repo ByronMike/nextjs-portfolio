@@ -2,7 +2,7 @@
 
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
-import { HEADER } from '@/content/layout/header';
+import { HEADER } from '@/content/layout/Header';
 
 export const DesktopNav: FunctionComponent = () => {
   return (

@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { LinkIcon } from '@heroicons/react/24/solid';
 import { FaGithub } from 'react-icons/fa';
 
-import { ProjectCardProps } from '@/types/components/project-card';
+import { ProjectCardProps } from '@/types/components/projectCard';
 import {
   upScaleVariants,
   cardAnimationVariants,

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Section from '@/components/layout/section';
 import StatisticItem from '@/components/StatisticItem';
-import { ABOUT } from '@/content/sections/about';
+import { ABOUT } from '@/content/sections/About';
 import { rightVariants } from '@/helpers/framer-motion/animationVariants';
 
 export const About: FunctionComponent = () => {

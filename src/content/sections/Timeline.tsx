@@ -13,9 +13,9 @@ import { IoBookOutline } from 'react-icons/io5';
 import { PiLeafThin } from 'react-icons/pi';
 import { TbMathIntegrals } from 'react-icons/tb';
 
-import { TIMELINEOBJECTTYPE } from '@/types/content/timeline';
+import { Timeline } from '@/types/content/timeline';
 
-export const TIMELINEOBJECT: TIMELINEOBJECTTYPE = {
+export const TIMELINE: Timeline = {
   1991: [
     {
       date: '1991-11-30',

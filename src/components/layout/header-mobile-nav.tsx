@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import clsx from 'clsx';
-import { HEADER } from '@/content/layout/header';
+import { HEADER } from '@/content/layout/Header';
 import { FunctionComponent, MouseEventHandler, useCallback } from 'react';
 
 type HeaderMobileNavProps = {

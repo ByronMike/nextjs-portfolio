@@ -1,6 +1,6 @@
 import { useAnimateCounter } from '@/hooks/useAnimateCounter';
 import { FunctionComponent } from 'react';
-import { StatisticItemProps } from '@/types/components/statistic-item';
+import { StatisticItemProps } from '@/types/components/statisticItem';
 
 const StatisticItem: FunctionComponent<StatisticItemProps> = ({
   statistic,
