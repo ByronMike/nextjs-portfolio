@@ -1,9 +1,9 @@
 'use client';
 
 import { FunctionComponent, useState } from 'react';
-import Section from '@/components/layout/section';
+import Section from '@/components/layout/Section';
 import { PROJECTS } from '@/content/sections/Projects';
-import { ProjectCard } from '@/components/project-card';
+import { ProjectCard } from '@/components/ProjectCard';
 
 export const Projects: FunctionComponent = () => {
   const [filter, setFilter] = useState('All Projects');

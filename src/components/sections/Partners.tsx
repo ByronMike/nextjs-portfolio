@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import Section from '@/components/layout/section';
+import Section from '@/components/layout/Section';
 import LogoAristid from '@/public/svg/partners/aristid.svg';
 import LogoLP from '@/public/svg/partners/la-provence.svg';
 import LogoProcivis from '@/public/svg/partners/procivis.svg';

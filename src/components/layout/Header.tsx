@@ -2,9 +2,9 @@
 
 import { FunctionComponent, useState } from 'react';
 import Link from 'next/link';
-import { DesktopNav } from '@/components/layout/header.desktop-nav';
-import { MobileNav } from '@/components/layout/header-mobile-nav';
-import { ProfileNav } from '@/components/layout/header.settings';
+import { DesktopNav } from '@/components/layout/HeaderDesktopNav';
+import { MobileNav } from '@/components/layout/HeaderMobileNav';
+import { ProfileNav } from '@/components/layout/HeaderSettings';
 import { HEADER } from '@/content/layout/Header';
 
 export const Header: FunctionComponent = () => {

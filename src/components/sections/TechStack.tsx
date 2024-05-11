@@ -1,7 +1,7 @@
 'use client';
 
 import { FunctionComponent } from 'react';
-import Section from '@/components/layout/section';
+import Section from '@/components/layout/Section';
 import LogoReact from '@/public/svg/tools/reactjs.svg';
 import LogoNext from '@/public/svg/tools/nextjs.svg';
 import LogoFigma from '@/public/svg/tools/figma.svg';

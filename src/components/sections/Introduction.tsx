@@ -3,10 +3,10 @@
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Section from '@/components/layout/section';
-import { Badge } from '@/components/badge';
-import { CodeEditor } from '@/components/code-editor';
-import { Profile } from '@/components/profile';
+import Section from '@/components/layout/Section';
+import { Badge } from '@/components/Badge';
+import { CodeEditor } from '@/components/CodeEditor';
+import { Profile } from '@/components/Profile';
 import { useGitHubUserData } from '@/hooks/useGitHubUserData';
 import {
   NEXT_PUBLIC_GITHUB_TOKEN,

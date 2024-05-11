@@ -3,7 +3,7 @@
 import { FunctionComponent, useRef, useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { useInView } from 'framer-motion';
-import Section from '@/components/layout/section';
+import Section from '@/components/layout/Section';
 import { useDebouncedEffect } from '@/hooks/useDebouncedEffect';
 import { scrollToX } from '@/helpers/utils/scrollTo';
 import { TIMELINE } from '@/content/sections/Timeline';

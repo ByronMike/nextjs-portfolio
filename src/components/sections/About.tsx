@@ -3,7 +3,7 @@
 import { FunctionComponent, useCallback, useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Section from '@/components/layout/section';
+import Section from '@/components/layout/Section';
 import StatisticItem from '@/components/StatisticItem';
 import { ABOUT } from '@/content/sections/About';
 import { rightVariants } from '@/helpers/framer-motion/animationVariants';

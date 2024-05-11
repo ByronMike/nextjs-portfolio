@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { SiGithub } from 'react-icons/si';
-import DarkmodeIcon from '@/components/darkmode-icon';
+import DarkmodeIcon from '@/components/DarkModeIcon';
 
 export const ProfileNav: FunctionComponent = () => {
   const { theme, setTheme } = useTheme();

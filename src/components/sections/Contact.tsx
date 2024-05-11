@@ -2,7 +2,7 @@
 
 import { FunctionComponent } from 'react';
 import { motion } from 'framer-motion';
-import Section from '@/components/layout/section';
+import Section from '@/components/layout/Section';
 import { CONTACTS } from '@/content/sections/Contact';
 import { upVariants } from '@/helpers/framer-motion/animationVariants';
 
