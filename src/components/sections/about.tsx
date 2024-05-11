@@ -38,7 +38,11 @@ export const About: FunctionComponent = () => {
   }, [focusImageIndex, images.length]);
 
   return (
-    <Section id="about" isMotion className="overflow-hidden pt-40 md:-mt-12">
+    <Section
+      id="about"
+      isMotion
+      className="overflow-hidden pt-10 md:-mt-12 md:pt-40"
+    >
       <div className="heading-pre mx-auto w-full max-w-6xl px-4 md:px-8 lg:pt-16">
         Présentation
       </div>
