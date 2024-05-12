@@ -8,10 +8,7 @@ import { Badge } from '@/components/Badge';
 import { CodeEditor } from '@/components/CodeEditor';
 import { Profile } from '@/components/Profile';
 import { useGitHubUserData } from '@/hooks/useGitHubUserData';
-import {
-  NEXT_PUBLIC_GITHUB_TOKEN,
-  NEXT_PUBLIC_GITHUB_USER,
-} from '@/helpers/constants';
+import { GITHUB_TOKEN, GITHUB_USER } from '@/helpers/constants';
 import {
   leftVariants,
   displayVariants,
@@ -19,10 +16,7 @@ import {
 import { WELCOME } from '@/content/sections/Introduction';
 
 export const Introduction: FunctionComponent = () => {
-  const { user } = useGitHubUserData(
-    NEXT_PUBLIC_GITHUB_USER,
-    NEXT_PUBLIC_GITHUB_TOKEN
-  );
+  const { user } = useGitHubUserData(GITHUB_USER, GITHUB_TOKEN);
   const codeSnippets: string[] = [];
   for (let i = 1; i <= 8; i++) {
     // @ts-expect-error: Should be fixed one day

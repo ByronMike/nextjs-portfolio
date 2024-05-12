@@ -2,9 +2,10 @@
 
 import { FunctionComponent } from 'react';
 import { useTheme } from 'next-themes';
-import Link from 'next/link';
 import { SiGithub } from 'react-icons/si';
 import DarkmodeIcon from '@/components/DarkModeIcon';
+import ButtonMail from '@/components/ButtonMail';
+import { GITHUB_LINK, EMAIL_CONTACT } from '@/helpers/constants';
 
 export const ProfileNav: FunctionComponent = () => {
   const { theme, setTheme } = useTheme();
@@ -19,22 +20,17 @@ export const ProfileNav: FunctionComponent = () => {
       >
         <DarkmodeIcon />
       </button>
-      <Link
-        href="https://github.com/byronmike/"
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href={GITHUB_LINK}
         className={
           'rounded p-2 text-gray-500 transition-colors d:text-gray-300 d:h:text-gray-50 md:h:text-gray-900'
         }
       >
-        <span className="sr-only">Github</span>
         <SiGithub className="h-5 w-5" />
-      </Link>
-      <Link
-        target="_blank"
-        href="mailto:auger.michaell@gmail.com"
-        className="button-rainbow ml-4 hidden whitespace-nowrap px-4 py-1.5 text-sm font-medium tracking-tight text-gray-500 md:flex"
-      >
-        Lets work
-      </Link>
+      </a>
+      <ButtonMail label="Lets work" mailto={`mailto:${EMAIL_CONTACT}`} />
     </nav>
   );
 };
