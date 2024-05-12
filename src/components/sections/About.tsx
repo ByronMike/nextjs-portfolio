@@ -49,13 +49,11 @@ export const About: FunctionComponent = () => {
       <div className="mx-auto flex max-w-6xl flex-col justify-center gap-16 px-4 pb-16 md:px-8 lg:grid lg:grid-cols-[540px_auto]">
         <button
           ref={buttonRef}
-          className="group relative mx-auto mb-12 mt-10 aspect-3/2 max-h-[405px] w-full max-w-[540px] flex-1 hfa:outline-none lg:mb-auto  lg:mr-0 lg:aspect-4/3"
+          className="relative mx-auto mb-12 mt-10 aspect-3/2 max-h-[405px] w-full max-w-[540px] flex-1 hfa:outline-none lg:mb-auto  lg:mr-0 lg:aspect-4/3"
           onClick={handleImageClick}
           type="button"
-          data-event="mouseover"
-          data-tip={images[focusImageIndex]?.alt}
         >
-          <span className="sr-only">Cycle through Images</span>
+          <span className="sr-only">Parcourir les images</span>
           {images.map(({ src, alt }, index) => {
             return (
               <Image
@@ -66,13 +64,7 @@ export const About: FunctionComponent = () => {
                 height={1500}
                 sizes="(min-width: 580px) 540px, 400px"
                 priority={index === 0}
-                className="absolute left-0 top-0 rounded-xl border-2 border-gray-50/80 object-cover !opacity-0 shadow-lg shadow-gray-700/5 transition-all duration-300 group-focus-visible:border-sky-500 d:border-gray-600/80"
-                data-about-image-index={index}
-                onLoad={() =>
-                  document
-                    .querySelectorAll(`[data-about-image-index="${index}"]`)
-                    .forEach((img) => img.classList.remove('!opacity-0'))
-                }
+                className="absolute left-0 top-0 rounded-xl border-2 border-gray-50/80 object-cover transition-all duration-300  d:border-gray-600/80"
                 style={{
                   transform:
                     focusImageIndex > index
@@ -104,7 +96,7 @@ export const About: FunctionComponent = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             variants={rightVariants}
-            className="tracking tight max-w-3xl leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4"
+            className="max-w-3xl leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4"
           >
             {ABOUT.description}
           </motion.div>

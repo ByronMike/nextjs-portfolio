@@ -1,5 +1,3 @@
-'use client';
-
 import { FunctionComponent } from 'react';
 import Section from '@/components/layout/Section';
 import LogoReact from '@/public/svg/tools/reactjs.svg';

@@ -29,7 +29,7 @@ export const Contact: FunctionComponent = () => {
             {CONTACTS.map(({ title, Icon, url }) => (
               <a key={title} href={url}>
                 <div className="flex select-none items-center gap-1 whitespace-nowrap rounded border border-gray-700/10  bg-sky-500/90 px-1.5 py-[2px] text-[13px]  font-medium  text-white transition-colors hfa:bg-sky-600/80 d:bg-sky-600/90 d:hfa:bg-sky-500/80">
-                  <Icon className="color-red" />
+                  <Icon />
                   {title}
                 </div>
               </a>

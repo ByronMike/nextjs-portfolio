@@ -2,8 +2,8 @@
 
 import { FunctionComponent, useState } from 'react';
 import Section from '@/components/layout/Section';
-import { PROJECTS } from '@/content/sections/Projects';
 import { ProjectCard } from '@/components/ProjectCard';
+import { PROJECTS } from '@/content/sections/Projects';
 
 export const Projects: FunctionComponent = () => {
   const [filter, setFilter] = useState('All Projects');
@@ -25,7 +25,7 @@ export const Projects: FunctionComponent = () => {
     <Section
       id="projects"
       isMotion
-      className="portfolio-preview mx-auto grid w-full max-w-6xl px-4 pt-28 md:px-8"
+      className="mx-auto grid w-full max-w-6xl px-4 pt-28 md:px-8"
     >
       <div className="mx-auto grid w-full max-w-6xl">
         <div className="heading-pre">Mes projets</div>
@@ -44,7 +44,7 @@ export const Projects: FunctionComponent = () => {
                     className="peer hidden"
                     checked={type === filter}
                     onChange={() => handleFilterChange(type)}
-                    name="Tag Filtersss"
+                    name="Tag Filters"
                     value={type}
                   />
                   <div className="cursor-pointer appearance-none whitespace-nowrap rounded-full border border-gray-200 bg-gray-400/10 px-3 py-1 text-[13px] font-medium text-gray-400 transition-colors peer-checked:text-gray-900 hfa:text-gray-500 d:border-gray-700 d:peer-checked:text-gray-50 d:hfa:text-gray-300">

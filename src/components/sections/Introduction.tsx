@@ -14,6 +14,7 @@ import {
   displayVariants,
 } from '@/helpers/framer-motion/animationVariants';
 import { WELCOME } from '@/content/sections/Introduction';
+import TechList from '../TechList';
 
 export const Introduction: FunctionComponent = () => {
   const { user } = useGitHubUserData(GITHUB_USER, GITHUB_TOKEN);
@@ -39,33 +40,7 @@ export const Introduction: FunctionComponent = () => {
         >
           <div className="heading-pre">{WELCOME.pre}</div>
           <h1 className="heading-hero ">{WELCOME.heading}</h1>
-          <div className="group inline-flex w-full max-w-[710px] flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-            <ul className="group-hover:paused flex  animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8">
-              {WELCOME.tech.map(({ name, Icon }) => (
-                <li
-                  className="flex items-center gap-2 text-gray-500 d:text-gray-400"
-                  key={name}
-                >
-                  <Icon className="h-7 w-7 text-gray-400 d:text-gray-300/80" />
-                  {name}
-                </li>
-              ))}
-            </ul>
-            <ul
-              className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8"
-              aria-hidden="true"
-            >
-              {WELCOME.tech.map(({ name, Icon }) => (
-                <li
-                  className="flex items-center gap-2 text-gray-500 d:text-gray-400"
-                  key={name}
-                >
-                  <Icon className="h-7 w-7 text-gray-400 d:text-gray-300/80" />
-                  {name}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <TechList tech={WELCOME.tech} />
         </motion.div>
         <motion.div
           initial="hidden"
