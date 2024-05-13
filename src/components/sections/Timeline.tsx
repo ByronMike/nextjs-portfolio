@@ -29,16 +29,30 @@ export const Timeline: FunctionComponent = () => {
     () => {
       if (!autoScroll || !inView) return;
       const [year, index] = selected.split('-');
+      console.log('year:', year);
+      console.log('index:', index);
+
       const keys = Object.keys(TIMELINE);
+      console.log('keys:', keys);
+
       const values = Object.values(TIMELINE);
+      console.log('values:', values);
+
       const yearLength = keys.length;
+      console.log('yearLength:', yearLength);
+
       const yearIndex = keys.findIndex((key) => key === year);
+      console.log('yearIndex:', yearIndex);
+
       const indexLength = TIMELINE[year]?.length;
+      console.log('indexLength:', indexLength);
+
       const totalIndex =
         values
           .flat()
           .findIndex((val) => new Date(val.date).getFullYear() === +year) +
         +index;
+      console.log('totalIndex:', totalIndex);
 
       const container = scrollContainerRef.current as HTMLDivElement;
 
