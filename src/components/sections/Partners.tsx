@@ -6,7 +6,7 @@ const Partners: FunctionComponent = () => {
   return (
     <Section
       id="partners"
-      className="mx-auto my-32 grid w-full max-w-6xl px-4 md:px-8"
+      className="mx-auto my-32 grid w-full max-w-6xl px-6 md:px-8"
     >
       <div className="mx-auto grid w-full max-w-6xl px-4 md:px-8">
         <h2 className="headline text-center text-xl font-bold md:text-2xl lg:text-3xl">

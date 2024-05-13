@@ -80,7 +80,7 @@
   }
 
   .heading-hero {
-    @apply mb-3 flex flex-wrap  text-4xl font-extrabold tracking-tighter text-gray-800 dark:[--color-gray-800:var(--color-gray-50)] sm:text-5xl md:text-6xl lg:mb-4 lg:text-7xl lg:leading-[1.15];
+    @apply mb-3 flex flex-wrap text-3xl font-extrabold tracking-tighter text-gray-800 dark:[--color-gray-800:var(--color-gray-50)] sm:text-5xl md:text-6xl lg:mb-4 lg:text-7xl lg:leading-[1.15];
     & strong {
       @apply bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-500 bg-clip-text font-extrabold text-transparent;
     }

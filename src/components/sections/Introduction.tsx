@@ -39,7 +39,7 @@ const Introduction: FunctionComponent = () => {
           variants={leftVariants}
         >
           <div className="heading-pre">{WELCOME.pre}</div>
-          <h1 className="heading-hero ">{WELCOME.heading}</h1>
+          <h1 className="heading-hero">{WELCOME.heading}</h1>
           <TechList tech={WELCOME.tech} />
         </motion.div>
         <motion.div

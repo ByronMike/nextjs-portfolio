@@ -41,9 +41,9 @@ const About: FunctionComponent = () => {
     <Section
       id="about"
       isMotion
-      className="overflow-hidden pt-10 md:-mt-12 md:pt-40"
+      className="mx-auto overflow-hidden px-4 pt-10 md:-mt-12 md:pt-20"
     >
-      <div className="heading-pre mx-auto w-full max-w-6xl px-4 md:px-8 lg:pt-16">
+      <div className="heading-pre mx-auto w-full max-w-6xl px-8 md:px-8 lg:pt-16">
         Présentation
       </div>
       <div className="mx-auto flex max-w-6xl flex-col justify-center gap-16 px-4 pb-16 md:px-8 lg:grid lg:grid-cols-[540px_auto]">
@@ -80,7 +80,7 @@ const About: FunctionComponent = () => {
             );
           })}
         </button>
-        <div className="spacing-8">
+        <div className="spacing-8 px-4">
           <div className="grid max-w-xl grid-cols-2 gap-4 text-center sm:grid-cols-4 sm:text-left">
             {ABOUT.stats.map(({ statistic, caption }, index) => (
               <StatisticItem
