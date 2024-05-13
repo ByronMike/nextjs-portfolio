@@ -8,7 +8,7 @@ import StatisticItem from '@/components/StatisticItem';
 import { ABOUT } from '@/content/sections/About';
 import { rightVariants } from '@/helpers/framer-motion/animationVariants';
 
-export const About: FunctionComponent = () => {
+const About: FunctionComponent = () => {
   const [focusImageIndex, setFocusImageIndex] = useState(0);
   const [images, setImages] = useState(ABOUT.images);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -105,3 +105,5 @@ export const About: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default About;

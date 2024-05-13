@@ -2,12 +2,12 @@
 
 import { FunctionComponent, useState } from 'react';
 import Link from 'next/link';
-import { DesktopNav } from '@/components/layout/HeaderDesktopNav';
-import { MobileNav } from '@/components/layout/HeaderMobileNav';
-import { ProfileNav } from '@/components/layout/HeaderSettings';
+import DesktopNav from '@/components/layout/HeaderDesktopNav';
+import MobileNav from '@/components/layout/HeaderMobileNav';
+import ProfileNav from '@/components/layout/HeaderSettings';
 import { HEADER } from '@/content/layout/Header';
 
-export const Header: FunctionComponent = () => {
+const Header: FunctionComponent = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
@@ -27,3 +27,5 @@ export const Header: FunctionComponent = () => {
     </>
   );
 };
+
+export default Header;

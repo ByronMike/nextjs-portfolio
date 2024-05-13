@@ -11,7 +11,7 @@ import LogoNodeJs from '@/public/svg/tools/nodejs.svg';
 import LogoTypeScript from '@/public/svg/tools/typescript.svg';
 import LogoReactNative from '@/public/svg/tools/react-native.svg';
 
-export const TechStack: FunctionComponent = () => {
+const TechStack: FunctionComponent = () => {
   return (
     <Section
       id="tech-stack"
@@ -35,3 +35,5 @@ export const TechStack: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default TechStack;

@@ -9,7 +9,7 @@ const StatisticItem: FunctionComponent<StatisticItemProps> = ({
   const animatedStatistic = useAnimateCounter(statistic);
 
   return (
-    <figure className="select-none spacing-1">
+    <figure className="spacing-1 select-none">
       <div className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-4xl font-extrabold tracking-tighter text-transparent">
         {animatedStatistic}
       </div>

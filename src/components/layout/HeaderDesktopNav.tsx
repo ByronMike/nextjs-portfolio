@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { HEADER } from '@/content/layout/Header';
 
-export const DesktopNav: FunctionComponent = () => {
+const DesktopNav: FunctionComponent = () => {
   return (
     <>
       <nav className="sm:scrollbar-none relative hidden justify-center md:flex">
@@ -26,3 +26,5 @@ export const DesktopNav: FunctionComponent = () => {
     </>
   );
 };
+
+export default DesktopNav;

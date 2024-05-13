@@ -4,9 +4,9 @@ import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Section from '@/components/layout/Section';
-import { Badge } from '@/components/Badge';
-import { CodeEditor } from '@/components/CodeEditor';
-import { Profile } from '@/components/Profile';
+import Badge from '@/components/Badge';
+import CodeEditor from '@/components/CodeEditor';
+import Profile from '@/components/Profile';
 import { useGitHubUserData } from '@/hooks/useGitHubUserData';
 import { GITHUB_TOKEN, GITHUB_USER } from '@/helpers/constants';
 import {
@@ -14,9 +14,9 @@ import {
   displayVariants,
 } from '@/helpers/framer-motion/animationVariants';
 import { WELCOME } from '@/content/sections/Introduction';
-import TechList from '../TechList';
+import TechList from '@/components/TechList';
 
-export const Introduction: FunctionComponent = () => {
+const Introduction: FunctionComponent = () => {
   const { user } = useGitHubUserData(GITHUB_USER, GITHUB_TOKEN);
   const codeSnippets: string[] = [];
   for (let i = 1; i <= 8; i++) {
@@ -132,3 +132,5 @@ export const Introduction: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default Introduction;

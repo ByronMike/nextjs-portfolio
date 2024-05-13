@@ -16,7 +16,7 @@ export type BadgeProps = {
   children: string;
 };
 
-export const Badge: FunctionComponent<BadgeProps> = ({
+const Badge: FunctionComponent<BadgeProps> = ({
   children,
   size = 'md',
   style = 'plain',
@@ -53,3 +53,5 @@ export const Badge: FunctionComponent<BadgeProps> = ({
     </span>
   );
 };
+
+export default Badge;

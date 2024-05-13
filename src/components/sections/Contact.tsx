@@ -6,7 +6,7 @@ import Section from '@/components/layout/Section';
 import { CONTACTS } from '@/content/sections/Contact';
 import { upVariants } from '@/helpers/framer-motion/animationVariants';
 
-export const Contact: FunctionComponent = () => {
+const Contact: FunctionComponent = () => {
   return (
     <Section id="contact">
       <div className="mx-auto mb-40 grid w-full max-w-6xl px-4 md:px-8">
@@ -40,3 +40,5 @@ export const Contact: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default Contact;

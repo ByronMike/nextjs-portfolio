@@ -7,7 +7,7 @@ import DarkmodeIcon from '@/components/DarkModeIcon';
 import ButtonMail from '@/components/ButtonMail';
 import { GITHUB_LINK, EMAIL_CONTACT } from '@/helpers/constants';
 
-export const ProfileNav: FunctionComponent = () => {
+const ProfileNav: FunctionComponent = () => {
   const { theme, setTheme } = useTheme();
   return (
     <nav className="z-10 ml-auto flex gap-1 pl-4">
@@ -34,3 +34,5 @@ export const ProfileNav: FunctionComponent = () => {
     </nav>
   );
 };
+
+export default ProfileNav;

@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 import Section from '@/components/layout/Section';
 import { PARTNERS } from '@/content/sections/Partners';
 
-export const Partners: FunctionComponent = () => {
+const Partners: FunctionComponent = () => {
   return (
     <Section
       id="partners"
@@ -28,3 +28,5 @@ export const Partners: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default Partners;

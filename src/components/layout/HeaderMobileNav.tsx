@@ -32,7 +32,7 @@ const MobileNavButton = ({
   );
 };
 
-export const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
+const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
   showNav,
   setShowNav,
 }) => {
@@ -74,8 +74,8 @@ export const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
             );
           })}
         </div>
-        <section className="mt-28 p-8 spacing-24">
-          <nav className="relative text-white spacing-6">
+        <section className="spacing-24 mt-28 p-8">
+          <nav className="spacing-6 relative text-white">
             {HEADER.nav.map((navItem, index) => {
               return (
                 <Link
@@ -126,3 +126,5 @@ export const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
     </div>
   );
 };
+
+export default MobileNav;

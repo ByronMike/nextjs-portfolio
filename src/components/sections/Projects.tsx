@@ -2,10 +2,10 @@
 
 import { FunctionComponent, useState } from 'react';
 import Section from '@/components/layout/Section';
-import { ProjectCard } from '@/components/ProjectCard';
+import ProjectCard from '@/components/ProjectCard';
 import { PROJECTS } from '@/content/sections/Projects';
 
-export const Projects: FunctionComponent = () => {
+const Projects: FunctionComponent = () => {
   const [filter, setFilter] = useState('All Projects');
   const [filteredProjects, setFilteredProjects] = useState(PROJECTS);
 
@@ -64,3 +64,5 @@ export const Projects: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default Projects;
