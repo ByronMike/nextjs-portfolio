@@ -84,7 +84,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                   className="p-1 text-gray-700/80 transition-all"
                   data-tip="View repository"
                 >
-                  <span className="sr-only">Link to Github repository</span>
+                  <span className="sr-only">Lien vers GitHub</span>
                   <FaGithub className="h-5 w-5 " />
                 </Link>
               ) : null}
@@ -95,7 +95,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                   className="p-1 text-gray-700/80 transition-all"
                   data-tip="View site"
                 >
-                  <span className="sr-only">Link to Project</span>
+                  <span className="sr-only">Lien vers mes projets</span>
                   <LinkIcon className="h-5 w-5 " />
                 </Link>
               ) : null}
