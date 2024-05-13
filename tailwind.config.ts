@@ -1,18 +1,6 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
 import colors from 'tailwindcss/colors';
-// import defaultTheme from 'tailwindcss/defaultTheme';
-/* eslint @typescript-eslint/no-var-requires: "off" */
-
-const {
-  default: flattenColorPalette,
-} = require('tailwindcss/lib/util/flattenColorPalette');
-import svgToDataUri from 'mini-svg-data-uri';
-
-function hexToRgb(hex) {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return `${parseInt(result[1], 16)} ${parseInt(result[2], 16)} ${parseInt(result[3], 16)}`;
-}
 
 const config: Config = {
   content: [
@@ -78,19 +66,6 @@ const config: Config = {
         blink: 'blink 0.75s step-start infinite',
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
       },
-      // fontFamily: {
-      //   sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      //   mono: [
-      //     'Consolas',
-      //     `ui-monospace`,
-      //     `SFMono-Regular`,
-      //     `Menlo`,
-      //     `Monaco`,
-      //     'Liberation Mono',
-      //     'Courier New',
-      //     `monospace`,
-      //   ],
-      // },
       aspectRatio: {
         '4/3': '4 / 3',
         '3/2': '3 / 2',
@@ -163,7 +138,7 @@ const config: Config = {
           900: 'rgb(var(--color-gray-900) / <alpha-value>)',
         },
       },
-      backgroundImage: (theme) => ({
+      backgroundImage: () => ({
         tick: "url('/icons/tick.svg')",
         gradient1: `radial-gradient(at 100% 100%, rgba(7, 0, 31, 0.07), rgba(88, 5, 171, 0.01), rgba(0, 0, 0, 0)), linear-gradient(to right bottom, rgb(239, 254, 250), rgb(248, 250, 255), rgb(254, 238, 248), rgb(231, 249, 251))`,
         'gradient-stats': `radial-gradient(ellipse 75% 650px at 35% calc(100% + 100px), rgb(var(--color-accent)) 20%, rgb(var(--color-accent) / 10%), rgb(var(--color-bg) / 0))`,
@@ -177,7 +152,7 @@ const config: Config = {
         'gradient-radial-to-bl':
           'radial-gradient(90% 115% at 100% 0%, var(--tw-gradient-stops))',
       }),
-      typography: ({ theme }) => ({
+      typography: () => ({
         dark: {
           css: {
             '--tw-prose-body': colors.slate[400],
@@ -196,10 +171,6 @@ const config: Config = {
             '--tw-prose-quote-borders': colors.slate[700],
             '--tw-prose-captions': colors.slate[400],
             '--tw-prose-code': colors.white,
-            // "--tw-prose-pre-code": colors.slate[300],
-            // "--tw-prose-pre-bg": "rgb(0 0 0 / 50%)",
-            // "--tw-prose-th-borders": colors.slate[600],
-            // "--tw-prose-td-borders": colors.slate[700],
           },
         },
       }),
@@ -270,100 +241,6 @@ const config: Config = {
         },
       });
     }),
-    ({ matchUtilities, theme }) => {
-      matchUtilities(
-        {
-          'bg-grid': (value) => {
-            if (/var\(--/gi.test(value)) {
-              const color = value.replace(
-                /var\(--color-([\w-]+\d+)\)/gi,
-                (_, match) => {
-                  return hexToRgb(
-                    colors[match.split('-')[0].replace(/^gray$/gi, 'trueGray')][
-                      +match.split('-')[1]
-                    ]
-                  );
-                }
-              );
-              return {
-                backgroundImage: `url("${svgToDataUri(
-                  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${color}"><path d="M0 .5H31.5V32"/></svg>`
-                )}")`,
-              };
-            }
-            return {
-              backgroundImage: `url("${svgToDataUri(
-                `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
-              )}")`,
-            };
-          },
-        },
-        {
-          values: flattenColorPalette(theme('backgroundColor')),
-          type: 'color',
-        },
-        { values: flattenColorPalette(theme('backgroundColor')), type: 'color' }
-      );
-
-      matchUtilities({
-        highlight: (value) => ({ boxShadow: `inset 0 1px 0 0 ${value}` }),
-      });
-      matchUtilities(
-        {
-          spacing: (value) => ({
-            display: `flex`,
-            flexDirection: 'column',
-            gap: value,
-            '@media print': {
-              display: `block`,
-              '&>*:not(:first-child)': {
-                marginTop: value,
-              },
-            },
-          }),
-        },
-        { values: theme('spacing') }
-      );
-    },
-    ({ addUtilities, theme }) => {
-      const backgroundSize = '7.07px 7.07px';
-      const backgroundImage = (color) =>
-        `linear-gradient(135deg, ${color} 10%, transparent 10%, transparent 50%, ${color} 50%, ${color} 60%, transparent 60%, transparent 100%)`;
-      const colors = Object.entries(theme('backgroundColor')).filter(
-        ([, value]) => typeof value === 'object' && value[400] && value[500]
-      );
-
-      addUtilities(
-        Object.fromEntries(
-          colors.map(([name, colors]) => {
-            const backgroundColor = `${colors[400]}1a`; // 10% opacity
-            const stripeColor = `${colors[500]}80`; // 50% opacity
-
-            return [
-              `.bg-stripes-${name}`,
-              {
-                backgroundColor,
-                backgroundImage: backgroundImage(stripeColor),
-                backgroundSize,
-              },
-            ];
-          })
-        )
-      );
-
-      addUtilities({
-        '.bg-stripes-white': {
-          backgroundImage: backgroundImage('rgba(255 255 255 / 0.75)'),
-          backgroundSize,
-        },
-      });
-
-      addUtilities({
-        '.ligatures-none': {
-          fontVariantLigatures: 'none',
-        },
-      });
-    },
   ],
 };
 export default config;

@@ -1,5 +1,3 @@
-//! Warning : Prism is a nightmare for assigning a CSS class priority, and the only solution found was to target the very exact element directly
-
 @layer components {
   .prose :where(pre):not(:where([class~='not-prose'] *)) {
     --container-width: calc(100vw - (100vw - 100%));
