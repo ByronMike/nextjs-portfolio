@@ -8,14 +8,14 @@ import { motion } from 'framer-motion';
 import { LinkIcon } from '@heroicons/react/24/solid';
 import { FaGithub } from 'react-icons/fa';
 
-import { ProjectCardProps } from '@/types/components/project-card';
+import { ProjectCardProps } from '@/types/components/projectCard';
 import {
   upScaleVariants,
   cardAnimationVariants,
   blurAnimationVariations,
 } from '@/helpers/framer-motion/animationVariants';
 
-export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
+const ProjectCard: FunctionComponent<ProjectCardProps> = ({
   project,
   cardNumber,
 }) => {
@@ -31,7 +31,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
         key={project.name}
         whileHover="hover"
         className={clsx(
-          'd:hover:dark-shadow-neon hover:shadow-neon backdrop to-black-500 relative h-[380px] w-[340px] min-w-[340px] snap-start rounded-xl border-2 border-gray-700/30 bg-white bg-opacity-10 from-[#06b6d4] bg-clip-padding p-4  shadow-xl transition-[min-width,width,margin-left,opacity]  duration-300 spacing-0 d:border-[#06b6d4]   d:bg-opacity-0 d:bg-gradient-to-r'
+          'd:hover:dark-shadow-neon hover:shadow-neon backdrop to-black-500 spacing-0 relative h-[380px] w-[340px] min-w-[340px] snap-start rounded-xl border-2 border-gray-700/30 bg-white bg-opacity-10 from-[#06b6d4] bg-clip-padding  p-4 shadow-xl  transition-[min-width,width,margin-left,opacity] duration-300 d:border-[#06b6d4]   d:bg-opacity-0 d:bg-gradient-to-r'
         )}
       >
         <figure className="relative flex aspect-2 h-full w-full">
@@ -84,7 +84,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                   className="p-1 text-gray-700/80 transition-all"
                   data-tip="View repository"
                 >
-                  <span className="sr-only">Link to Github repository</span>
+                  <span className="sr-only">Lien vers GitHub</span>
                   <FaGithub className="h-5 w-5 " />
                 </Link>
               ) : null}
@@ -95,7 +95,7 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                   className="p-1 text-gray-700/80 transition-all"
                   data-tip="View site"
                 >
-                  <span className="sr-only">Link to Project</span>
+                  <span className="sr-only">Lien vers mes projets</span>
                   <LinkIcon className="h-5 w-5 " />
                 </Link>
               ) : null}
@@ -106,3 +106,5 @@ export const ProjectCard: FunctionComponent<ProjectCardProps> = ({
     </motion.section>
   );
 };
+
+export default ProjectCard;

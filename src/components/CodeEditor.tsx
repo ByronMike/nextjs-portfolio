@@ -1,6 +1,6 @@
-import { Code, CodeGroupProps } from '@/components/typography/code';
+import Code, { CodeGroupProps } from '@/components/typography/code';
 
-export const CodeEditor = ({
+const CodeEditor = ({
   code,
   language,
 }: {
@@ -39,3 +39,5 @@ export const CodeEditor = ({
     </figure>
   );
 };
+
+export default CodeEditor;

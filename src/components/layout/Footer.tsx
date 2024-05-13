@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
-import { FOOTER } from '@/content/layout/footer';
+import { FOOTER } from '@/content/layout/Footer';
 
-export const Footer: FunctionComponent = () => {
+const Footer: FunctionComponent = () => {
   return (
-    <footer className="print:hidden">
+    <footer>
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {Object.values(FOOTER.socialAccount).map(({ name, Icon, href }) => (
@@ -27,3 +27,5 @@ export const Footer: FunctionComponent = () => {
     </footer>
   );
 };
+
+export default Footer;

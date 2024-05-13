@@ -1,11 +1,11 @@
 'use client';
 
 import { FunctionComponent, useState } from 'react';
-import Section from '@/components/layout/section';
-import { PROJECTS } from '@/content/sections/projects';
-import { ProjectCard } from '@/components/project-card';
+import Section from '@/components/layout/Section';
+import ProjectCard from '@/components/ProjectCard';
+import { PROJECTS } from '@/content/sections/Projects';
 
-export const Projects: FunctionComponent = () => {
+const Projects: FunctionComponent = () => {
   const [filter, setFilter] = useState('All Projects');
   const [filteredProjects, setFilteredProjects] = useState(PROJECTS);
 
@@ -25,7 +25,7 @@ export const Projects: FunctionComponent = () => {
     <Section
       id="projects"
       isMotion
-      className="portfolio-preview mx-auto grid w-full max-w-6xl px-4 pt-28 md:px-8"
+      className="mx-auto grid w-full max-w-6xl px-12 pt-20 md:px-8"
     >
       <div className="mx-auto grid w-full max-w-6xl">
         <div className="heading-pre">Mes projets</div>
@@ -44,7 +44,7 @@ export const Projects: FunctionComponent = () => {
                     className="peer hidden"
                     checked={type === filter}
                     onChange={() => handleFilterChange(type)}
-                    name="Tag Filtersss"
+                    name="Tag Filters"
                     value={type}
                   />
                   <div className="cursor-pointer appearance-none whitespace-nowrap rounded-full border border-gray-200 bg-gray-400/10 px-3 py-1 text-[13px] font-medium text-gray-400 transition-colors peer-checked:text-gray-900 hfa:text-gray-500 d:border-gray-700 d:peer-checked:text-gray-50 d:hfa:text-gray-300">
@@ -56,7 +56,7 @@ export const Projects: FunctionComponent = () => {
           </fieldset>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="mt-4 flex flex-wrap justify-center gap-4">
         {filteredProjects.map((project, key) => (
           <ProjectCard key={project.name} project={project} cardNumber={key} />
         ))}
@@ -64,3 +64,5 @@ export const Projects: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default Projects;

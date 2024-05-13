@@ -3,9 +3,9 @@ import { SiNodedotjs } from 'react-icons/si';
 import { SiReact } from 'react-icons/si';
 import { SiTailwindcss } from 'react-icons/si';
 
-import { IconProps } from '@/types/content/tech-stack';
+import { IconProps } from '@/types/content/techStack';
 
-export const Welcome = {
+export const WELCOME = {
   pre: 'Bienvenue sur mon portfolio',
   heading: (
     <>

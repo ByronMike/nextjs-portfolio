@@ -3,30 +3,25 @@
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Section from '@/components/layout/section';
-import { Badge } from '@/components/badge';
-import { CodeEditor } from '@/components/code-editor';
-import { Profile } from '@/components/profile';
+import Section from '@/components/layout/Section';
+import Badge from '@/components/Badge';
+import CodeEditor from '@/components/CodeEditor';
+import Profile from '@/components/Profile';
 import { useGitHubUserData } from '@/hooks/useGitHubUserData';
-import {
-  NEXT_PUBLIC_GITHUB_TOKEN,
-  NEXT_PUBLIC_GITHUB_USER,
-} from '@/helpers/constants';
+import { GITHUB_TOKEN, GITHUB_USER } from '@/helpers/constants';
 import {
   leftVariants,
   displayVariants,
 } from '@/helpers/framer-motion/animationVariants';
-import { Welcome } from '@/content/sections/introduction';
+import { WELCOME } from '@/content/sections/Introduction';
+import TechList from '@/components/TechList';
 
-export const Introduction: FunctionComponent = () => {
-  const { user } = useGitHubUserData(
-    NEXT_PUBLIC_GITHUB_USER,
-    NEXT_PUBLIC_GITHUB_TOKEN
-  );
+const Introduction: FunctionComponent = () => {
+  const { user } = useGitHubUserData(GITHUB_USER, GITHUB_TOKEN);
   const codeSnippets: string[] = [];
   for (let i = 1; i <= 8; i++) {
     // @ts-expect-error: Should be fixed one day
-    codeSnippets.push(Welcome[`code${i}`]);
+    codeSnippets.push(WELCOME[`code${i}`]);
   }
 
   return (
@@ -43,35 +38,9 @@ export const Introduction: FunctionComponent = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           variants={leftVariants}
         >
-          <div className="heading-pre">{Welcome.pre}</div>
-          <h1 className="heading-hero ">{Welcome.heading}</h1>
-          <div className="group inline-flex w-full max-w-[710px] flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-            <ul className="group-hover:paused flex  animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8">
-              {Welcome.tech.map(({ name, Icon }) => (
-                <li
-                  className="flex items-center gap-2 text-gray-500 d:text-gray-400"
-                  key={name}
-                >
-                  <Icon className="h-7 w-7 text-gray-400 d:text-gray-300/80" />
-                  {name}
-                </li>
-              ))}
-            </ul>
-            <ul
-              className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8"
-              aria-hidden="true"
-            >
-              {Welcome.tech.map(({ name, Icon }) => (
-                <li
-                  className="flex items-center gap-2 text-gray-500 d:text-gray-400"
-                  key={name}
-                >
-                  <Icon className="h-7 w-7 text-gray-400 d:text-gray-300/80" />
-                  {name}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="heading-pre">{WELCOME.pre}</div>
+          <h1 className="heading-hero">{WELCOME.heading}</h1>
+          <TechList tech={WELCOME.tech} />
         </motion.div>
         <motion.div
           initial="hidden"
@@ -81,7 +50,7 @@ export const Introduction: FunctionComponent = () => {
           variants={leftVariants}
         >
           <p className="mb-3 max-w-prose font-normal text-gray-500 d:text-gray-400 md:text-lg md:tracking-tight">
-            {Welcome.body}
+            {WELCOME.body}
           </p>
 
           <p className="mb-3 max-w-xl font-normal text-gray-500 md:text-lg md:tracking-tight"></p>
@@ -94,21 +63,21 @@ export const Introduction: FunctionComponent = () => {
           transition={{ delay: 0.6, duration: 0.5 }}
           variants={leftVariants}
         >
-          {Welcome.cta1 ? (
+          {WELCOME.cta1 ? (
             <Link
-              href={Welcome.cta1.href}
+              href={WELCOME.cta1.href}
               className="button-rainbow inline-flex whitespace-nowrap bg-gray-800 px-10 py-2.5 text-sm font-medium tracking-tight text-gray-50 hfa:border-gray-300/90 hfa:bg-gray-900 hfa:text-white d:hfa:border-gray-700/30 md:px-12"
             >
-              {Welcome.cta1.name}
+              {WELCOME.cta1.name}
             </Link>
           ) : null}
 
-          {Welcome.cta2 ? (
+          {WELCOME.cta2 ? (
             <Link
-              href={Welcome.cta2.href}
+              href={WELCOME.cta2.href}
               className="button-border inline-flex whitespace-nowrap bg-white/90 px-10 py-2.5 text-sm font-medium tracking-tight text-gray-500 transition-all hfa:border-gray-900/70 hfa:bg-white/90 hfa:text-gray-900 d:border-gray-700/80 d:bg-transparent d:text-gray-300 d:hfa:border-gray-200/30 d:hfa:bg-gray-900/80 d:hfa:text-gray-50 md:px-12"
             >
-              {Welcome.cta2.name}
+              {WELCOME.cta2.name}
             </Link>
           ) : null}
         </motion.div>
@@ -163,3 +132,5 @@ export const Introduction: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default Introduction;

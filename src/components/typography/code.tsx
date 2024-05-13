@@ -17,7 +17,7 @@ export type CodeGroupProps = {
   className?: string;
 };
 
-export const Code: FunctionComponent<CodeGroupProps> = ({
+const Code: FunctionComponent<CodeGroupProps> = ({
   language,
   code,
   className,
@@ -38,3 +38,5 @@ export const Code: FunctionComponent<CodeGroupProps> = ({
     </pre>
   );
 };
+
+export default Code;

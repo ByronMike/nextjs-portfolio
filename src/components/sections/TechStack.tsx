@@ -1,7 +1,5 @@
-'use client';
-
 import { FunctionComponent } from 'react';
-import Section from '@/components/layout/section';
+import Section from '@/components/layout/Section';
 import LogoReact from '@/public/svg/tools/reactjs.svg';
 import LogoNext from '@/public/svg/tools/nextjs.svg';
 import LogoFigma from '@/public/svg/tools/figma.svg';
@@ -13,7 +11,7 @@ import LogoNodeJs from '@/public/svg/tools/nodejs.svg';
 import LogoTypeScript from '@/public/svg/tools/typescript.svg';
 import LogoReactNative from '@/public/svg/tools/react-native.svg';
 
-export const TechStack: FunctionComponent = () => {
+const TechStack: FunctionComponent = () => {
   return (
     <Section
       id="tech-stack"
@@ -37,3 +35,5 @@ export const TechStack: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default TechStack;

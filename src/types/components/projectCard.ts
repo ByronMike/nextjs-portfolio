@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import { Technology } from '@/types/content/tech-stack';
+import { Technology } from '@/types/content/techStack';
 
 export interface projectType {
   name: string;

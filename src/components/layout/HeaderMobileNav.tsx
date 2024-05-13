@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import clsx from 'clsx';
-import { HEADER } from '@/content/layout/header';
+import { HEADER } from '@/content/layout/Header';
 import { FunctionComponent, MouseEventHandler, useCallback } from 'react';
 
 type HeaderMobileNavProps = {
@@ -32,7 +32,7 @@ const MobileNavButton = ({
   );
 };
 
-export const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
+const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
   showNav,
   setShowNav,
 }) => {
@@ -74,14 +74,14 @@ export const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
             );
           })}
         </div>
-        <section className="mt-28 p-8 spacing-24">
-          <nav className="relative text-white spacing-6">
+        <section className="spacing-24 mt-28 p-8">
+          <nav className="spacing-6 relative text-white">
             {HEADER.nav.map((navItem, index) => {
               return (
                 <Link
                   key={navItem.href}
                   href={navItem.href}
-                  className="group flex items-baseline justify-between py-2 text-gray-300 opacity-0 opacity-0 transition-opacity delay-200 hfa:text-sky-400 [.nav-active_&]:opacity-100"
+                  className="flex justify-between py-2 text-gray-300 transition-opacity delay-200 hfa:text-sky-400 [.nav-active_&]:opacity-100"
                   onClick={() => setShowNav(false)}
                 >
                   <span
@@ -126,3 +126,5 @@ export const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
     </div>
   );
 };
+
+export default MobileNav;

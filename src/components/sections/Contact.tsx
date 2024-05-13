@@ -2,14 +2,14 @@
 
 import { FunctionComponent } from 'react';
 import { motion } from 'framer-motion';
-import Section from '@/components/layout/section';
-import { CONTACTS } from '@/content/sections/contact';
+import Section from '@/components/layout/Section';
+import { CONTACTS } from '@/content/sections/Contact';
 import { upVariants } from '@/helpers/framer-motion/animationVariants';
 
-export const Contact: FunctionComponent = () => {
+const Contact: FunctionComponent = () => {
   return (
     <Section id="contact">
-      <div className="mx-auto mb-40 grid w-full max-w-6xl px-4 md:px-8">
+      <div className="mx-auto mb-40 grid w-full max-w-6xl px-10 md:px-8">
         <div className="heading-pre flex justify-center">Contact</div>
         <motion.div
           initial="hidden"
@@ -29,7 +29,7 @@ export const Contact: FunctionComponent = () => {
             {CONTACTS.map(({ title, Icon, url }) => (
               <a key={title} href={url}>
                 <div className="flex select-none items-center gap-1 whitespace-nowrap rounded border border-gray-700/10  bg-sky-500/90 px-1.5 py-[2px] text-[13px]  font-medium  text-white transition-colors hfa:bg-sky-600/80 d:bg-sky-600/90 d:hfa:bg-sky-500/80">
-                  <Icon className="color-red" />
+                  <Icon />
                   {title}
                 </div>
               </a>
@@ -40,3 +40,5 @@ export const Contact: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default Contact;

@@ -3,12 +3,12 @@
 import { FunctionComponent, useCallback, useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Section from '@/components/layout/section';
+import Section from '@/components/layout/Section';
 import StatisticItem from '@/components/StatisticItem';
-import { ABOUT } from '@/content/sections/about';
+import { ABOUT } from '@/content/sections/About';
 import { rightVariants } from '@/helpers/framer-motion/animationVariants';
 
-export const About: FunctionComponent = () => {
+const About: FunctionComponent = () => {
   const [focusImageIndex, setFocusImageIndex] = useState(0);
   const [images, setImages] = useState(ABOUT.images);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -41,21 +41,19 @@ export const About: FunctionComponent = () => {
     <Section
       id="about"
       isMotion
-      className="overflow-hidden pt-10 md:-mt-12 md:pt-40"
+      className="mx-auto overflow-hidden px-4 pt-10 md:-mt-12 md:pt-20"
     >
-      <div className="heading-pre mx-auto w-full max-w-6xl px-4 md:px-8 lg:pt-16">
+      <div className="heading-pre mx-auto w-full max-w-6xl px-8 md:px-8 lg:pt-16">
         Présentation
       </div>
       <div className="mx-auto flex max-w-6xl flex-col justify-center gap-16 px-4 pb-16 md:px-8 lg:grid lg:grid-cols-[540px_auto]">
         <button
           ref={buttonRef}
-          className="group relative mx-auto mb-12 mt-10 aspect-3/2 max-h-[405px] w-full max-w-[540px] flex-1 hfa:outline-none lg:mb-auto  lg:mr-0 lg:aspect-4/3"
+          className="relative mx-auto mb-12 mt-10 aspect-3/2 max-h-[405px] w-full max-w-[540px] flex-1 hfa:outline-none lg:mb-auto  lg:mr-0 lg:aspect-4/3"
           onClick={handleImageClick}
           type="button"
-          data-event="mouseover"
-          data-tip={images[focusImageIndex]?.alt}
         >
-          <span className="sr-only">Cycle through Images</span>
+          <span className="sr-only">Parcourir les images</span>
           {images.map(({ src, alt }, index) => {
             return (
               <Image
@@ -66,13 +64,7 @@ export const About: FunctionComponent = () => {
                 height={1500}
                 sizes="(min-width: 580px) 540px, 400px"
                 priority={index === 0}
-                className="absolute left-0 top-0 rounded-xl border-2 border-gray-50/80 object-cover !opacity-0 shadow-lg shadow-gray-700/5 transition-all duration-300 group-focus-visible:border-sky-500 d:border-gray-600/80"
-                data-about-image-index={index}
-                onLoad={() =>
-                  document
-                    .querySelectorAll(`[data-about-image-index="${index}"]`)
-                    .forEach((img) => img.classList.remove('!opacity-0'))
-                }
+                className="absolute left-0 top-0 rounded-xl border-2 border-gray-50/80 object-cover transition-all duration-300  d:border-gray-600/80"
                 style={{
                   transform:
                     focusImageIndex > index
@@ -88,7 +80,7 @@ export const About: FunctionComponent = () => {
             );
           })}
         </button>
-        <div className="spacing-8">
+        <div className="spacing-8 px-4">
           <div className="grid max-w-xl grid-cols-2 gap-4 text-center sm:grid-cols-4 sm:text-left">
             {ABOUT.stats.map(({ statistic, caption }, index) => (
               <StatisticItem
@@ -104,7 +96,7 @@ export const About: FunctionComponent = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             variants={rightVariants}
-            className="tracking tight max-w-3xl leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4"
+            className="max-w-3xl leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4"
           >
             {ABOUT.description}
           </motion.div>
@@ -113,3 +105,5 @@ export const About: FunctionComponent = () => {
     </Section>
   );
 };
+
+export default About;
