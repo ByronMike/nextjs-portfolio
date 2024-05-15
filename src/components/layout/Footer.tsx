@@ -14,7 +14,7 @@ const Footer: FunctionComponent = () => {
               className="p-1 text-gray-400 hover:text-gray-500 d:text-gray-600 d:hover:text-gray-500"
             >
               <span className="sr-only">{name}</span>
-              <Icon className="h-5 w-5" aria-hidden="true" />
+              <Icon aria-label="social network" className="h-5 w-5" />
             </Link>
           ))}
         </div>

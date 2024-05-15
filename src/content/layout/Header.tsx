@@ -3,7 +3,7 @@ import Logo from 'public/logo.svg';
 export const HEADER = {
   logo: {
     href: '/',
-    title: <Logo />,
+    img: <Logo />,
     alt: 'Logo',
   },
   nav: [

@@ -16,17 +16,17 @@ const CodeEditor = ({
         <i className="flex gap-1.5">
           <button
             type="button"
-            aria-hidden
+            aria-label="red fake button"
             className="h-3 w-3 rounded-full bg-gray-700 transition-colors h:bg-[#EC6A5F]"
           />
           <button
             type="button"
-            aria-hidden
+            aria-label="yellow fake button"
             className="h-3 w-3 rounded-full bg-gray-700 transition-colors h:bg-[#F4BF50]"
           />
           <button
             type="button"
-            aria-hidden
+            aria-label="green fake button"
             className="h-3 w-3 rounded-full bg-gray-700 transition-colors h:bg-[#61C454]"
           />
         </i>

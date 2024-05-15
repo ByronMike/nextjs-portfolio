@@ -25,6 +25,7 @@ const ProfileNav: FunctionComponent = () => {
         target="_blank"
         rel="noreferrer"
         href={GITHUB_LINK}
+        aria-label="github"
         className={
           'rounded p-2 text-gray-500 transition-colors d:text-gray-300 d:h:text-gray-50 md:h:text-gray-900'
         }
