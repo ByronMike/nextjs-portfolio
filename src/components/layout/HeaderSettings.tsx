@@ -13,6 +13,7 @@ const ProfileNav: FunctionComponent = () => {
     <nav className="z-10 ml-auto flex gap-1 pl-4">
       <button
         type="button"
+        aria-label="theme icon"
         className={
           'rounded p-2 text-gray-500 transition-colors d:text-gray-300 d:h:text-gray-50 md:h:text-gray-900'
         }
@@ -30,7 +31,7 @@ const ProfileNav: FunctionComponent = () => {
       >
         <SiGithub className="h-5 w-5" />
       </a>
-      <ButtonMail label="Lets work" mailto={`mailto:${EMAIL_CONTACT}`} />
+      <ButtonMail label="Let's work" mailto={`mailto:${EMAIL_CONTACT}`} />
     </nav>
   );
 };

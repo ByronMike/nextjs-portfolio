@@ -105,6 +105,8 @@ const Timeline: FunctionComponent = () => {
                     )}
                   >
                     <button
+                      type="button"
+                      aria-label="professional path"
                       className=" absolute flex -translate-x-1/2 flex-col items-center px-3 hfa:outline-none"
                       onMouseOver={() => {
                         setAutoScroll(false);
