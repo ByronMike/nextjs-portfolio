@@ -82,7 +82,7 @@ const About: FunctionComponent = () => {
           })}
         </button>
         <div className="spacing-8 px-4">
-          <div className="grid max-w-xl grid-cols-2 gap-4 text-center sm:grid-cols-4 sm:text-left">
+          <div className="grid max-w-xl grid-cols-2 gap-4 text-center sm:grid-cols-3+1 sm:text-left">
             {ABOUT.stats.map(({ statistic, caption }, index) => (
               <StatisticItem
                 key={caption + index}
