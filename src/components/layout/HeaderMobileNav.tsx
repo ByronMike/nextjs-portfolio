@@ -19,6 +19,7 @@ const MobileNavButton = ({
   return (
     <button
       type="button"
+      aria-label="burger"
       onClick={onClick}
       className="relative z-50 p-1"
       // @ts-expect-error: type inference doesn't work
@@ -117,8 +118,12 @@ const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
                 : `transform 0.15s ${0.05}s, opacity 0.2s 0.05s`,
             }}
           >
-            <button className="button-rainbow  whitespace-nowrap border-[4px] border-opacity-40 px-10 py-3 font-medium tracking-tight text-gray-900 ">
-              Lets work
+            <button
+              type="button"
+              aria-label="contact"
+              className="button-rainbow  whitespace-nowrap border-[4px] border-opacity-40 px-10 py-3 font-medium tracking-tight text-gray-900 "
+            >
+              Let's work
             </button>
           </div>
         </section>

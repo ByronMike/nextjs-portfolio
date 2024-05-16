@@ -86,7 +86,7 @@ const Timeline: FunctionComponent = () => {
       >
         {Object.entries(TIMELINE).map(([year, events], yearIndex) => (
           <div key={year} className="relative">
-            <div className="absolute left-0 -translate-x-1/2 select-none text-xs font-semibold text-gray-400">
+            <div className="absolute left-0 -translate-x-1/2 select-none text-xs font-semibold text-gray-700">
               {year}
             </div>
             <div
@@ -105,6 +105,8 @@ const Timeline: FunctionComponent = () => {
                     )}
                   >
                     <button
+                      type="button"
+                      aria-label="professional path"
                       className=" absolute flex -translate-x-1/2 flex-col items-center px-3 hfa:outline-none"
                       onMouseOver={() => {
                         setAutoScroll(false);
@@ -151,7 +153,7 @@ const Timeline: FunctionComponent = () => {
         ))}
 
         <div className="relative">
-          <div className="absolute left-0 -translate-x-1/2 text-xs font-semibold text-gray-400">
+          <div className="absolute left-0 -translate-x-1/2 text-xs font-semibold text-gray-700">
             Today
           </div>
           <div className="mt-6">

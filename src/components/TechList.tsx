@@ -14,12 +14,15 @@ const TechList: FunctionComponent<TechListProps> = ({ tech }) => {
 
   return (
     <div className="group inline-flex w-full max-w-[710px] flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-      <ul className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8">
+      <ul
+        aria-label="tech stack"
+        className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8"
+      >
         {techItems}
       </ul>
       <ul
+        aria-label="tech stack"
         className="group-hover:paused flex animate-infinite-scroll items-center justify-center md:justify-start [&_li]:mx-8"
-        aria-hidden="true"
       >
         {techItems}
       </ul>
