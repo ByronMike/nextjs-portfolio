@@ -12,7 +12,6 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        xs: { max: '639px' },
         '3xl': { min: '1647px' },
       },
       keyframes: {
