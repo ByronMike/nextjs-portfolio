@@ -81,7 +81,7 @@ const Timeline: FunctionComponent = () => {
       className=" mx-auto w-[80%] max-w-6xl px-4 pb-16 md:px-8"
     >
       <div
-        className="-mx-4 flex h-96 overflow-x-auto px-6 py-4 xl:mx-0"
+        className="-mx-4 flex h-96 overflow-x-auto overflow-y-clip px-6 py-4 xl:mx-0"
         ref={scrollContainerRef}
       >
         {Object.entries(TIMELINE).map(([year, events], yearIndex) => (
