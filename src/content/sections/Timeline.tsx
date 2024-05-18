@@ -21,7 +21,7 @@ export const TIMELINE: Timeline = {
       date: '1991-11-30',
       heading: 'Naissance',
       description:
-        'A la Roche-sur-Yon (France), capitale de la brioche vendéenne',
+        'À La Roche-sur-Yon (France), capitale de la brioche vendéenne',
       Icon: ({ className = '' }) => <FaBaby className={className} />,
     },
   ],
@@ -50,7 +50,7 @@ export const TIMELINE: Timeline = {
       date: '2004-06-01',
       heading: 'Jeux vidéo',
       description:
-        "Avec un goût prononcé pour les challenges, je réalise quelques performances dans mes jeux de prédilection (Vietcong, Age of Mythology, Halo) et notamment un top 10 (sur 25.000) dans l'univers 36 d'OGame.fr ",
+        "Avec un goût prononcé pour les challenges, je réalise quelques performances dans mes jeux de prédilection (Vietcong, Age of Mythology, Halo) et notamment un top 10 (sur 25.000) dans l'univers 36 d'OGame.fr",
       Icon: ({ className = '' }) => <BiGame className={className} />,
     },
   ],
@@ -59,7 +59,7 @@ export const TIMELINE: Timeline = {
       date: '2009-01-01',
       heading: 'Passions quantitatives',
       description:
-        "L'année du baccalauréat, une période où se sont révélées quelques passions qui allaient me suivre des années durant : l'économie, la finance et les mathématiqes",
+        "L'année du baccalauréat, une période où se sont révélées quelques passions qui allaient me suivre des années durant : l'économie, la finance et les mathématiques",
       Icon: ({ className = '' }) => <TbMathIntegrals className={className} />,
     },
   ],
@@ -84,7 +84,7 @@ export const TIMELINE: Timeline = {
       date: '2015-01-01',
       heading: 'Finance Responsable en Action',
       description:
-        "L'année 2015 marque mes premiers engagements professionnels dans la finance responsable avec des travaux publiés par différents services d'état (Autorité des Marchés Financiers, Ministère de l'Ecologie) ou dans la gestion d'actifs (Ecofi Investissements)",
+        "L'année 2015 marque mes premiers engagements professionnels dans la finance responsable avec des travaux publiés par différents services de l'État (Autorité des Marchés Financiers, Ministère de l'Ecologie) ou dans la gestion d'actifs (Ecofi Investissements)",
       Icon: ({ className = '' }) => <AiOutlineFund className={className} />,
     },
   ],
@@ -138,7 +138,7 @@ export const TIMELINE: Timeline = {
       date: '2023-02-01',
       heading: 'The Coding Machine',
       description:
-        "En mission pour une ESN spécialisée sur le éditeurs de logiciels en B2B (The Coding Machine), j'ai eu la chance de travailler sur un tech stack que j'apprécie et sur laquelle je souhaitais me spécialiser en tant que développeur front-end : React, Redux, Apollo GraphL, Cypress",
+        "En mission pour une ESN spécialisée sur le éditeurs de logiciels en B2B (The Coding Machine), j'ai eu la chance de travailler sur un tech stack que j'apprécie et sur laquelle je souhaitais me spécialiser en tant que développeur front-end : React, Redux, Apollo GraphQL, Cypress",
       Icon: ({ className = '' }) => (
         <CodeBracketSquareIcon className={className} />
       ),
