@@ -5,7 +5,7 @@ import { ButtonMailProps } from '@/types/components/buttonMail';
 const ButtonMail: FunctionComponent<ButtonMailProps> = ({ mailto, label }) => {
   return (
     <Link
-      href="#"
+      href={mailto}
       onClick={(e) => {
         window.location.href = mailto;
         e.preventDefault();
