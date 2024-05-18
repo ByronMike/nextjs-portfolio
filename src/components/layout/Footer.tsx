@@ -4,7 +4,7 @@ import { FOOTER } from '@/content/layout/Footer';
 
 const Footer: FunctionComponent = () => {
   return (
-    <footer>
+    <footer className="dark:bg-dark-background">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {Object.values(FOOTER.socialAccount).map(({ name, Icon, href }) => (

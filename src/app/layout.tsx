@@ -34,7 +34,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className={`flex flex-col justify-center ${inter.className}`}>
+          <main
+            className={`bg-dark-background flex flex-col justify-center ${inter.className}`}
+          >
             {children}
           </main>
           <Footer />

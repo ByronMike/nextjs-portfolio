@@ -137,12 +137,16 @@ const config: Config = {
           800: 'rgb(var(--color-gray-800) / <alpha-value>)',
           900: 'rgb(var(--color-gray-900) / <alpha-value>)',
         },
+        deepBlue: {
+          500: 'rgb(var(--color-deep-blue) / <alpha-value>)',
+        },
       },
       gridTemplateColumns: {
         '3+1': 'repeat(3, minmax(0, 1fr)) 1.5fr',
       },
       backgroundImage: () => ({
         tick: "url('/icons/tick.svg')",
+        dark: "url('/images/dark-background.png')",
         gradient1: `radial-gradient(at 100% 100%, rgba(7, 0, 31, 0.07), rgba(88, 5, 171, 0.01), rgba(0, 0, 0, 0)), linear-gradient(to right bottom, rgb(239, 254, 250), rgb(248, 250, 255), rgb(254, 238, 248), rgb(231, 249, 251))`,
         'gradient-stats': `radial-gradient(ellipse 75% 650px at 35% calc(100% + 100px), rgb(var(--color-accent)) 20%, rgb(var(--color-accent) / 10%), rgb(var(--color-bg) / 0))`,
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

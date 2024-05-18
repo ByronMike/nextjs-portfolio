@@ -54,6 +54,8 @@
     --color-gray-700: 64 64 64;
     --color-gray-800: 38 38 38;
     --color-gray-900: 23 23 23;
+
+    --color-deep-blue: 7 17 49;
   }
 
   select {
@@ -85,5 +87,10 @@
       0 0 20px 10px rgba(255, 255, 255, 0.5),
       0 0 30px 15px rgba(255, 255, 255, 0.3),
       0 0 40px 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .bg-dark-background {
+    background-image: url('/images/dark-background.png');
+    background-size: cover;
   }
 }
