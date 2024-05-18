@@ -19,7 +19,12 @@ const Partners: FunctionComponent = () => {
         </div>
         <div className="mx-auto mt-8 flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
           {PARTNERS.map((partner) => (
-            <a key={partner.name} href={partner.url}>
+            <a
+              key={partner.name}
+              href={partner.url}
+              target="_blank"
+              rel="noreferrer"
+            >
               {partner.logo}
             </a>
           ))}

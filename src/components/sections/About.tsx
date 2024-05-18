@@ -46,7 +46,7 @@ const About: FunctionComponent = () => {
       <div className="heading-pre mx-auto w-full max-w-6xl px-8 md:px-8 lg:pt-16">
         Présentation
       </div>
-      <div className="mx-auto flex max-w-6xl flex-col justify-center gap-16 px-4 pb-16 md:px-8 lg:grid lg:grid-cols-[540px_auto]">
+      <div className="mx-auto flex max-w-6xl flex-col justify-center px-4 pb-16 sm:gap-16 md:px-8 lg:grid lg:grid-cols-[540px_auto]">
         <button
           ref={buttonRef}
           type="button"
@@ -81,7 +81,7 @@ const About: FunctionComponent = () => {
             );
           })}
         </button>
-        <div className="spacing-8 px-4">
+        <div className="spacing-8 flex flex-col gap-8 px-4 sm:gap-2">
           <div className="grid max-w-xl grid-cols-2 gap-4 text-center sm:grid-cols-3+1 sm:text-left">
             {ABOUT.stats.map(({ statistic, caption }, index) => (
               <StatisticItem

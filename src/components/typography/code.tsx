@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import Prism from 'prismjs';
 import { FunctionComponent, useEffect } from 'react';
 
-// import 'prism-themes/themes/prism-holi-theme.css';
 import 'prismjs/components/prism-jsx';
 import 'prismjs/components/prism-tsx';
 import 'prismjs/components/prism-typescript';
