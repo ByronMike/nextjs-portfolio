@@ -72,7 +72,6 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
             variants={blurAnimationVariations}
             transition={{ duration: 0.3 }}
           >
-            {/* d:backdrop-blur-none */}
             <div className="flex w-full items-end justify-end gap-2">
               <div className="mr-auto text-sm font-semibold text-black">
                 {project.year}

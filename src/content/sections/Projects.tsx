@@ -1,5 +1,6 @@
 import { TECH } from '@/content/sections/TechStack';
 import SurfCommunity from '@/public/images/projects/surf-community.png';
+import MyQuiver from '@/public/images/projects/my-quiver.png';
 
 export const PROJECTS = [
   {
@@ -46,33 +47,32 @@ export const PROJECTS = [
     year: '2021',
   },
   {
-    name: 'KidsLiving',
-    type: ['Ecommerce Sites', 'Integrations'],
-    tech: [TECH.typescript, TECH.vercel],
-    url: 'https://kidsliving.co.za',
+    name: 'Plant Sitting (MVP)',
+    type: ['React Native'],
+    tech: [TECH.react_native, TECH.expo, TECH.expressJS, TECH.mongoDB],
+    description: `Une application mobile de mise en réseau pour le gardiennage des plantes.`,
+    featuredImage: SurfCommunity,
+    repository: 'https://github.com/ByronMike/plantsitting-frontend',
+    year: '2022',
+  },
+  {
+    name: 'My quiver (MVP)',
+    type: ['No code'],
+    tech: [TECH.no_code, TECH.glide, TECH.excel],
+    description: `My Quiver est une app mobile permettant aux Surfeurs de créer un quiver virtuel.`,
+    featuredImage: MyQuiver,
+    year: '2020',
     repository: '',
-    description: `A random app about random things. And I add some descriptions just to add a new line.`,
+    url: 'https://myquiver.glideapp.io/',
+  },
+  {
+    name: 'Surf-community.fr',
+    type: ['Wordpress'],
+    tech: [TECH.wordpress, TECH.linux, TECH.apache, TECH.mysql],
+    description: `Surf Community est un site dédié à la communauté Surf (+300k vues).`,
     featuredImage: SurfCommunity,
     year: '2017',
-  },
-  {
-    name: 'Lunalemon',
-    type: ['Marketing Sites'],
-    tech: [TECH.typescript, TECH.tailwind, TECH.nextjs, TECH.vercel],
-    description: `A random app about random things. And I add some descriptions just to add a new line.`,
-    featuredImage: SurfCommunity,
-    year: '2022',
-    url: 'https://kidsliving.co.za',
-    repository: 'https://github.com/FelixTellmann/lunalemon.dev',
-  },
-  {
-    name: 'Lunalemoned',
-    type: ['Marketing Sites'],
-    tech: [TECH.typescript, TECH.tailwind, TECH.nextjs, TECH.vercel],
-    description: `A random app about random things. And I add some descriptions just to add a new line.`,
-    featuredImage: SurfCommunity,
-    year: '2022',
-    url: 'https://kidsliving.co.za',
-    repository: 'https://github.com/FelixTellmann/lunalemon.dev',
+    repository: '',
+    url: 'https://surf-community.fr/',
   },
 ];
