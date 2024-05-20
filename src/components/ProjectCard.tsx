@@ -19,6 +19,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
   project,
   cardNumber,
 }) => {
+  const isFirstPortfolio = project.name === 'Portfolio V1';
   return (
     <motion.section
       initial="hidden"
@@ -49,7 +50,12 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
             variants={cardAnimationVariants}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-2xl font-bold tracking-tighter text-black">
+            <h2
+              className={clsx(
+                'text-2xl font-bold tracking-tighter text-black',
+                isFirstPortfolio && 'text-gray-200'
+              )}
+            >
               {project.name}
             </h2>
             <div className="-ml-0.5 mt-0.5 flex items-center gap-2 tracking-tight text-black d:text-gray-200">
@@ -65,7 +71,14 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                 );
               })}
             </div>
-            <p className="line-clamp-4 py-2">{project.description}</p>
+            <p
+              className={clsx(
+                'line-clamp-4 py-2',
+                isFirstPortfolio && 'text-gray-200'
+              )}
+            >
+              {project.description}
+            </p>
           </motion.header>
           <motion.footer
             className="absolute bottom-0 left-0 w-full rounded-b-xl bg-opacity-60 bg-clip-padding px-4 py-2 backdrop-blur-lg backdrop-filter d:backdrop-blur-none"
