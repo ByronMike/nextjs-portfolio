@@ -1,7 +1,13 @@
 import { AiOutlineConsoleSql } from 'react-icons/ai';
+import { FaFileExcel } from 'react-icons/fa';
+import { FaGlideG } from 'react-icons/fa';
 import { IoLogoVercel } from 'react-icons/io5';
+import { MdCodeOff } from 'react-icons/md';
+import { SiApache } from 'react-icons/si';
 import { SiCss3 } from 'react-icons/si';
 import { SiEslint } from 'react-icons/si';
+import { SiExpo } from 'react-icons/si';
+import { SiExpress } from 'react-icons/si';
 import { SiFigma } from 'react-icons/si';
 import { SiFirebase } from 'react-icons/si';
 import { SiFramer } from 'react-icons/si';
@@ -11,8 +17,11 @@ import { SiGraphql } from 'react-icons/si';
 import { SiHtml5 } from 'react-icons/si';
 import { SiJavascript } from 'react-icons/si';
 import { SiJest } from 'react-icons/si';
+import { SiLinux } from 'react-icons/si';
 import { SiMarkdown } from 'react-icons/si';
+import { SiMongodb } from 'react-icons/si';
 import { SiMysql } from 'react-icons/si';
+import { SiNestjs } from 'react-icons/si';
 import { SiNpm } from 'react-icons/si';
 import { SiNodedotjs } from 'react-icons/si';
 import { SiPhp } from 'react-icons/si';
@@ -25,6 +34,7 @@ import { SiTypescript } from 'react-icons/si';
 import { SiWebpack } from 'react-icons/si';
 import { SiWordpress } from 'react-icons/si';
 import { SiYarn } from 'react-icons/si';
+import { TbBrandReactNative } from 'react-icons/tb';
 
 import Axios from '@/public/icons/tech-logos/axios.svg';
 import Express from '@/public/icons/tech-logos/express.svg';
@@ -60,7 +70,7 @@ export const TECH: Record<string, Technology> = {
     Icon: ({ className }) => <SiReact className={className} />,
   },
   tailwind: {
-    name: 'TailwindCSS',
+    name: 'Tailwind',
     Icon: ({ className }) => <SiTailwindcss className={className} />,
   },
   prisma: {
@@ -87,8 +97,8 @@ export const TECH: Record<string, Technology> = {
     name: 'Firebase',
     Icon: ({ className }) => <SiFirebase className={className} />,
   },
-  framer: {
-    name: 'Framer',
+  framer_motion: {
+    name: 'Framer-motion',
     Icon: ({ className }) => <SiFramer className={className} />,
   },
   git: {
@@ -119,17 +129,13 @@ export const TECH: Record<string, Technology> = {
     name: 'Node.js',
     Icon: ({ className }) => <SiNodedotjs className={className} />,
   },
-  express: {
+  expressJS: {
     name: 'Express',
     Icon: ({ className }) => <Express className={className} />,
   },
   prettier: {
     name: 'Prettier',
     Icon: ({ className }) => <SiPrettier className={className} />,
-  },
-  react: {
-    name: 'React.js',
-    Icon: ({ className }) => <SiReact className={className} />,
   },
   react_query: {
     name: 'React Query',
@@ -138,10 +144,6 @@ export const TECH: Record<string, Technology> = {
   redis: {
     name: 'Redis',
     Icon: ({ className }) => <SiRedis className={className} />,
-  },
-  tailwindcss: {
-    name: 'Tailwindcss',
-    Icon: ({ className }) => <SiTailwindcss className={className} />,
   },
   webpack: {
     name: 'Webpack',
@@ -170,5 +172,45 @@ export const TECH: Record<string, Technology> = {
   wordpress: {
     name: 'WordPress',
     Icon: ({ className }) => <SiWordpress className={className} />,
+  },
+  linux: {
+    name: 'Linux',
+    Icon: ({ className }) => <SiLinux className={className} />,
+  },
+  apache: {
+    name: 'Apache',
+    Icon: ({ className }) => <SiApache className={className} />,
+  },
+  no_code: {
+    name: 'No code',
+    Icon: ({ className }) => <MdCodeOff className={className} />,
+  },
+  glide: {
+    name: 'Glide',
+    Icon: ({ className }) => <FaGlideG className={className} />,
+  },
+  excel: {
+    name: 'Excel',
+    Icon: ({ className }) => <FaFileExcel className={className} />,
+  },
+  react_native: {
+    name: 'React Native',
+    Icon: ({ className }) => <TbBrandReactNative className={className} />,
+  },
+  express: {
+    name: 'Express',
+    Icon: ({ className }) => <SiExpress className={className} />,
+  },
+  mongodb: {
+    name: 'MongoDB',
+    Icon: ({ className }) => <SiMongodb className={className} />,
+  },
+  expo: {
+    name: 'Expo',
+    Icon: ({ className }) => <SiExpo className={className} />,
+  },
+  nestjs: {
+    name: 'Nest.js',
+    Icon: ({ className }) => <SiNestjs className={className} />,
   },
 } as const;
