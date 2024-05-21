@@ -1,6 +1,6 @@
-# Boilerplate for Next JS 14, Tailwind CSS 3 and TypeScript
+# Portfolio - Michaël Auger
 
-⚡ An open-source Boilerplate for Next.js developers who want to build a high-performance, maintenable and enjoyable app : Next.js (app routing), TypeScript, ESLint, Prettier, Husky, Lint-Staged, PostCSS, Tailwind CSSs.
+⚡ My Portfolio V2 with a modern tech stack : Next.js (app routing), TypeScript, ESLint, Prettier, Husky, Lint-Staged, PostCSS, Tailwind CSSs.
 
 ## 🔥 Features
 - [Next.js](https://nextjs.org) for Static Site Generator
@@ -38,37 +38,14 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## 📚 Learn More
+## 📊 Performance
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![alt text](/public/images/lighthouse.png)
 
 ## 🚀 Deploy to production
 
-You can see the results locally in production mode with:
+This Next.js application has been deployed with the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```shell
-npm build
-```
-
-```shell
-npm start
-```
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## 💖 Contributing
-
-1. Fork this repository;
-2. Create your branch: `git checkout -b my-remarkable-contribution`;
-3. Commit your changes: `git commit -m 'feat: add my remarkable contribution'`;
-4. Push to the branch: `git push origin my-remarkable-contribution`.
 
 ## 📝 License
 
