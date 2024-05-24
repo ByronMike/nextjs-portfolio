@@ -34,7 +34,7 @@ export const PROJECTS = [
     description: `Mon portfolio V1 réalisé avec React.js et hébergé sur Vercel.`,
     featuredImage: PortfolioV1,
     repository: 'https://github.com/ByronMike/react-portfolio',
-    url: 'https://byronmike-react-portfolio.vercel.app/',
+    url: 'https://michael-auger-react-portfolio.vercel.app/',
     year: '2023',
   },
   {
