@@ -44,7 +44,7 @@ export const PROJECTS = [
     description: `Une application mobile de mise en réseau pour le gardiennage des plantes.`,
     featuredImage: PlantSitting,
     repository: 'https://github.com/ByronMike/plantsitting-frontend',
-    url: 'https://vimeo.com/948344409?share=copy',
+    url: 'https://youtu.be/tuxQFKX-yO0',
     year: '2022',
   },
   {

@@ -68,7 +68,7 @@ export const WELCOME = {
     name: 'Contactez-moi',
   },
   cta2: {
-    href: '/resume',
+    href: '/documents/cv.pdf',
     name: 'CV',
   },
   code1: `import {`,
