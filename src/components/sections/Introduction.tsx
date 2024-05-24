@@ -73,12 +73,14 @@ const Introduction: FunctionComponent = () => {
           ) : null}
 
           {WELCOME.cta2 ? (
-            <Link
+            <a
               href={WELCOME.cta2.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="button-border inline-flex whitespace-nowrap bg-white/90 px-10 py-2.5 text-sm font-medium tracking-tight text-gray-500 transition-all hfa:border-gray-900/70 hfa:bg-white/90 hfa:text-gray-900 d:border-gray-700/80 d:bg-transparent d:text-gray-300 d:hfa:border-gray-200/30 d:hfa:bg-gray-900/80 d:hfa:text-gray-50 md:px-12"
             >
               {WELCOME.cta2.name}
-            </Link>
+            </a>
           ) : null}
         </motion.div>
       </div>
