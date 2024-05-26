@@ -86,6 +86,7 @@ const About: FunctionComponent = () => {
             {ABOUT.stats.map(({ statistic, caption }, index) => (
               <StatisticItem
                 key={caption + index}
+                index={index}
                 statistic={statistic}
                 caption={caption}
               />

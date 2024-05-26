@@ -3,10 +3,11 @@ import { FunctionComponent } from 'react';
 import { StatisticItemProps } from '@/types/components/statisticItem';
 
 const StatisticItem: FunctionComponent<StatisticItemProps> = ({
+  index,
   statistic,
   caption,
 }) => {
-  const animatedStatistic = useAnimateCounter(statistic);
+  const animatedStatistic = useAnimateCounter(index, statistic);
 
   return (
     <figure className="spacing-1 select-none">
