@@ -8,13 +8,14 @@ import {
   useMotionValue,
   useTransform,
 } from 'framer-motion';
+import { appendPlusSign } from '@/helpers/utils/appendPlusSign';
 
-export const useAnimateCounter = (numbers: string) => {
+export const useAnimateCounter = (index: number, numbers: string) => {
   const [, animate] = useAnimate();
   const startingValue = useMotionValue(0);
   const currentValue = useTransform(
     startingValue,
-    (value) => Math.round(value).toLocaleString() + '+'
+    (value) => Math.round(value).toLocaleString() + appendPlusSign(index)
   );
 
   const parseString = parseInt(numbers);
