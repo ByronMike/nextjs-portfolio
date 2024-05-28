@@ -9,7 +9,7 @@ import { upVariants } from '@/helpers/framer-motion/animationVariants';
 const Contact: FunctionComponent = () => {
   return (
     <Section id="contact">
-      <div className="mx-auto mb-40 grid w-full max-w-6xl px-10 md:px-8">
+      <div className="mx-auto mb-20 grid w-full max-w-6xl px-10 md:mb-40 md:px-8">
         <div className="heading-pre flex justify-center">Contact</div>
         <motion.div
           initial="hidden"
