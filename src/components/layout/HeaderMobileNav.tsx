@@ -49,10 +49,11 @@ const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
           ' fixed left-0 top-0 h-screen w-full',
           showNav
             ? 'nav-active opacity-100'
-            : 'pointer-events-none select-none opacity-0 delay-[900ms]'
+            : 'pointer-events-none select-none opacity-0 delay-[800ms]'
         )}
       >
-        <div className="absolute inset-0 -z-50 grid grid-cols-[1rem_repeat(16,minmax(0,1fr))_1rem]">
+        <div className="absolute inset-0 -z-30 bg-[#0F172A]"></div>
+        {/* <div className="absolute inset-0 -z-50 grid grid-cols-[1rem_repeat(16,minmax(0,1fr))_1rem]">
           {[...new Array(18)].map((_, index) => {
             return (
               <div
@@ -74,7 +75,7 @@ const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
               />
             );
           })}
-        </div>
+        </div> */}
         <section className="spacing-24 mt-28 p-8">
           <nav className="spacing-6 relative text-white">
             {HEADER.nav.map((navItem, index) => {
