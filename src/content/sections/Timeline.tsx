@@ -138,7 +138,7 @@ export const TIMELINE: Timeline = {
       date: '2023-02-01',
       heading: 'The Coding Machine',
       description:
-        "En mission pour une ESN spécialisée sur le éditeurs de logiciels en B2B (The Coding Machine), j'ai eu la chance de travailler sur un tech stack que j'apprécie et sur laquelle je souhaitais me spécialiser en tant que développeur front-end : React, Redux, Apollo GraphQL, Cypress",
+        "En mission pour une ESN spécialisée sur le éditeurs de logiciels en B2B (The Coding Machine), j'ai eu la chance de travailler avec une double casquette de Chef de projet et développeur web sur un tech stack moderne  : React, Redux, Apollo GraphQL, Cypress",
       Icon: ({ className = '' }) => (
         <CodeBracketSquareIcon className={className} />
       ),
@@ -147,7 +147,7 @@ export const TIMELINE: Timeline = {
       date: '2023-07-01',
       heading: 'La Provence',
       description:
-        'Je rejoins La Provence, un quotidien régional français créé en 1997 à Marseille, qui souhaite faire une refonte totale du site. Recruté en CDI en tant que développeur front-end, ma stack est : ⚡Next, Tailwind, StoryBook, TS⚡',
+        'Je rejoins La Provence, un quotidien régional français créé en 1997 à Marseille, qui souhaite faire une refonte totale du site. Recruté en CDI en tant que développeur web, ma stack est : ⚡ Next, Tailwind, StoryBook, TS ⚡',
       Icon: ({ className = '' }) => <CodeBracketIcon className={className} />,
     },
   ],

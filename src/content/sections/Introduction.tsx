@@ -9,7 +9,7 @@ export const WELCOME = {
   pre: 'Bienvenue sur mon portfolio',
   heading: (
     <>
-      Je suis <strong>&nbsp;Michaël Auger</strong> Front-end developer.
+      Je suis <strong>&nbsp;Michaël Auger</strong> Web Developer.
     </>
   ),
   tech: [
@@ -36,6 +36,15 @@ export const WELCOME = {
     <>
       Mon expertise se focalise sur{' '}
       <a
+        href="https://react.dev/"
+        target="_blank"
+        rel="noreferrer"
+        className="relative cursor-pointer underline before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600"
+      >
+        React.js
+      </a>
+      ,{' '}
+      <a
         target="_blank"
         rel="noreferrer"
         href="https://nextjs.org/"
@@ -45,12 +54,13 @@ export const WELCOME = {
       </a>{' '}
       et{' '}
       <a
-        href="https://react.dev/"
+        href="https://nodejs.org/en/"
         target="_blank"
         rel="noreferrer"
         className="relative cursor-pointer underline before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600"
       >
-        React.js
+        {' '}
+        Node.js
       </a>{' '}
       pour créer des solutions web dynamiques et efficaces. De la conception
       d'interfaces utilisateur interactives à l'optimisation des performances

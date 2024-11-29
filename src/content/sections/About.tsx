@@ -37,9 +37,9 @@ export const ABOUT = {
   description: (
     <>
       <p>
-        Mon domaine de prédilection est le développement front-end avec{' '}
-        <strong>Next.js</strong>, <strong>Typescript</strong> et{' '}
-        <strong>TailwindCSS</strong> pour créer de belles expériences
+        Mon domaine de prédilection est le développement web avec{' '}
+        <strong>Next.js</strong>, <strong>Node.js</strong>, et{' '}
+        <strong>Typescript</strong> pour créer de belles expériences
         utilisateurs (UI / UX).
       </p>
       <p>
