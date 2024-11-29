@@ -18,6 +18,6 @@ export const CONTACTS: Contact[] = [
   {
     title: 'Resume',
     Icon: ({ className = '' }) => <FaRegFileAlt className={className} />,
-    url: 'https://www.linkedin.com/in/auger-michael/',
+    url: '/documents/cv.pdf',
   },
 ];
