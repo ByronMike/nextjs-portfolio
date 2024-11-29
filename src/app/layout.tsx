@@ -8,7 +8,7 @@ import '@/styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Michael Auger - Frontend Developer - Next, React, Tailwind, Node.js',
+  title: 'Michael Auger - Web Developer - Next, React, Tailwind, Node.js',
   description: 'Portfolio de Michael Auger',
   icons: {
     icon: '/icon.png',
