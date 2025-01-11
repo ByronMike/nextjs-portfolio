@@ -98,7 +98,7 @@ const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
                   </span>
                   <div className="mx-2 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px] opacity-0 transition-opacity [.nav-active_&]:opacity-40 [.nav-active_&]:delay-500"></div>
                   <small
-                    className="translate-x-[200%] text-gray-400 [.nav-active_&]:translate-x-0"
+                    className="translate-x-[200%] text-end text-gray-400 [.nav-active_&]:translate-x-0"
                     style={{
                       transition: showNav
                         ? `transform 0.15s ${0.4 + 0.05 * index}s`
