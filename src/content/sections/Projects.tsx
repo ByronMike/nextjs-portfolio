@@ -8,14 +8,14 @@ import SurfCommunity from '@/public/images/projects/surf-community.png';
 
 export const PROJECTS = [
   {
-    name: 'surfandcamp.fr (en cours)',
+    name: 'surfandcamp.com',
     type: ['Next.js'],
     tech: [TECH.nextjs, TECH.nestjs, TECH.mongodb, TECH.nodejs],
-    url: '',
+    url: 'https://www.surfandcamp.com/',
     repository: '',
     description: `Site de réservation et d'évaluation des Surf Camps dans le monde.`,
     featuredImage: SurfAndCamp,
-    year: '2024',
+    year: '2025',
   },
   {
     name: 'Portfolio V2',
