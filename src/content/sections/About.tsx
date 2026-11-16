@@ -19,12 +19,12 @@ export const ABOUT = {
       caption: 'années de code',
     },
     {
-      statistic: '1000+',
-      caption: 'Commits',
-    },
-    {
       statistic: '8',
       caption: 'ans recherche & finance',
+    },
+    {
+      statistic: '1000+',
+      caption: 'Commits',
     },
   ],
   description: (

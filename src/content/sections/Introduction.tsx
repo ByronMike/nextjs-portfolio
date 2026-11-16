@@ -9,7 +9,7 @@ export const WELCOME = {
   pre: 'Disponible pour des missions en remote',
   heading: (
     <>
-      Je suis <strong>&nbsp;Michaël Auger</strong>, Product Engineer Fullstack.
+      Je suis <strong>&nbsp;Michaël Auger</strong> Product Engineer.
     </>
   ),
   tech: [

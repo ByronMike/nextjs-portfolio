@@ -11,7 +11,7 @@ const StatisticItem: FunctionComponent<StatisticItemProps> = ({
 
   return (
     <figure className="spacing-1 select-none">
-      <div className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-4xl font-extrabold tracking-tighter text-transparent">
+      <div className="whitespace-nowrap bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-4xl font-extrabold tracking-tighter text-transparent">
         {animatedStatistic}
       </div>
       <figcaption className="text-[15px] font-semibold tracking-tight text-gray-400 d:text-gray-300/80">

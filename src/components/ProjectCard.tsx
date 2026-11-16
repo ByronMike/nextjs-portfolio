@@ -73,7 +73,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
             </div>
             <p
               className={clsx(
-                'line-clamp-4 py-2',
+                'line-clamp-2 py-2',
                 isFirstPortfolio && 'text-gray-200'
               )}
             >
