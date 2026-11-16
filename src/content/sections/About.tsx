@@ -11,54 +11,50 @@ import Tahiti from '@/public/images/about/tahiti.jpg';
 export const ABOUT = {
   stats: [
     {
-      statistic: `${
-        new Date(Date.now() - new Date('1991-11-30').getTime()).getFullYear() -
-        1970
-      }`,
-      caption: 'ans',
+      statistic: '2',
+      caption: 'produits fondés',
     },
     {
-      statistic: `${
-        new Date(Date.now() - new Date('2017').getTime()).getFullYear() - 1970
-      }`,
-      caption: 'années Webmaster',
-    },
-    {
-      statistic: `${
-        new Date(Date.now() - new Date('2021').getTime()).getFullYear() - 1970
-      }+`,
-      caption: 'années Développeur',
+      statistic: '4',
+      caption: 'années de code',
     },
     {
       statistic: '1000+',
       caption: 'Commits',
     },
+    {
+      statistic: '8',
+      caption: 'ans recherche & finance',
+    },
   ],
   description: (
     <>
       <p>
-        Mon domaine de prédilection est le développement web avec{' '}
-        <strong>Next.js</strong>, <strong>Node.js</strong>, et{' '}
+        Je suis Product Engineer fullstack freelance, en full remote près de
+        Genève. Je construis des produits web de bout en bout avec{' '}
+        <strong>Next.js</strong>, <strong>Node.js</strong> et{' '}
         <strong>Typescript</strong> pour créer de belles expériences
         utilisateurs (UI / UX).
       </p>
       <p>
-        Après une première expérience personnelle de plus de 7 ans à gérer un{' '}
+        Fondateur tech de{' '}
         <a
-          href="https://www.surf-community.fr"
+          href="https://www.surfandcamp.com"
           target="_blank"
           rel="noreferrer"
           className="text-blue-500 underline"
         >
-          blog communautaire
-        </a>{' '}
-        sur Wordpress, en parallèle de mes travaux d'enseignant-chercheur en
-        économie quantitative, j'ai décidé de devenir développeur à plein temps.
+          SurfAndCamp
+        </a>
+        , une marketplace internationale de surf camps, et de Surf-Community, je
+        sais ce que c'est de construire un produit de A à Z — pas seulement de
+        coder des tickets.
       </p>
       <p>
-        Actuellement en poste à La Provence, un quotidien régional français créé
-        en 1997 à Marseille, je reste ouvert à d'autres opportunités
-        professionnelles.
+        Avant le code, plus de 8 ans dans la recherche et la finance durable
+        m'ont laissé la rigueur, le sens analytique et la compréhension du
+        business. Je travaille en freelance, à temps plein ou en deux missions à
+        50 %, partout dans le monde.
       </p>
     </>
   ),

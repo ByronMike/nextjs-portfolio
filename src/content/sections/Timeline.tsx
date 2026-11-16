@@ -3,6 +3,8 @@ import {
   CodeBracketSquareIcon,
   ComputerDesktopIcon,
   WifiIcon,
+  GlobeAltIcon,
+  RocketLaunchIcon,
 } from '@heroicons/react/24/solid';
 
 import { AiOutlineFund } from 'react-icons/ai';
@@ -158,6 +160,24 @@ export const TIMELINE: Timeline = {
       description:
         "L'année 2024 annonce le retour au premier plan des projets perso et la refonte de mon portfolio avec des technos qui apportent une réelle plus-value dans l'UI et l'UX : framer-motion et three.js",
       Icon: ({ className = '' }) => <CiKeyboard className={className} />,
+    },
+  ],
+  2025: [
+    {
+      date: '2025-01-01',
+      heading: 'BatMat — Kode',
+      description:
+        "Je démarre en freelance pour Kode (Suisse) sur BatMat, une marketplace B2B/B2C du bâtiment multi-pays : internationalisation, paiements Stripe, sécurité Cloudflare (~75 % d'attaques en moins) et SEO international. En parallèle, je développe SurfAndCamp, ma marketplace de surf camps.",
+      Icon: ({ className = '' }) => <GlobeAltIcon className={className} />,
+    },
+  ],
+  2026: [
+    {
+      date: '2026-01-01',
+      heading: 'Freelance à plein temps',
+      description:
+        'Je passe en freelance à plein temps, en full remote : Product Engineer pour des startups, agences et éditeurs — du besoin métier à la mise en production (Kode, MyDMC/Zintra).',
+      Icon: ({ className = '' }) => <RocketLaunchIcon className={className} />,
     },
   ],
 };

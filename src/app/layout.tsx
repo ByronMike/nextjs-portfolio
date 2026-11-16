@@ -8,10 +8,11 @@ import '@/styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Michael Auger - Web Developer - Next, React, Tailwind, Node.js',
-  description: 'Portfolio de Michael Auger',
+  title: 'Michaël Auger — Product Engineer Fullstack (Freelance)',
+  description:
+    'Product Engineer fullstack freelance : marketplaces, paiements et outils internes en Next.js, Node.js et PostgreSQL. En full remote, partout dans le monde.',
   icons: {
-    icon: '/icon.png',
+    icon: '/favicon/logo.svg',
   },
 };
 

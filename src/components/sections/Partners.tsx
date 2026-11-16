@@ -10,7 +10,7 @@ const Partners: FunctionComponent = () => {
     >
       <div className="mx-auto grid w-full max-w-6xl px-4 md:px-8">
         <h2 className="headline text-center text-xl font-bold md:text-2xl lg:text-3xl">
-          Ces marques me font confiance en tant que Développeur Web
+          Ils m'ont fait confiance
         </h2>
         <div className="tracking tight text-center leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4">
           Il s'agit d'entreprises très diverses selon leur taille (PME, ETI) et

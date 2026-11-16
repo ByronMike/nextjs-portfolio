@@ -94,7 +94,7 @@ const Introduction: FunctionComponent = () => {
           variants={displayVariants}
         >
           <div className="relative z-20 flex justify-start gap-1.5">
-            <Badge style="info">TS Developer</Badge>
+            <Badge style="info">Product Engineer</Badge>
             <Badge style="success">Watersport Blogger</Badge>
             <Badge style="warning">Surfer</Badge>
             <div className="hidden md:contents">
