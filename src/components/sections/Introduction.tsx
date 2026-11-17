@@ -84,9 +84,9 @@ const Introduction: FunctionComponent = () => {
           ) : null}
         </motion.div>
       </div>
-      <div className="relative overflow-scroll sm:overflow-visible md:h-[420px] md:w-[583px]">
+      <div className="relative sm:overflow-visible md:h-[420px] md:w-[520px]">
         <motion.div
-          className="relative flex h-full w-[90%] flex-col gap-4  sm:min-w-[660px]  md:min-w-[460px] lg:absolute lg:left-6 lg:top-16 lg:w-full lg:min-w-[460px]"
+          className="relative flex h-full w-full flex-col gap-4 md:min-w-[460px] lg:absolute lg:left-6 lg:top-16 lg:w-full lg:min-w-[460px]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

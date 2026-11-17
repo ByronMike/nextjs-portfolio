@@ -36,7 +36,7 @@ export default function RootLayout({
         >
           <Header />
           <main
-            className={`bg-dark-background flex flex-col justify-center ${inter.className}`}
+            className={`bg-dark-background flex flex-col justify-center overflow-x-hidden ${inter.className}`}
           >
             {children}
           </main>
