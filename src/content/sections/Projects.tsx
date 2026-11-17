@@ -6,9 +6,6 @@ import MyQuiver from '@/public/images/projects/my-quiver.png';
 import SurfAndCamp from '@/public/images/projects/surf-and-camp.png';
 import SurfCommunity from '@/public/images/projects/surf-community.png';
 
-// TODO: remplacer batmat.png / la-provence.png / mykard.png (placeholders
-// dégradés) par de vraies captures des sites ch.batmat.io, laprovence.com,
-// mykard.ch.
 export const PROJECTS = [
   {
     name: 'SurfAndCamp',
@@ -41,12 +38,12 @@ export const PROJECTS = [
     year: '2023',
   },
   {
-    name: 'MyKard / M-EG',
+    name: 'MyKard',
     type: ['Next.js'],
     tech: [TECH.nextjs, TECH.typescript, TECH.nodejs],
     url: 'https://www.mykard.ch/',
     repository: '',
-    description: `Console métier & tracking pour une agence suisse (MyDMC) : socle, demandes, chatbot Botpress.`,
+    description: `Carte de visite NFC & profil digital (MyDMC) : site e-commerce et tracking (Meta Pixel, Conversions API).`,
     featuredImage: MyKard,
     year: '2026',
   },
