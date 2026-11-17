@@ -84,7 +84,7 @@ const Introduction: FunctionComponent = () => {
           ) : null}
         </motion.div>
       </div>
-      <div className="relative sm:overflow-visible md:h-[420px] md:w-[520px]">
+      <div className="relative sm:overflow-visible md:h-[420px] md:w-[460px]">
         <motion.div
           className="relative flex h-full w-full flex-col gap-4 md:min-w-[460px] lg:absolute lg:left-6 lg:top-16 lg:w-full lg:min-w-[460px]"
           initial="hidden"
