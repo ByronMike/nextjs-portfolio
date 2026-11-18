@@ -6,17 +6,8 @@ import MyQuiver from '@/public/images/projects/my-quiver.png';
 import SurfAndCamp from '@/public/images/projects/surf-and-camp.png';
 import SurfCommunity from '@/public/images/projects/surf-community.png';
 
+// Classés du plus récent au plus ancien.
 export const PROJECTS = [
-  {
-    name: 'SurfAndCamp',
-    type: ['Next.js'],
-    tech: [TECH.nextjs, TECH.typescript, TECH.stripe, TECH.postgresql],
-    url: 'https://www.surfandcamp.com/',
-    repository: '',
-    description: `Fondateur tech — marketplace internationale de surf camps, paiements Stripe Connect, multi-pays.`,
-    featuredImage: SurfAndCamp,
-    year: '2025',
-  },
   {
     name: 'BatMat',
     type: ['Next.js'],
@@ -25,6 +16,26 @@ export const PROJECTS = [
     repository: '',
     description: `Marketplace B2B/B2C du bâtiment multi-pays (Kode) : i18n, paiements Stripe, sécurité Cloudflare.`,
     featuredImage: BatMat,
+    year: '2026',
+  },
+  {
+    name: 'MyKard',
+    type: ['Next.js'],
+    tech: [TECH.nextjs, TECH.typescript, TECH.nodejs],
+    url: 'https://www.mykard.ch/',
+    repository: '',
+    description: `Carte de visite NFC & profil digital (MyDMC) : site e-commerce et tracking (Meta Pixel, Conversions API).`,
+    featuredImage: MyKard,
+    year: '2026',
+  },
+  {
+    name: 'SurfAndCamp',
+    type: ['Next.js'],
+    tech: [TECH.nextjs, TECH.typescript, TECH.stripe, TECH.postgresql],
+    url: 'https://www.surfandcamp.com/',
+    repository: '',
+    description: `Fondateur tech — marketplace internationale de surf camps, paiements Stripe Connect, multi-pays.`,
+    featuredImage: SurfAndCamp,
     year: '2025',
   },
   {
@@ -38,14 +49,14 @@ export const PROJECTS = [
     year: '2023',
   },
   {
-    name: 'MyKard',
-    type: ['Next.js'],
-    tech: [TECH.nextjs, TECH.typescript, TECH.nodejs],
-    url: 'https://www.mykard.ch/',
+    name: 'MyQuiver',
+    type: ['React Native'],
+    tech: [TECH.react_native, TECH.expo, TECH.nestjs],
+    description: `App mobile pour créer son quiver de surf virtuel. React Native (Expo, Nest.js).`,
+    featuredImage: MyQuiver,
+    year: '2020',
     repository: '',
-    description: `Carte de visite NFC & profil digital (MyDMC) : site e-commerce et tracking (Meta Pixel, Conversions API).`,
-    featuredImage: MyKard,
-    year: '2026',
+    url: 'https://myquiver.glideapp.io/',
   },
   {
     name: 'surf-community.fr',
@@ -56,15 +67,5 @@ export const PROJECTS = [
     year: '2017',
     repository: '',
     url: 'https://surf-community.fr/',
-  },
-  {
-    name: 'MyQuiver',
-    type: ['React Native'],
-    tech: [TECH.react_native, TECH.expo, TECH.nestjs],
-    description: `App mobile pour créer son quiver de surf virtuel. React Native (Expo, Nest.js).`,
-    featuredImage: MyQuiver,
-    year: '2020',
-    repository: '',
-    url: 'https://myquiver.glideapp.io/',
   },
 ];

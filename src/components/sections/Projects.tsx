@@ -25,7 +25,7 @@ const Projects: FunctionComponent = () => {
     <Section
       id="projects"
       isMotion
-      className="mx-auto grid w-full max-w-6xl px-6 pt-20 md:px-8"
+      className="mx-auto grid w-full max-w-6xl px-6 pt-10 md:px-8 md:pt-20"
     >
       <div className="mx-auto grid w-full max-w-6xl">
         <div className="heading-pre">Mes projets</div>

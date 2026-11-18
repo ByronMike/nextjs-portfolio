@@ -28,7 +28,7 @@ const Introduction: FunctionComponent = () => {
     <Section
       id="introduction"
       isMotion
-      className="relative mx-auto flex w-[85%] max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4  py-16  md:w-[100%] md:px-8 lg:grid"
+      className="relative mx-auto flex w-[85%] max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4 pb-16 pt-6 md:w-[100%] md:px-8 md:pt-16 lg:grid"
     >
       <div className="col-span-2">
         <motion.div
