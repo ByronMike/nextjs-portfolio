@@ -48,9 +48,11 @@ export const WELCOME = {
     | 'automate with AI'
     | 'find a long-term remote mission';
   }; \n\n`,
-  code6: `export const Engineer: `,
+  code6: `export const Engineer:
+  `,
   code7: `FunctionComponent`,
-  code8: `<EngineerProps> = ({ helps }) => {
+  code8: `<EngineerProps> =
+  ({ helps }) => {
   return (
     <>
       <h1>Fullstack Product Engineer</h1>
