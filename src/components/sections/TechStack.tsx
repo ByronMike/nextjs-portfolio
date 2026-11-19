@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import { useTranslations } from 'next-intl';
 import Section from '@/components/layout/Section';
 import LogoReact from '@/public/svg/tools/reactjs.svg';
 import LogoNext from '@/public/svg/tools/nextjs.svg';
@@ -12,13 +13,14 @@ import LogoTypeScript from '@/public/svg/tools/typescript.svg';
 import LogoReactNative from '@/public/svg/tools/react-native.svg';
 
 const TechStack: FunctionComponent = () => {
+  const t = useTranslations('techstack');
   return (
     <Section
       id="tech-stack"
       className="mx-auto max-w-6xl px-4 pb-16 md:px-8 lg:pt-24"
     >
       <h2 className="headline text-center text-xl font-bold md:text-2xl lg:mt-24 lg:text-3xl">
-        Mes outils préférés pour le Développement Web
+        {t('title')}
       </h2>
       <div className="mx-auto mt-8 flex  flex-wrap items-center justify-center gap-x-16 gap-y-8">
         <LogoNext className="w-32" aria-label="Next.js" />

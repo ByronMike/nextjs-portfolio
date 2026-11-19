@@ -8,92 +8,25 @@ import TahitiJardin from '@/public/images/about/tahiti-jardin.jpg';
 import TahitiPk0 from '@/public/images/about/tahiti-pk0.jpg';
 import Tahiti from '@/public/images/about/tahiti.jpg';
 
+// Locale-invariant about data: animated stat values (keyed to message captions
+// under `about.stats.<key>`) and the image gallery (alt text comes from
+// `about.imageAlts` by index). Bio paragraphs live in `about.p1/p2/p3`.
 export const ABOUT = {
   stats: [
-    {
-      statistic: '2',
-      caption: 'produits fondés',
-    },
-    {
-      statistic: '4',
-      caption: 'années de code',
-    },
-    {
-      statistic: '8',
-      caption: 'ans recherche & finance',
-    },
-    {
-      statistic: '1000+',
-      caption: 'Commits',
-    },
+    { statistic: '2', key: 'products' },
+    { statistic: '4', key: 'code' },
+    { statistic: '8', key: 'research' },
+    { statistic: '1000+', key: 'commits' },
   ],
-  description: (
-    <>
-      <p>
-        Je suis Product Engineer fullstack freelance, en full remote près de
-        Genève. Je construis des produits web de bout en bout avec{' '}
-        <strong>Next.js</strong>, <strong>Node.js</strong> et{' '}
-        <strong>Typescript</strong> pour créer de belles expériences
-        utilisateurs (UI / UX).
-      </p>
-      <p>
-        Fondateur tech de{' '}
-        <a
-          href="https://www.surfandcamp.com"
-          target="_blank"
-          rel="noreferrer"
-          className="text-blue-500 underline"
-        >
-          SurfAndCamp
-        </a>
-        , une marketplace internationale de surf camps, et de Surf-Community, je
-        sais ce que c'est de construire un produit de A à Z — pas seulement de
-        coder des tickets.
-      </p>
-      <p>
-        Avant le code, plus de 8 ans dans la recherche et la finance durable
-        m'ont laissé la rigueur, le sens analytique et la compréhension du
-        business. Je travaille en freelance, à temps plein ou en deux missions à
-        50 %, partout dans le monde.
-      </p>
-    </>
-  ),
   images: [
-    {
-      src: Me,
-      alt: 'Votre aimable serviteur',
-    },
-    {
-      src: SurfPortugal,
-      alt: 'Surf au Portugal dans la région de Peniche',
-    },
-    {
-      src: Bouddha,
-      alt: "Le jardin d'eden de Buddha à Bombarral au Portugal",
-    },
-    {
-      src: Tahiti,
-      alt: "Les jardins d'Harrison Smith à Tahiti",
-    },
-    {
-      src: Calanques,
-      alt: 'Les fameuses calanques de Marseille',
-    },
-    {
-      src: TahitiPk0,
-      alt: 'Le centre du monde de la planète Surf',
-    },
-    {
-      src: TahitiJardin,
-      alt: 'La forêt tropicale tahitienne',
-    },
-    {
-      src: JurassicPark,
-      alt: 'Un T-rex au pays des cigales',
-    },
-    {
-      src: Dev,
-      alt: 'Un développeur dans son élément',
-    },
+    Me,
+    SurfPortugal,
+    Bouddha,
+    Tahiti,
+    Calanques,
+    TahitiPk0,
+    TahitiJardin,
+    JurassicPark,
+    Dev,
   ],
 };

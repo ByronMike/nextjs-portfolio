@@ -1,7 +1,14 @@
 'use client';
 
-import { FunctionComponent, useCallback, useRef, useState } from 'react';
+import {
+  FunctionComponent,
+  ReactNode,
+  useCallback,
+  useRef,
+  useState,
+} from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Section from '@/components/layout/Section';
 import StatisticItem from '@/components/StatisticItem';
@@ -9,8 +16,12 @@ import { ABOUT } from '@/content/sections/About';
 import { rightVariants } from '@/helpers/framer-motion/animationVariants';
 
 const About: FunctionComponent = () => {
+  const t = useTranslations('about');
+  const alts = t.raw('imageAlts') as string[];
   const [focusImageIndex, setFocusImageIndex] = useState(0);
-  const [images, setImages] = useState(ABOUT.images);
+  const [images, setImages] = useState(() =>
+    ABOUT.images.map((src, i) => ({ src, alt: alts[i] }))
+  );
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleImageClick = useCallback(() => {
@@ -44,7 +55,7 @@ const About: FunctionComponent = () => {
       className="mx-auto overflow-hidden px-4 pt-10 md:-mt-12 md:pt-20"
     >
       <div className="heading-pre mx-auto w-full max-w-6xl px-8 md:px-8 lg:pt-16">
-        Présentation
+        {t('pre')}
       </div>
       <div className="mx-auto flex max-w-6xl flex-col justify-center px-4 pb-16 sm:gap-16 md:px-8 lg:grid lg:grid-cols-[540px_auto]">
         <button
@@ -54,13 +65,13 @@ const About: FunctionComponent = () => {
           className="relative mx-auto mb-12 mt-10 aspect-3/2 max-h-[405px] w-full max-w-[540px] flex-1 hfa:outline-none lg:mb-auto  lg:mr-0 lg:aspect-4/3"
           onClick={handleImageClick}
         >
-          <span className="sr-only">Parcourir les images</span>
+          <span className="sr-only">{t('srBrowse')}</span>
           {images.map(({ src, alt }, index) => {
             return (
               <Image
                 src={src}
                 alt={alt}
-                key={alt}
+                key={typeof src === 'object' && 'src' in src ? src.src : index}
                 width={2000}
                 height={1500}
                 sizes="(min-width: 580px) 540px, 400px"
@@ -83,12 +94,12 @@ const About: FunctionComponent = () => {
         </button>
         <div className="spacing-8 flex flex-col gap-8 px-4 sm:gap-2">
           <div className="grid max-w-xl grid-cols-2 gap-4 text-center sm:grid-cols-3+1 sm:text-left">
-            {ABOUT.stats.map(({ statistic, caption }, index) => (
+            {ABOUT.stats.map(({ statistic, key }, index) => (
               <StatisticItem
-                key={caption + index}
+                key={key}
                 index={index}
                 statistic={statistic}
-                caption={caption}
+                caption={t(`stats.${key}`)}
               />
             ))}
           </div>
@@ -100,7 +111,26 @@ const About: FunctionComponent = () => {
             variants={rightVariants}
             className="max-w-3xl leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4"
           >
-            {ABOUT.description}
+            <p>
+              {t.rich('p1', {
+                strong: (chunks: ReactNode) => <strong>{chunks}</strong>,
+              })}
+            </p>
+            <p>
+              {t.rich('p2', {
+                link: (chunks: ReactNode) => (
+                  <a
+                    href="https://www.surfandcamp.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-blue-500 underline"
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
+            </p>
+            <p>{t('p3')}</p>
           </motion.div>
         </div>
       </div>

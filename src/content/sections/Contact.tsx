@@ -2,27 +2,33 @@ import { GrLinkedin } from 'react-icons/gr';
 import { MdOutlineEmail } from 'react-icons/md';
 import { FaRegFileAlt, FaGithub } from 'react-icons/fa';
 
-import { Contact } from '@/types/content/contact';
+export type ContactKey = 'email' | 'linkedin' | 'github' | 'resume';
 
-export const CONTACTS: Contact[] = [
+// Locale-invariant contact links. Labels live in messages under
+// `contact.links.<key>`. The `resume` url is resolved per locale in the
+// component (FR cv.pdf / EN cv-en.pdf).
+export const CONTACTS: {
+  key: ContactKey;
+  Icon: React.FunctionComponent<{ className?: string }>;
+  url?: string;
+}[] = [
   {
-    title: 'Email',
+    key: 'email',
     Icon: ({ className = '' }) => <MdOutlineEmail className={className} />,
     url: 'mailto:auger.michaell@gmail.com',
   },
   {
-    title: 'Linkedin',
+    key: 'linkedin',
     Icon: ({ className = '' }) => <GrLinkedin className={className} />,
     url: 'https://www.linkedin.com/in/auger-michael/',
   },
   {
-    title: 'GitHub',
+    key: 'github',
     Icon: ({ className = '' }) => <FaGithub className={className} />,
     url: 'https://github.com/ByronMike',
   },
   {
-    title: 'Resume',
+    key: 'resume',
     Icon: ({ className = '' }) => <FaRegFileAlt className={className} />,
-    url: '/documents/cv.pdf',
   },
 ];

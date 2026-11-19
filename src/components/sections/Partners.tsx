@@ -1,8 +1,10 @@
 import { FunctionComponent } from 'react';
+import { useTranslations } from 'next-intl';
 import Section from '@/components/layout/Section';
 import { PARTNERS } from '@/content/sections/Partners';
 
 const Partners: FunctionComponent = () => {
+  const t = useTranslations('partners');
   return (
     <Section
       id="partners"
@@ -10,12 +12,10 @@ const Partners: FunctionComponent = () => {
     >
       <div className="mx-auto grid w-full max-w-6xl px-4 md:px-8">
         <h2 className="headline text-center text-xl font-bold md:text-2xl lg:text-3xl">
-          Ils m'ont fait confiance
+          {t('title')}
         </h2>
         <div className="tracking tight text-center leading-relaxed text-gray-500 d:text-gray-100/70 [&>p+p]:mt-4">
-          Il s'agit d'entreprises très diverses selon leur taille (PME, ETI) et
-          leur secteur d'activité (média, retail tech, ESN, immobilier,
-          automobile)
+          {t('subtitle')}
         </div>
         <div className="mx-auto mt-8 flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
           {PARTNERS.map((partner) => (
