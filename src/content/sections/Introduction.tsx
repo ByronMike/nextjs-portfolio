@@ -5,13 +5,10 @@ import { SiTailwindcss } from 'react-icons/si';
 
 import { IconProps } from '@/types/content/techStack';
 
+// Locale-invariant hero data: tech marquee icons, outbound link targets, the
+// contact CTA target and the code-editor snippet. All copy lives in messages
+// under the `hero` namespace; the CV link is resolved per locale.
 export const WELCOME = {
-  pre: 'Bienvenue sur mon portfolio',
-  heading: (
-    <>
-      Je suis <strong>&nbsp;Michaël Auger</strong> Web Developer.
-    </>
-  ),
   tech: [
     {
       name: 'Next.js',
@@ -32,73 +29,32 @@ export const WELCOME = {
       Icon: ({ className }: IconProps) => <SiNodedotjs className={className} />,
     },
   ] as const,
-  body: (
-    <>
-      Mon expertise se focalise sur{' '}
-      <a
-        href="https://react.dev/"
-        target="_blank"
-        rel="noreferrer"
-        className="relative cursor-pointer underline before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600"
-      >
-        React.js
-      </a>
-      ,{' '}
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://nextjs.org/"
-        className="relative cursor-pointer underline before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600"
-      >
-        Next.js
-      </a>{' '}
-      et{' '}
-      <a
-        href="https://nodejs.org/en/"
-        target="_blank"
-        rel="noreferrer"
-        className="relative cursor-pointer underline before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600"
-      >
-        {' '}
-        Node.js
-      </a>{' '}
-      pour créer des solutions web dynamiques et efficaces. De la conception
-      d'interfaces utilisateur interactives à l'optimisation des performances
-      des sites web.
-      <span className="mt-4 block" />
-      Ma motivation principale réside dans l'amélioration de la qualité de mon
-      code au profit de ses impacts sur le business. Enfin, je poursuis une
-      démarche d'amélioration continue de mes connaissances afin d'utiliser des
-      technologies modernes, pour mettre en oeuvre les meilleures pratiques
-      ainsi que par pur plaisir d'apprendre.
-    </>
-  ),
-  cta1: {
-    href: 'mailto:auger.michaell@gmail.com',
-    name: 'Contactez-moi',
+  links: {
+    react: 'https://react.dev/',
+    next: 'https://nextjs.org/',
+    node: 'https://nodejs.org/en/',
   },
-  cta2: {
-    href: '/documents/cv.pdf',
-    name: 'CV',
+  cta: {
+    contact: 'mailto:auger.michaell@gmail.com',
   },
   code1: `import {`,
   code2: ` FunctionComponent `,
   code3: `} from 'react'; \n\ntype `,
-  code4: `WelcomeProps`,
+  code4: `EngineerProps`,
   code5: ` = {
-  objectives:
-    | 'experiment new tech'
-    | 'show my skills'
-    | 'find freelancing opportunities'
-    | 'find a fulltime job';
+  helps:
+    | 'ship marketplaces & payments'
+    | 'build internal tools'
+    | 'automate with AI'
+    | 'find a long-term remote mission';
   }; \n\n`,
-  code6: `export const Welcome: `,
+  code6: `export const Engineer: `,
   code7: `FunctionComponent`,
-  code8: `<WelcomeProps> = ({ objectives }) => {
+  code8: `<EngineerProps> = ({ helps }) => {
   return (
     <>
-      <h1>Bienvenue sur mon portfolio</h1>
-      <p>Ce site me permet de <em>{objectives}</em></p>
+      <h1>Fullstack Product Engineer</h1>
+      <p>I help teams <em>{helps}</em></p>
     </>
   );
 };`,

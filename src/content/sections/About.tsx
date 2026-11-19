@@ -8,96 +8,25 @@ import TahitiJardin from '@/public/images/about/tahiti-jardin.jpg';
 import TahitiPk0 from '@/public/images/about/tahiti-pk0.jpg';
 import Tahiti from '@/public/images/about/tahiti.jpg';
 
+// Locale-invariant about data: animated stat values (keyed to message captions
+// under `about.stats.<key>`) and the image gallery (alt text comes from
+// `about.imageAlts` by index). Bio paragraphs live in `about.p1/p2/p3`.
 export const ABOUT = {
   stats: [
-    {
-      statistic: `${
-        new Date(Date.now() - new Date('1991-11-30').getTime()).getFullYear() -
-        1970
-      }`,
-      caption: 'ans',
-    },
-    {
-      statistic: `${
-        new Date(Date.now() - new Date('2017').getTime()).getFullYear() - 1970
-      }`,
-      caption: 'années Webmaster',
-    },
-    {
-      statistic: `${
-        new Date(Date.now() - new Date('2021').getTime()).getFullYear() - 1970
-      }+`,
-      caption: 'années Développeur',
-    },
-    {
-      statistic: '1000+',
-      caption: 'Commits',
-    },
+    { statistic: '2', key: 'products' },
+    { statistic: '4', key: 'code' },
+    { statistic: '8', key: 'research' },
+    { statistic: '1000+', key: 'commits' },
   ],
-  description: (
-    <>
-      <p>
-        Mon domaine de prédilection est le développement web avec{' '}
-        <strong>Next.js</strong>, <strong>Node.js</strong>, et{' '}
-        <strong>Typescript</strong> pour créer de belles expériences
-        utilisateurs (UI / UX).
-      </p>
-      <p>
-        Après une première expérience personnelle de plus de 7 ans à gérer un{' '}
-        <a
-          href="https://www.surf-community.fr"
-          target="_blank"
-          rel="noreferrer"
-          className="text-blue-500 underline"
-        >
-          blog communautaire
-        </a>{' '}
-        sur Wordpress, en parallèle de mes travaux d'enseignant-chercheur en
-        économie quantitative, j'ai décidé de devenir développeur à plein temps.
-      </p>
-      <p>
-        Actuellement en poste à La Provence, un quotidien régional français créé
-        en 1997 à Marseille, je reste ouvert à d'autres opportunités
-        professionnelles.
-      </p>
-    </>
-  ),
   images: [
-    {
-      src: Me,
-      alt: 'Votre aimable serviteur',
-    },
-    {
-      src: SurfPortugal,
-      alt: 'Surf au Portugal dans la région de Peniche',
-    },
-    {
-      src: Bouddha,
-      alt: "Le jardin d'eden de Buddha à Bombarral au Portugal",
-    },
-    {
-      src: Tahiti,
-      alt: "Les jardins d'Harrison Smith à Tahiti",
-    },
-    {
-      src: Calanques,
-      alt: 'Les fameuses calanques de Marseille',
-    },
-    {
-      src: TahitiPk0,
-      alt: 'Le centre du monde de la planète Surf',
-    },
-    {
-      src: TahitiJardin,
-      alt: 'La forêt tropicale tahitienne',
-    },
-    {
-      src: JurassicPark,
-      alt: 'Un T-rex au pays des cigales',
-    },
-    {
-      src: Dev,
-      alt: 'Un développeur dans son élément',
-    },
+    Me,
+    SurfPortugal,
+    Bouddha,
+    Tahiti,
+    Calanques,
+    TahitiPk0,
+    TahitiJardin,
+    JurassicPark,
+    Dev,
   ],
 };

@@ -1,5 +1,8 @@
-import Link from 'next/link';
+'use client';
+
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { HEADER } from '@/content/layout/Header';
 import { FunctionComponent, MouseEventHandler, useCallback } from 'react';
 
@@ -37,6 +40,7 @@ const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
   showNav,
   setShowNav,
 }) => {
+  const t = useTranslations('nav');
   const toggleNav = useCallback(() => {
     setShowNav((current) => !current);
   }, [setShowNav]);
@@ -94,7 +98,7 @@ const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
                         : `transform 0.15s ${0.05 * index}s`,
                     }}
                   >
-                    {navItem.title}
+                    {t(`items.${navItem.key}.title`)}
                   </span>
                   <div className="mx-2 h-px flex-1 bg-[linear-gradient(90deg,var(--line-color),var(--line-color)_50%,transparent_0,transparent)] bg-[length:8px_1px] opacity-0 transition-opacity [.nav-active_&]:opacity-40 [.nav-active_&]:delay-500"></div>
                   <small
@@ -105,7 +109,7 @@ const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
                         : `transform 0.15s ${0.05 * index}s`,
                     }}
                   >
-                    {navItem.alt}
+                    {t(`items.${navItem.key}.alt`)}
                   </small>
                 </Link>
               );
@@ -124,7 +128,7 @@ const MobileNav: FunctionComponent<HeaderMobileNavProps> = ({
               aria-label="contact"
               className="button-rainbow  whitespace-nowrap border-[4px] border-opacity-40 px-10 py-3 font-medium tracking-tight text-gray-900 "
             >
-              Let's work
+              {t('cta')}
             </button>
           </div>
         </section>

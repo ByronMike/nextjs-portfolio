@@ -1,67 +1,73 @@
+import { projectType } from '@/types/components/projectCard';
 import { TECH } from '@/content/sections/TechStack';
+import BatMat from '@/public/images/projects/batmat.png';
+import LaProvence from '@/public/images/projects/la-provence.png';
+import MyKard from '@/public/images/projects/mykard.png';
 import MyQuiver from '@/public/images/projects/my-quiver.png';
-import PlantSitting from '@/public/images/projects/plant-sitting.png';
-import PortfolioV1 from '@/public/images/projects/portfolio-v1.png';
-import PortfolioV2 from '@/public/images/projects/portfolio-v2.png';
 import SurfAndCamp from '@/public/images/projects/surf-and-camp.png';
 import SurfCommunity from '@/public/images/projects/surf-community.png';
 
-export const PROJECTS = [
+// Classés du plus récent au plus ancien. Descriptions in messages under
+// `projects.items.<id>`.
+export const PROJECTS: projectType[] = [
   {
-    name: 'surfandcamp.com',
+    id: 'batmat',
+    name: 'BatMat',
     type: ['Next.js'],
-    tech: [TECH.nextjs, TECH.nestjs, TECH.mongodb, TECH.nodejs],
+    tech: [TECH.nextjs, TECH.reactjs, TECH.postgresql, TECH.cloudflare],
+    url: 'https://ch.batmat.io/',
+    repository: '',
+    featuredImage: BatMat,
+    objectPosition: 'left center',
+    year: '2026',
+  },
+  {
+    id: 'mykard',
+    name: 'MyKard',
+    type: ['Next.js'],
+    tech: [TECH.nextjs, TECH.typescript, TECH.nodejs],
+    url: 'https://www.mykard.ch/',
+    repository: '',
+    featuredImage: MyKard,
+    objectPosition: 'center top',
+    darkPanel: true,
+    year: '2026',
+  },
+  {
+    id: 'surfandcamp',
+    name: 'SurfAndCamp',
+    type: ['Next.js'],
+    tech: [TECH.nextjs, TECH.typescript, TECH.stripe, TECH.postgresql],
     url: 'https://www.surfandcamp.com/',
     repository: '',
-    description: `Site de réservation et d'évaluation des Surf Camps dans le monde.`,
     featuredImage: SurfAndCamp,
     year: '2025',
   },
   {
-    name: 'Portfolio V2',
+    id: 'laprovence',
+    name: 'La Provence',
     type: ['Next.js'],
-    tech: [TECH.nextjs, TECH.tailwind, TECH.framer_motion, TECH.typescript],
-    url: 'https://michael-auger-nextjs-portfolio.vercel.app/',
-    repository: 'https://github.com/ByronMike/nextjs-portfolio',
-    description: `Mon portfolio V2 réalisé avec Next.js (App router) et hébergé sur Vercel.`,
-    featuredImage: PortfolioV2,
-    year: '2024',
-  },
-  {
-    name: 'Portfolio V1',
-    type: ['React.js'],
-    tech: [TECH.reactjs, TECH.tailwind, TECH.framer_motion],
-    description: `Mon portfolio V1 réalisé avec React.js et hébergé sur Vercel.`,
-    featuredImage: PortfolioV1,
-    repository: 'https://github.com/ByronMike/react-portfolio',
-    url: 'https://michael-auger-react-portfolio.vercel.app/',
+    tech: [TECH.nextjs, TECH.nestjs, TECH.typescript, TECH.tailwind],
+    url: 'https://www.laprovence.com/',
+    repository: '',
+    featuredImage: LaProvence,
     year: '2023',
   },
   {
-    name: 'Plant Sitting (MVP)',
+    id: 'myquiver',
+    name: 'MyQuiver',
     type: ['React Native'],
-    tech: [TECH.react_native, TECH.expo, TECH.expressJS, TECH.mongodb],
-    description: `Une application mobile de mise en réseau pour le gardiennage des plantes.`,
-    featuredImage: PlantSitting,
-    repository: 'https://github.com/ByronMike/plantsitting-frontend',
-    url: 'https://youtu.be/tuxQFKX-yO0',
-    year: '2022',
-  },
-  {
-    name: 'My quiver (MVP)',
-    type: ['No code'],
-    tech: [TECH.no_code, TECH.glide, TECH.excel],
-    description: `My Quiver est une app mobile permettant aux Surfeurs de créer un quiver virtuel.`,
+    tech: [TECH.react_native, TECH.expo, TECH.nestjs],
     featuredImage: MyQuiver,
     year: '2020',
     repository: '',
     url: 'https://myquiver.glideapp.io/',
   },
   {
+    id: 'surf-community',
     name: 'surf-community.fr',
     type: ['Wordpress'],
-    tech: [TECH.wordpress, TECH.linux, TECH.apache, TECH.mysql],
-    description: `Surf Community est un site dédié à la communauté Surf (+300k vues).`,
+    tech: [TECH.wordpress, TECH.php, TECH.javascript, TECH.mysql],
     featuredImage: SurfCommunity,
     year: '2017',
     repository: '',

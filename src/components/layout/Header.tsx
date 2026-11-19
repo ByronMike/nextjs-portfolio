@@ -1,7 +1,7 @@
 'use client';
 
 import { FunctionComponent, useState } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import DesktopNav from '@/components/layout/HeaderDesktopNav';
 import MobileNav from '@/components/layout/HeaderMobileNav';
 import ProfileNav from '@/components/layout/HeaderSettings';

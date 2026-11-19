@@ -1,7 +1,8 @@
 'use client';
 
-import { FunctionComponent } from 'react';
+import { FunctionComponent, ReactNode } from 'react';
 import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Section from '@/components/layout/Section';
 import Badge from '@/components/Badge';
@@ -16,11 +17,17 @@ import {
 import { WELCOME } from '@/content/sections/Introduction';
 import TechList from '@/components/TechList';
 
+const linkClass =
+  'relative cursor-pointer underline before:absolute b:bottom-0 b:-z-10 b:h-3 b:w-full b:-rotate-2 b:animate-hint-hint b:bg-pink-400/70 b:blur-sm d:b:bg-pink-600';
+
 const Introduction: FunctionComponent = () => {
+  const t = useTranslations('hero');
+  const locale = useLocale();
+  const cvHref = locale === 'en' ? '/documents/cv-en.pdf' : '/documents/cv.pdf';
   const { user } = useGitHubUserData(GITHUB_USER, GITHUB_TOKEN);
   const codeSnippets: string[] = [];
   for (let i = 1; i <= 8; i++) {
-    // @ts-expect-error: Should be fixed one day
+    // @ts-expect-error: dynamic access of code1..code8
     codeSnippets.push(WELCOME[`code${i}`]);
   }
 
@@ -28,7 +35,7 @@ const Introduction: FunctionComponent = () => {
     <Section
       id="introduction"
       isMotion
-      className="relative mx-auto flex w-[85%] max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4  py-16  md:w-[100%] md:px-8 lg:grid"
+      className="relative mx-auto flex w-[85%] max-w-6xl grid-cols-3 flex-col gap-8 gap-y-16 px-4 pb-16 pt-6 md:w-[100%] md:px-8 md:pt-16 lg:grid"
     >
       <div className="col-span-2">
         <motion.div
@@ -38,8 +45,12 @@ const Introduction: FunctionComponent = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           variants={leftVariants}
         >
-          <div className="heading-pre">{WELCOME.pre}</div>
-          <h1 className="heading-hero">{WELCOME.heading}</h1>
+          <div className="heading-pre">{t('pre')}</div>
+          <h1 className="heading-hero">
+            {t.rich('heading', {
+              name: (chunks: ReactNode) => <strong>&nbsp;{chunks}</strong>,
+            })}
+          </h1>
           <TechList tech={WELCOME.tech} />
         </motion.div>
         <motion.div
@@ -50,7 +61,39 @@ const Introduction: FunctionComponent = () => {
           variants={leftVariants}
         >
           <p className="mb-3 max-w-prose font-normal text-gray-500 d:text-gray-400 md:text-lg md:tracking-tight">
-            {WELCOME.body}
+            {t.rich('body', {
+              react: (chunks: ReactNode) => (
+                <a
+                  href={WELCOME.links.react}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={linkClass}
+                >
+                  {chunks}
+                </a>
+              ),
+              next: (chunks: ReactNode) => (
+                <a
+                  href={WELCOME.links.next}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={linkClass}
+                >
+                  {chunks}
+                </a>
+              ),
+              node: (chunks: ReactNode) => (
+                <a
+                  href={WELCOME.links.node}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={linkClass}
+                >
+                  {chunks}
+                </a>
+              ),
+              break: () => <span className="mt-4 block" />,
+            })}
           </p>
 
           <p className="mb-3 max-w-xl font-normal text-gray-500 md:text-lg md:tracking-tight"></p>
@@ -63,30 +106,26 @@ const Introduction: FunctionComponent = () => {
           transition={{ delay: 0.6, duration: 0.5 }}
           variants={leftVariants}
         >
-          {WELCOME.cta1 ? (
-            <Link
-              href={WELCOME.cta1.href}
-              className="button-rainbow inline-flex whitespace-nowrap bg-gray-800 px-10 py-2.5 text-sm font-medium tracking-tight text-gray-50 hfa:border-gray-300/90 hfa:bg-gray-900 hfa:text-white d:hfa:border-gray-700/30 md:px-12"
-            >
-              {WELCOME.cta1.name}
-            </Link>
-          ) : null}
+          <Link
+            href={WELCOME.cta.contact}
+            className="button-rainbow inline-flex whitespace-nowrap bg-gray-800 px-10 py-2.5 text-sm font-medium tracking-tight text-gray-50 hfa:border-gray-300/90 hfa:bg-gray-900 hfa:text-white d:hfa:border-gray-700/30 md:px-12"
+          >
+            {t('ctaContact')}
+          </Link>
 
-          {WELCOME.cta2 ? (
-            <a
-              href={WELCOME.cta2.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button-border inline-flex whitespace-nowrap bg-white/90 px-10 py-2.5 text-sm font-medium tracking-tight text-gray-500 transition-all hfa:border-gray-900/70 hfa:bg-white/90 hfa:text-gray-900 d:border-gray-700/80 d:bg-transparent d:text-gray-300 d:hfa:border-gray-200/30 d:hfa:bg-gray-900/80 d:hfa:text-gray-50 md:px-12"
-            >
-              {WELCOME.cta2.name}
-            </a>
-          ) : null}
+          <a
+            href={cvHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button-border inline-flex whitespace-nowrap bg-white/90 px-10 py-2.5 text-sm font-medium tracking-tight text-gray-500 transition-all hfa:border-gray-900/70 hfa:bg-white/90 hfa:text-gray-900 d:border-gray-700/80 d:bg-transparent d:text-gray-300 d:hfa:border-gray-200/30 d:hfa:bg-gray-900/80 d:hfa:text-gray-50 md:px-12"
+          >
+            {t('ctaCv')}
+          </a>
         </motion.div>
       </div>
-      <div className="relative overflow-scroll sm:overflow-visible md:h-[420px] md:w-[583px]">
+      <div className="relative sm:overflow-visible md:h-[420px] md:w-[460px]">
         <motion.div
-          className="relative flex h-full w-[90%] flex-col gap-4  sm:min-w-[660px]  md:min-w-[460px] lg:absolute lg:left-6 lg:top-16 lg:w-full lg:min-w-[460px]"
+          className="relative flex h-full w-full flex-col gap-4 md:min-w-[460px] lg:absolute lg:left-6 lg:top-16 lg:w-full lg:min-w-[460px]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -94,12 +133,11 @@ const Introduction: FunctionComponent = () => {
           variants={displayVariants}
         >
           <div className="relative z-20 flex justify-start gap-1.5">
-            <Badge style="info">TS Developer</Badge>
-            <Badge style="success">Watersport Blogger</Badge>
-            <Badge style="warning">Surfer</Badge>
+            <Badge style="info">{t('badges.role')}</Badge>
+            <Badge style="warning">{t('badges.surfer')}</Badge>
             <div className="hidden md:contents">
-              <Badge style="accent">Ukuleleist</Badge>
-              <Badge style="plain">Ginger tea aficionado</Badge>
+              <Badge style="accent">{t('badges.ukulele')}</Badge>
+              <Badge style="plain">{t('badges.tea')}</Badge>
             </div>
           </div>
           <div className="relative flex h-full flex-col">

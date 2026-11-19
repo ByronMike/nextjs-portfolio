@@ -1,8 +1,11 @@
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 import { FOOTER } from '@/content/layout/Footer';
 
-const Footer: FunctionComponent = () => {
+const Footer: FunctionComponent = async () => {
+  const t = await getTranslations('footer');
+  const year = new Date().getFullYear();
   return (
     <footer className="dark:bg-dark-background">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
@@ -20,7 +23,7 @@ const Footer: FunctionComponent = () => {
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
           <small className="block text-center text-sm text-gray-400 d:text-gray-600">
-            {FOOTER.copyright}
+            © {year} Michaël Auger. {t('rights')}
           </small>
         </div>
       </div>

@@ -1,16 +1,20 @@
 'use client';
 
 import { FunctionComponent } from 'react';
+import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import { SiGithub } from 'react-icons/si';
 import DarkmodeIcon from '@/components/DarkModeIcon';
 import ButtonMail from '@/components/ButtonMail';
+import LocaleSwitcher from '@/components/layout/LocaleSwitcher';
 import { GITHUB_LINK, EMAIL_CONTACT } from '@/helpers/constants';
 
 const ProfileNav: FunctionComponent = () => {
+  const t = useTranslations('nav');
   const { theme, setTheme } = useTheme();
   return (
-    <nav className="z-10 ml-auto flex gap-1 pl-4">
+    <nav className="z-10 ml-auto flex items-center gap-1 pl-4">
+      <LocaleSwitcher />
       <button
         type="button"
         aria-label="theme icon"
@@ -32,7 +36,7 @@ const ProfileNav: FunctionComponent = () => {
       >
         <SiGithub className="h-5 w-5" />
       </a>
-      <ButtonMail label="Let's work" mailto={`mailto:${EMAIL_CONTACT}`} />
+      <ButtonMail label={t('cta')} mailto={`mailto:${EMAIL_CONTACT}`} />
     </nav>
   );
 };

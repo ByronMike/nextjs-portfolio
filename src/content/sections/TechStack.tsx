@@ -4,7 +4,9 @@ import { FaGlideG } from 'react-icons/fa';
 import { IoLogoVercel } from 'react-icons/io5';
 import { MdCodeOff } from 'react-icons/md';
 import { SiApache } from 'react-icons/si';
+import { SiCloudflare } from 'react-icons/si';
 import { SiCss3 } from 'react-icons/si';
+import { SiDocker } from 'react-icons/si';
 import { SiEslint } from 'react-icons/si';
 import { SiExpo } from 'react-icons/si';
 import { SiExpress } from 'react-icons/si';
@@ -25,7 +27,9 @@ import { SiNestjs } from 'react-icons/si';
 import { SiNpm } from 'react-icons/si';
 import { SiNodedotjs } from 'react-icons/si';
 import { SiPhp } from 'react-icons/si';
+import { SiPostgresql } from 'react-icons/si';
 import { SiPostman } from 'react-icons/si';
+import { SiStripe } from 'react-icons/si';
 import { SiPrettier } from 'react-icons/si';
 import { SiReact } from 'react-icons/si';
 import { SiRedis } from 'react-icons/si';
@@ -212,5 +216,21 @@ export const TECH: Record<string, Technology> = {
   nestjs: {
     name: 'Nest.js',
     Icon: ({ className }) => <SiNestjs className={className} />,
+  },
+  postgresql: {
+    name: 'PostgreSQL',
+    Icon: ({ className }) => <SiPostgresql className={className} />,
+  },
+  stripe: {
+    name: 'Stripe',
+    Icon: ({ className }) => <SiStripe className={className} />,
+  },
+  docker: {
+    name: 'Docker',
+    Icon: ({ className }) => <SiDocker className={className} />,
+  },
+  cloudflare: {
+    name: 'Cloudflare',
+    Icon: ({ className }) => <SiCloudflare className={className} />,
   },
 } as const;

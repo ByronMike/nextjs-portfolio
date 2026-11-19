@@ -2,6 +2,7 @@
 
 import { FunctionComponent, useRef, useState, useEffect } from 'react';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 import { useInView } from 'framer-motion';
 import Section from '@/components/layout/Section';
 import { useDebouncedEffect } from '@/hooks/useDebouncedEffect';
@@ -9,6 +10,7 @@ import { scrollToX } from '@/helpers/utils/scrollTo';
 import { TIMELINE } from '@/content/sections/Timeline';
 
 const Timeline: FunctionComponent = () => {
+  const t = useTranslations('timeline');
   const [selected, setSelected] = useState('');
   const [initiated, setInitiated] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -95,10 +97,12 @@ const Timeline: FunctionComponent = () => {
                 gridTemplateColumns: `repeat(${events.length}, 120px)`,
               }}
             >
-              {events.map(({ heading, Icon, description }, index) => {
+              {events.map(({ id, Icon }, index) => {
+                const heading = t(`${id}.heading`);
+                const description = t(`${id}.description`);
                 return (
                   <div
-                    key={heading}
+                    key={id}
                     className={clsx(
                       'relative',
                       selected === `${year}-${index}` && 'selected'
@@ -154,7 +158,7 @@ const Timeline: FunctionComponent = () => {
 
         <div className="relative">
           <div className="absolute left-0 -translate-x-1/2 text-xs font-semibold text-gray-700">
-            Today
+            {t('today')}
           </div>
           <div className="mt-6">
             <div className="relative">

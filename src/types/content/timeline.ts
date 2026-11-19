@@ -1,8 +1,7 @@
 export interface Timeline {
   [year: string]: {
+    id: string;
     date: string;
-    heading: string;
-    description: string;
     Icon: React.FunctionComponent<{ className?: string }>;
   }[];
 }

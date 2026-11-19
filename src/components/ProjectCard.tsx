@@ -4,6 +4,7 @@ import { FunctionComponent } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { LinkIcon } from '@heroicons/react/24/solid';
 import { FaGithub } from 'react-icons/fa';
@@ -19,6 +20,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
   project,
   cardNumber,
 }) => {
+  const t = useTranslations('projects');
   const isFirstPortfolio = project.name === 'Portfolio V1';
   return (
     <motion.section
@@ -35,25 +37,42 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
           'd:hover:dark-shadow-neon hover:shadow-neon backdrop to-black-500 spacing-0 relative h-[380px] w-[340px] min-w-[340px] snap-start rounded-xl border-2 border-gray-700/30 bg-white bg-opacity-10 from-[#06b6d4] bg-clip-padding  p-4 shadow-xl  transition-[min-width,width,margin-left,opacity] duration-300 d:border-[#06b6d4]   d:bg-opacity-0 d:bg-gradient-to-r'
         )}
       >
-        <figure className="relative flex aspect-2 h-full w-full">
+        <figure
+          className={clsx(
+            'relative flex aspect-2 h-full w-full',
+            project.darkImage && 'rounded-t-lg bg-black'
+          )}
+        >
           <Image
             src={project.featuredImage}
             alt={project.name}
             width={400}
             height={200}
-            className="rounded-t-lg object-cover object-center"
+            className={clsx(
+              'rounded-t-lg',
+              project.objectFit === 'contain' ? 'object-contain' : 'object-cover'
+            )}
+            style={{ objectPosition: project.objectPosition ?? 'center' }}
           />
         </figure>
         <div className="absolute bottom-0 left-0 w-full">
           <motion.header
-            className="h-[160px] rounded-b-xl bg-opacity-60 bg-clip-padding px-4 pb-2 pt-2 text-[15px] tracking-tight text-black backdrop-blur-lg backdrop-filter d:text-black"
+            className={clsx(
+              'h-[176px] rounded-b-xl bg-clip-padding px-4 pb-2 pt-2 text-[15px] tracking-tight text-black shadow-[0_-8px_20px_-6px_rgba(0,0,0,0.3)] backdrop-blur-lg backdrop-filter d:text-black d:shadow-none',
+              project.darkImage
+                ? 'bg-white/90 d:bg-white/80'
+                : project.darkPanel
+                  ? 'bg-white/80 d:bg-gray-900/60'
+                  : 'bg-white/80 d:bg-transparent'
+            )}
             variants={cardAnimationVariants}
             transition={{ duration: 0.3 }}
           >
             <h2
               className={clsx(
                 'text-2xl font-bold tracking-tighter text-black',
-                isFirstPortfolio && 'text-gray-200'
+                isFirstPortfolio && 'text-gray-200',
+                project.darkPanel && 'd:text-gray-100'
               )}
             >
               {project.name}
@@ -73,30 +92,46 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
             </div>
             <p
               className={clsx(
-                'line-clamp-4 py-2',
-                isFirstPortfolio && 'text-gray-200'
+                'line-clamp-2 pt-2',
+                isFirstPortfolio && 'text-gray-200',
+                project.darkPanel && 'd:text-gray-100'
               )}
             >
-              {project.description}
+              {t(`items.${project.id}`)}
             </p>
           </motion.header>
           <motion.footer
-            className="absolute bottom-0 left-0 w-full rounded-b-xl bg-opacity-60 bg-clip-padding px-4 py-2 backdrop-blur-lg backdrop-filter d:backdrop-blur-none"
+            className={clsx(
+              'absolute bottom-0 left-0 w-full rounded-b-xl bg-clip-padding px-4 py-2 backdrop-blur-lg backdrop-filter d:backdrop-blur-none',
+              project.darkImage
+                ? 'bg-white/90 d:bg-white/80'
+                : project.darkPanel
+                  ? 'bg-white/80 d:bg-gray-900/60'
+                  : 'bg-white/80 d:bg-transparent'
+            )}
             variants={blurAnimationVariations}
             transition={{ duration: 0.3 }}
           >
             <div className="flex w-full items-end justify-end gap-2">
-              <div className="mr-auto text-sm font-semibold text-black">
+              <div
+                className={clsx(
+                  'mr-auto text-sm font-semibold text-black',
+                  project.darkPanel && 'd:text-gray-100'
+                )}
+              >
                 {project.year}
               </div>
               {project.repository ? (
                 <Link
                   target="_blank"
                   href={project.repository}
-                  className="p-1 text-gray-700/80 transition-all"
+                  className={clsx(
+                    'p-1 text-gray-700/80 transition-all',
+                    project.darkPanel && 'd:text-gray-300'
+                  )}
                   data-tip="View repository"
                 >
-                  <span className="sr-only">Lien vers GitHub</span>
+                  <span className="sr-only">{t('srRepository')}</span>
                   <FaGithub className="h-5 w-5 " />
                 </Link>
               ) : null}
@@ -104,10 +139,13 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
                 <Link
                   target="_blank"
                   href={project.url}
-                  className="p-1 text-gray-700/80 transition-all"
+                  className={clsx(
+                    'p-1 text-gray-700/80 transition-all',
+                    project.darkPanel && 'd:text-gray-300'
+                  )}
                   data-tip="View site"
                 >
-                  <span className="sr-only">Lien vers mes projets</span>
+                  <span className="sr-only">{t('srUrl')}</span>
                   <LinkIcon className="h-5 w-5 " />
                 </Link>
               ) : null}

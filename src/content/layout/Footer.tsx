@@ -4,7 +4,6 @@ import { SiTwitter } from 'react-icons/si';
 import { SiSpotify } from 'react-icons/si';
 
 export const FOOTER = {
-  copyright: `© ${new Date().getFullYear()} Michael Auger. Tous droits réservés.`,
   socialAccount: {
     github: {
       name: 'GitHub',
